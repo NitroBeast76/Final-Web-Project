@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    line-height: 140%; /* Sets a consistent line height for better readability */
+}
+
+html {
+    font-size: 62.5%; /* Sets base font size to 10px for easier rem calculations */
+}
+
+body {
+    background-color: #c1d7d0; /* Sets the background color to a neutral tone */
+    box-sizing: border-box; /* Ensures consistent box model behavior */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    font-size: 1.8rem; /* Sets the default font size */
+    word-spacing: 0.1rem; /* Adds spacing between words for readability */
+    letter-spacing: 0.01rem; /* Adds slight spacing between letters */
+}
+
+/* Header styles */
+header {
+    hh
+}
+
+header a {
+    text-decoration: none; /* Removes underline from links */
+    color: #D9D1C1; /* Sets link color to a neutral tone */
+}
+
+/* Navigation styles */
+nav {
+    font-size: larger; /* Increases font size for navigation text */
+    display: flex; /* Uses flexbox for layout */
+    padding: 20px; /* Adds padding inside the navigation */
+    justify-content: space-between; /* Distributes items evenly with space between */
+    align-items: center; /* Centers items vertically */
+}
+
+/* Navigation links */
+nav a {
+    text-decoration: none; /* Removes underline from links */
+    color: #D9D1C1; /* Sets link color to a neutral tone */
+    margin-left: 20px; /* Adds spacing between navigation links */
+}
