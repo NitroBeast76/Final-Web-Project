@@ -7,13 +7,69 @@
     <link rel="stylesheet" href="CSS/styles.css">
     <script src="JavaScript/script.js"></script>
     <style>
-        
+        #hero-area {
+            margin: 50px;
+            margin-top: 200px;
+            padding: 50px;
+            margin-bottom: 500px;
+        }
+
+        #hero-area h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        #hero-area h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        #hero-area button {
+            padding: 20px;
+            margin: 10px;
+            margin-right: 0;
+            margin-left: 0;
+            background-color: #022627;
+            color: #09c0c3;
+            border-radius: 15px;
+            height: 30px;
+            width: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #hero-area button:hover {
+            background-color: #09c0c3;
+            color: #022627;
+            text-decoration: underline;
+            transform: translate(10px, 0px);
+        }
+
+        #hero-image {
+            position: absolute;
+            top: 20%;
+            left: 35%;
+        }
+
+        #hero-image img {
+            margin-top: 50px;
+            height: auto;
+            width: 900px;
+            border-radius: 20px 80px 20px;
+        }
     </style>
+
 </head>
 <body>
     <header>
         <figure class="company-logo">
-            <img src="Images/Drop Logo.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast.">
+                    <a href="index.html">
+                        <img src="Images/Drop Logo.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast.">
+                    </a>
         </figure>
         <nav>
             <ul>
@@ -25,6 +81,42 @@
         </nav>
     </header>
 
+
+    <main>
+        <section id="hero-area">
+            <h1>
+                Stay Chill. Stay Cool.
+            </h1>
+
+            <h2>
+                Here are our Top Choices
+            </h2>
+
+            <div id="shop-now">
+                <button onclick="location.href='shop.html'">
+                    Shop Now
+                </button>
+            </div>
+
+            <figure id="hero-image">
+                <img src="Images/uZ0iU9Lqsd9.png" alt="a coffee cup carrying the Drip logo, with a steaming hot beverage inside. The cup is white, and the logo is prominently displayed in black text.">
+                <figcaption>
+                    <span>
+                        <sub>
+                            <a href="https://www.canva.com/mockups/mockup/uZ0iU9Lqsd9" target="_blank" rel="noopener noreferrer">
+                                Mockup Image of a coffee cup by Canva
+                            </a>
+                        </sub>
+                    </span>
+                </figcaption>
+            </figure>
+        </section>
+
+
+    </main>
+
+
+
     <footer>
         <figure>
             <img src="Images/Drop Logo for footer.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast." style="width: 100px;">
@@ -35,11 +127,40 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
             <ul class="legal-links">
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Cookies</a></li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+                <li>
+                    <a href="#">Cookies</a>
+                </li>
+            </ul>
+            <ul class="social-media-icons">
+                <li>
+                    <figure>
+                        <img src="Images/Instagram icon.png" alt="Instagram icon">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="Images/facebook icon.png" alt="Facebook icon">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="Images/X icon.png" alt="X icon">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="Images/LinkedIn icon..png" alt="LinkedIn icon">
+                    </figure>
+                </li>
             </ul>
         </figure>
     </footer>
+
 </body>
 </html>

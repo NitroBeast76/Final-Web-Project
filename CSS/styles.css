@@ -26,6 +26,19 @@ header{
 
 }
 
+h1{
+    font-size: 2.4rem; /* Sets a larger font size for the main heading */
+    color: #022627; /* Sets a dark color for the heading */
+    margin: 0; /* Removes default margin */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h2{
+    font-size: 1.8rem; /* Sets a smaller font size for subheadings */
+    color: #022627; /* Sets a dark color for subheadings */
+    margin: 0; /* Removes default margin */
+}
+
 nav{
     gap: 20px; /* Adds space between navigation items */
     padding: 20px; /* Adds padding around the navigation */
@@ -34,6 +47,7 @@ nav{
 }
 
 nav a{
+    display: inline-block; /* Allows padding and margin to be applied */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none; /* Removes underline from links */
     color: #022627;
@@ -44,6 +58,7 @@ nav a{
 nav a:hover{
     color: #405A53; /* Changes link color on hover for better visibility */
     text-decoration: underline; /* Adds underline on hover for emphasis */
+    transform: translate(0px, -5px) rotate(2deg) scale(1.05); /* Adds a slight transformation effect on hover */
 }
 
 nav ul{
@@ -56,11 +71,22 @@ nav ul li{
     display: inline; /* Displays list items inline */
 }
 
+figcaption{
+    font-size: 1.8rem; /* Sets a smaller font size for footer captions */
+    color: #09C0C3;
+}
+
+figcaption a{
+    color: #405a53; /* Sets link color in captions */
+    text-decoration: none; /* Removes underline from links */
+}
+    
 footer{
     background-color: #022627; /* Sets a dark background color for the footer */
     color: #B4D0C8; /* Sets a light text color for contrast */
     padding: 20px; /* Adds padding around the footer content */
     font-size: 1.4rem; /* Sets a smaller font size for the footer */
+    position: relative;    /* ← new */
 }
 
 footer figcaption{
@@ -86,20 +112,51 @@ footer a:hover{
     text-decoration: underline; /* Adds underline on hover for emphasis */
 }
 
+
+
 .footer-links{
     position: absolute;
-    top: 28%;
+    top: 10%;
     left: 57%;
     text-align: center; /* Centers the list items */
 }
 
+.footer-links a{
+    line-height: 200%;
+}
+
 .legal-links{
     position: absolute;
-    top: 28%;
+    top: 10%;
     left: 70%;
     text-align: center; /* Centers the list items */
 }
 
+.legal-links a{
+    line-height: 200%;
+}
+
+.social-media-icons{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    text-align: center; /* Centers the list items */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Centers the icons horizontally */
+    align-items: center; /* Centers the icons vertically */
+}
+
+.social-media-icons img{
+    width: 20px; /* Sets a fixed width for social media icons */
+    height: 20px; /* Sets a fixed height for social media icons */
+}
+
+.social-media-icons figure{
+    margin: 0 20px; /* Adds horizontal spacing between icons */
+}
+
+
 .company-logo img{
             width: 170px;
 }
+
