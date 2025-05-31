@@ -6,6 +6,44 @@
     <title>Drip</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <script src="JavaScript/script.js"></script>
+
+    <style>
+        .product-grid{
+            display: grid;
+            gap: 100px;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+            margin: 10px;
+            margin-top: 43px;
+            margin-left: 100px;
+        }
+
+        .product-grid > figure {
+            background-color: #a8bbb5;
+            border: 1px solid #a8bbb5;
+            width: 200px;
+            height: 200px;
+        }
+
+        .product-grid > figure img {
+            width: 75%;
+            height: 75%;
+            margin: 10px;
+        }
+
+        .product-grid > figure figcaption {
+            background-color: #B4D0C8;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #022627;
+            padding: 10px;
+        }
+
+        #filter-button{
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,6 +59,42 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <section id="products">
+            <h1>Products</h1>
+            <button id="filter-button">Filter</button>
+
+            <div class="product-grid">
+                <figure>
+                    <img src="#" alt="Product 1">
+                    <figcaption>Product 1</figcaption>
+                </figure>
+                <figure>
+                    <img src="#" alt="Product 2">
+                    <figcaption>Product 2</figcaption>
+                </figure>
+                <figure>
+                    <img src="#" alt="Product 3">
+                    <figcaption>Product 3</figcaption>
+                </figure>
+                <figure>
+                    <img src="#" alt="Product 4">
+                    <figcaption>Product 4</figcaption>
+                </figure>
+                <figure>
+                    <img src="#" alt="Product 5">
+                    <figcaption>Product 5</figcaption>
+                </figure>
+                <figure>
+                    <img src="#" alt="Product 6">
+                    <figcaption>Product 6</figcaption>
+                </figure>
+            </div>
+
+                <!-- Add more products as needed -->
+        </section>
+    </main>
 
     <footer>
         <figure>

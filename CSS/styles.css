@@ -71,6 +71,14 @@ nav ul li{
     display: inline; /* Displays list items inline */
 }
 
+main{
+    padding: 20px; /* Adds padding around the main content */
+    font-size: 1.6rem; /* Sets a smaller font size for the main content */
+    margin: 10px; /* Adds margin around the main content */
+}
+
+
+
 figcaption{
     font-size: 1.8rem; /* Sets a smaller font size for footer captions */
     color: #09C0C3;
@@ -81,6 +89,11 @@ figcaption a{
     text-decoration: none; /* Removes underline from links */
 }
     
+figcaption a:hover{
+    color: #09C0C3; /* Changes link color on hover for better visibility */
+    text-decoration: underline; /* Adds underline on hover for emphasis */
+}
+
 footer{
     background-color: #022627; /* Sets a dark background color for the footer */
     color: #B4D0C8; /* Sets a light text color for contrast */
