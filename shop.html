@@ -8,40 +8,90 @@
     <script src="JavaScript/script.js"></script>
 
     <style>
+        
+        #products h1{
+            text-transform: uppercase;
+            text-align: left;
+        }
+
         .product-grid{
             display: grid;
-            gap: 100px;
-            grid-template-columns: auto auto auto;
-            padding: 10px;
-            margin: 10px;
-            margin-top: 43px;
-            margin-left: 100px;
+            row-gap: 250px;
+            column-gap: 180px;
+            grid-template-columns: 300px 300px 300px;
+            grid-template-rows: 200px 200px;
+            padding: 20px;
+            margin: 100px;
+            margin-top: 70px;
+            margin-left: 60px;
+            align-items: center;
         }
 
         .product-grid > figure {
             background-color: #a8bbb5;
             border: 1px solid #a8bbb5;
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
         .product-grid > figure img {
-            width: 75%;
-            height: 75%;
+            width: 85%;
+            height: 85%;
             margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
         .product-grid > figure figcaption {
             background-color: #B4D0C8;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-weight: bold;
             color: #022627;
             padding: 10px;
+            border: 1px solid #a8bbb5;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
+
+        .product-grid > figure p {
+            font-size: 1.2rem;
+            color: #022627;
+            font-weight: bold;
+            background-color: #B4D0C8;
+            border: 1px solid #a8bbb5;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
 
         #filter-button{
             margin: 10px;
             padding: 10px;
+            background-color: #09C0C3;
+            color: #022627;
+            width: 100px;
+            border-radius: 10px;
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+
+        #filter-button:hover {
+            background-color: #022627;
+            color: #09C0C3;
+        }
+        
+        .heart-icon figure {
+            display: inline;
+        }
+
+        .heart-icon figure img {
+            height: auto;
+            width: 15%;
+            margin-left: 20px;
+            vertical-align: middle;
+            box-shadow: none;
         }
     </style>
 </head>
@@ -67,29 +117,217 @@
 
             <div class="product-grid">
                 <figure>
-                    <img src="#" alt="Product 1">
-                    <figcaption>Product 1</figcaption>
+                    <img src="Images/1st product.png" alt="Black and gold travel mug with handle and clear lid, DRiP logo on front.">
+                    <figcaption>
+                        DRiP Élan Series – Obsidian Gold Travel Tumbler
+                        <br>
+                        CAD $49.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
+                    
                 </figure>
+
                 <figure>
-                    <img src="#" alt="Product 2">
-                    <figcaption>Product 2</figcaption>
+                    <img src="Images/3rd product.png" alt="Matte black transit bottle with glossy red accents and DRIP droplet icon; sleek and bold design.">
+                    <figcaption>
+                        DRiP VantaFlare Transit Bottle
+                        <br>
+                        CAD $52.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
                 </figure>
+
                 <figure>
-                    <img src="#" alt="Product 3">
-                    <figcaption>Product 3</figcaption>
+                    <img src="Images/4th product.png" alt="Brushed silver water bottle with pale blue accents, straw lid, and DRIP droplet icon.">
+                    <figcaption>
+                        DRiP GlacierStream Hydration Bottle
+                        <br>
+                        CAD $47.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
                 </figure>
+
                 <figure>
-                    <img src="#" alt="Product 4">
-                    <figcaption>Product 4</figcaption>
+                    <img src="Images/5th product.png" alt="Flat black A6-shaped bottle with gold lid and DRIP logo; sleek, paper-like silhouette.">
+                    <figcaption>
+                        DRiP NoirSlate A6 Flask
+                        <br>
+                        CAD $45.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
                 </figure>
+                
                 <figure>
-                    <img src="#" alt="Product 5">
-                    <figcaption>Product 5</figcaption>
+                    <img src="Images/6th product.png" alt="Faceted matte black tumbler with purple accents and DRIP droplet icon; jewel-like design.">
+                    <figcaption>
+                        DRiP AmethystEdge Tumbler
+                        <br>
+                        CAD $48.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
                 </figure>
+
                 <figure>
-                    <img src="#" alt="Product 6">
-                    <figcaption>Product 6</figcaption>
+                    <img src="Images/7th product.png" alt="Matte black carbon fiber tumbler with iridescent purple accents and DRIP icon; sculptural and high-end design.">
+                    <figcaption>
+                        DRiP CarbonLuxe Prism Tumbler
+                        <br>
+                        CAD $65.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
                 </figure>
+
+                <!--
+                    <figure>
+                    <img src="Images/8th product.png" alt="Matte black travel tumbler with glossy red accents and DRIP logo; sleek and bold design.">
+                    <figcaption>
+                        DRiP VantaFlare Travel Tumbler
+                        <br>
+                        CAD $50.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Images/9th product.png" alt="Matte black travel tumbler with glossy red accents and DRIP logo; sleek and bold design.">
+                    <figcaption>
+                        DRiP VantaFlare Travel Tumbler
+                        <br>
+                        CAD $50.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Images/10th product.png" alt="Matte black travel tumbler with glossy red accents and DRIP logo; sleek and bold design.">
+                    <figcaption>
+                        DRiP VantaFlare Travel Tumbler
+                        <br>
+                        CAD $50.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Images/11th product.png" alt="Matte black travel tumbler with glossy red accents and DRIP logo; sleek and bold design.">
+                    <figcaption>
+                        DRiP VantaFlare Travel Tumbler
+                        <br>
+                        CAD $50.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Images/12th product.png" alt="Matte black travel tumbler with glossy red accents and DRIP logo; sleek and bold design.">
+                    <figcaption>
+                        DRiP VantaFlare Travel Tumbler
+                        <br>
+                        CAD $50.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Images/13th product.png" alt="Matte black travel tumbler with glossy red accents and DRIP logo; sleek and bold design.">
+                    <figcaption>
+                        DRiP VantaFlare Travel Tumbler
+                        <br>
+                        CAD $50.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Images/14th product.png" alt="Matte black travel tumbler with glossy red accents and DRIP logo; sleek and bold design.">
+                    <figcaption>
+                        DRiP VantaFlare Travel Tumbler
+                        <br>
+                        CAD $50.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Images/15th product.png" alt="Matte black travel tumbler with glossy red accents and DRIP logo; sleek and bold design.">
+                    <figcaption>
+                        DRiP VantaFlare Travel Tumbler
+                        <br>
+                        CAD $50.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Images/16th product.png" alt="Matte black travel tumbler with glossy red accents and DRIP logo; sleek and bold design.">
+                    <figcaption>
+                        DRiP VantaFlare Travel Tumbler
+                        <br>
+                        CAD $50.00
+                        <span  class="heart-icon">
+                            <figure>
+                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
+                            </figure>
+                        </span>
+                    </figcaption>
+                </figure>
+                -->
             </div>
 
                 <!-- Add more products as needed -->
