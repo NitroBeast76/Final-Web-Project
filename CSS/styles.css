@@ -173,3 +173,6 @@ footer a:hover{
             width: 170px;
 }
 
+hr {
+    border: 2px solid #022627; /* Sets a solid border for horizontal rules */
+}

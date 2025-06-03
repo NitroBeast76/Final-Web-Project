@@ -6,6 +6,81 @@
     <title>Drip</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <script src="JavaScript/script.js"></script>
+    <script src="https://kit.fontawesome.com/b6f797d5b9.js" crossorigin="anonymous"></script>
+
+    <style>
+
+        #our-story {
+            position: relative;
+            margin-bottom: 300px;
+        }
+
+        #intro{
+            font-size: 1.8rem;
+            margin-bottom: 50px;
+            margin: 20px;
+            padding: 20px;
+            color: #405A53;
+            font-weight:  bold;
+        }
+
+        #intro h1 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        #border{
+            border-left: 2px solid #022627;
+            height: 500px;
+            position: absolute;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        #reasons-qualities {
+            display: grid;
+            grid-template-columns: 500px auto 500px;
+            gap: 20px;
+            margin: 20px;
+            padding: 20px;
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+
+        #reasons {
+            font-size: 1.8rem;
+            color: #405A53;
+            font-weight: bold;
+        }
+
+        #reasons h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+
+
+        #qualities {
+            display: grid;
+            place-items: center;
+            grid-auto-flow: row; 
+            margin-left: 40px;
+            flex-grow: 1;
+            grid-template-columns: 100px;
+        }
+
+        .icon-container {
+            width: 100px;
+            height: 100px;
+            background-color: #022627;
+            border-radius: 50%;
+        }
+    </style>
+
 </head>
 <body>
     <header>
@@ -23,15 +98,48 @@
     </header>
 
     <main>
-        <section class="our-story">
-            <h1>Who are we?</h1>
-            <p>
-                Lorem ipsum dolor sit amet. Vel exercitationem cumque sit recusandae consequatur et quasi voluptas est sunt alias et quas odio ut nihil beatae. Et facere sint qui consequatur dolores non optio Quis!
+        <section cid="our-story">
+            <div id="intro">
+                <h1><b>Who are we?</b></h1>
+                <p>
+                    Lorem ipsum dolor sit amet. Vel exercitationem cumque sit recusandae consequatur et quasi voluptas est sunt alias et quas odio ut nihil beatae. Et facere sint qui consequatur dolores non optio Quis!
 
-                Sit vero reprehenderit ea quia dignissimos et totam galisum ut dolorum quas? Qui quod voluptatem vel nesciunt molestias ut dicta necessitatibus ab cupiditate cumque.
+                    Sit vero reprehenderit ea quia dignissimos et totam galisum ut dolorum quas? Qui quod voluptatem vel nesciunt molestias ut dicta necessitatibus ab cupiditate cumque.
 
-                Sed nesciunt libero aut aspernatur commodi eos dolor facilis quo dignissimos consequuntur qui odio dicta. Et porro repudiandae est autem dignissimos vel officia asperiores et porro tempora et quasi magnam et delectus delectus. Sit architecto enim ut ducimus galisum 33 distinctio nulla sed repellendus adipisci ex possimus quidem qui necessitatibus esse aut accusantium quos.
-            </p>
+                    Sed nesciunt libero aut aspernatur commodi eos dolor facilis quo dignissimos consequuntur qui odio dicta. Et porro repudiandae est autem dignissimos vel officia asperiores et porro tempora et quasi magnam et delectus delectus. Sit architecto enim ut ducimus galisum 33 distinctio nulla sed repellendus adipisci ex possimus quidem qui necessitatibus esse aut accusantium quos.
+                </p>
+            </div>
+
+            <hr>
+
+            <div id="reasons-qualities">
+                <div id="reasons">
+                    <h1>Why Us?</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>  
+
+                <div id="border"></div>
+
+                <div id="qualities">
+                    <figure class="icon-container">
+
+                    </figure>
+                    
+                    <figure class="icon-container">
+
+                    </figure>
+
+                    <figure class="icon-container">
+
+                    </figure>
+
+                    </div>
+                </div>
+
+                </div>
+
         </section>
     </main>
 
