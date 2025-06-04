@@ -12,6 +12,8 @@
         #products h1{
             text-transform: uppercase;
             text-align: left;
+            margin-left: 12rem;
+            font-size: 5rem;
         }
 
         .product-grid{
@@ -71,6 +73,7 @@
             padding: 10px;
             background-color: #09C0C3;
             color: #022627;
+            margin-left: 125rem;
             width: 100px;
             border-radius: 10px;
             font-size: 1.6rem;
@@ -93,12 +96,38 @@
             vertical-align: middle;
             box-shadow: none;
         }
+
+        .heart-icon figure img:hover {
+            filter: 
+                brightness(0) 
+                saturate(100%) 
+                invert(16%) 
+                sepia(99%) 
+                saturate(7404%) 
+                hue-rotate(4deg) 
+                brightness(95%) 
+                contrast(118%);
+        }
+
+        .heart-icon figure img:active {
+            backdrop-filter: 
+                brightness(0) 
+                saturate(100%) 
+                invert(16%) 
+                sepia(99%) 
+                saturate(7404%) 
+                hue-rotate(4deg) 
+                brightness(95%) 
+                contrast(118%);
+        }
     </style>
 </head>
 <body>
     <header>
         <figure class="company-logo">
-            <img src="Images/Drop Logo.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast.">
+            <a href="index.html">
+                        <img src="Images/Drop Logo.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast.">
+            </a>
         </figure>
         <nav>
             <ul>
@@ -357,22 +386,29 @@
             <ul class="social-media-icons">
                 <li>
                     <figure>
-                        <img src="Images/Instagram icon.png" alt="Instagram icon">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="Images/Instagram icon.png" alt="Instagram icon">
+                        </a>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="Images/facebook icon.png" alt="Facebook icon">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="Images/facebook icon.png" alt="Facebook icon">
+                        </a>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="Images/X icon.png" alt="X icon">
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="Images/X icon.png" alt="X icon">
+                        </a>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="Images/LinkedIn icon..png" alt="LinkedIn icon">
+                        <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
+                            <img src="Images/LinkedIn icon..png" alt="LinkedIn icon">
                     </figure>
                 </li>
             </ul>

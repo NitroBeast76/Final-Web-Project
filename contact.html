@@ -9,14 +9,18 @@
 
     <style>
         #contact-form {
-            background-color: #cee9e1;
+            background-color: #c2dfd6;
             padding: 3rem;
-            border-radius: 10px;
-            width: 170rem;
-            height: 55rem;
+            margin: 3rem;
+            width: 55rem;
+            height: 74rem;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            flex-grow: 8;
             margin-top: 5rem;
+            margin-bottom: 5rem;
+            position: absolute;
+            left: 55%;
+            top: 25%;
+
         }
 
         fieldset {
@@ -26,7 +30,7 @@
         }
 
         legend {
-            font-size: 1.8rem;
+            font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 1rem;
             color: #022627;
@@ -34,7 +38,8 @@
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 4rem;
+            margin-left: 0.7rem;
         }
 
         label {
@@ -47,12 +52,14 @@
         input,
         textarea {
             width: 100%;
-            padding: 0.7rem;
+            padding: 1rem;
             border: 1px solid #cfdcd8;
             border-radius: 3px;
             background-color: #e5efec;
             font-size: 1.4rem;
             color: #B4D0C8;
+            margin-left: 13rem;
+            width: 68%;
         }
 
         button {
@@ -61,8 +68,12 @@
             font-weight: bold;
             border: none;
             padding: 0.6rem 1.5rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            width: 9rem;
+            height: 3rem;
         }
 
         button:hover {
@@ -73,10 +84,11 @@
             font-size: 1.8rem;
             color: #022627;
             font-weight: bold;
-            background-color: #78a799;
-            align-self: flex-start;
+            background-color: #93ada5;
             padding: 2rem;
-            padding-right: 6rem;
+            padding-right: 70rem;
+            position: relative;
+            margin-bottom: 70rem;
         }
         
         #plea h1 {
@@ -85,20 +97,14 @@
             text-transform: uppercase;
             text-decoration: underline;
         }
-
-        #contact-us {
-            display: flex;
-            justify-content: space-evenly;
-            gap: 2rem;
-            margin: 2rem;
-            padding: 2rem;
-        }
     </style>
 </head>
 <body>
     <header>
         <figure class="company-logo">
-            <img src="Images/Drop Logo.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast.">
+            <a href="index.html">
+                        <img src="Images/Drop Logo.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast.">
+            </a>
         </figure>
         <nav>
             <ul>
@@ -123,6 +129,8 @@
                 <fieldset>
                 <legend id="contactFormLegend">Contact Information</legend>
 
+                <br>
+
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input id="name" name="name" type="text" placeholder="Lorem ipsum dolor sit amet" required />
@@ -139,13 +147,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="concerns">Concerns</label>
-                    <textarea id="concerns" name="concerns" rows="2" placeholder="Lorem ipsum dolor sit amet"></textarea>
+                    <label for="subject">Subject</label>
+                    <input id="subject" name="subject" type="text" placeholder="Lorem ipsum dolor sit amet" />
                 </div>
 
                 <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input id="subject" name="subject" type="text" placeholder="Lorem ipsum dolor sit amet" />
+                    <label for="concerns">Concerns</label>
+                    <textarea id="concerns" name="concerns" rows="2" placeholder="Lorem ipsum dolor sit amet"></textarea>
                 </div>
 
                 <button type="submit">SUBMIT</button>
@@ -177,22 +185,29 @@
             <ul class="social-media-icons">
                 <li>
                     <figure>
-                        <img src="Images/Instagram icon.png" alt="Instagram icon">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="Images/Instagram icon.png" alt="Instagram icon">
+                        </a>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="Images/facebook icon.png" alt="Facebook icon">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="Images/facebook icon.png" alt="Facebook icon">
+                        </a>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="Images/X icon.png" alt="X icon">
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="Images/X icon.png" alt="X icon">
+                        </a>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="Images/LinkedIn icon..png" alt="LinkedIn icon">
+                        <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
+                            <img src="Images/LinkedIn icon..png" alt="LinkedIn icon">
                     </figure>
                 </li>
             </ul>
