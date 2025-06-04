@@ -12,7 +12,7 @@
 
         #our-story {
             position: relative;
-            margin-bottom: 300px;
+            margin-bottom: 400px;
         }
 
         #intro{
@@ -32,14 +32,6 @@
             text-align: center;
         }
 
-        #border{
-            border-left: 2px solid #022627;
-            height: 500px;
-            position: absolute;
-            left: 50%;
-            margin-left: -3px;
-        }
-
         #reasons-qualities {
             display: grid;
             grid-template-columns: 500px auto 500px;
@@ -50,10 +42,20 @@
             margin-bottom: 100px;
         }
 
+        #border{
+            border-left: 2px solid #022627;
+            height: 350px;
+            position: absolute;
+            left: 50%;
+            margin-left: -3px;
+            grid-area: 1 / 2 / span 1 / span 1;
+        }
+
         #reasons {
             font-size: 1.8rem;
             color: #405A53;
             font-weight: bold;
+            grid-area: 1 / 1 / span 1 / span 1;
         }
 
         #reasons h1 {
@@ -63,21 +65,21 @@
             text-decoration: underline;
         }
 
-
         #qualities {
-            display: grid;
-            place-items: center;
-            grid-auto-flow: row; 
-            margin-left: 40px;
-            flex-grow: 1;
-            grid-template-columns: 100px;
+            font-size: 1.8rem;
+            color: #405A53;
+            font-weight: bold;
+            grid-area: 1 / 3 / span 1 / span 1;
         }
 
-        .icon-container {
-            width: 100px;
-            height: 100px;
-            background-color: #022627;
-            border-radius: 50%;
+        #qualities ul {
+            list-style-type: decimal;
+            padding: 0;
+        }
+
+        #qualities li {
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
     </style>
 
@@ -123,19 +125,19 @@
                 <div id="border"></div>
 
                 <div id="qualities">
-                    <figure class="icon-container">
+                    <ul>
+                        <li>
+                            Lorem ipsum dolor sit amet. Eum tenetur soluta qui voluptas incidunt id saepe consectetur sed voluptates quaerat et sapiente galisum est sunt molestiae
+                        </li>
 
-                    </figure>
-                    
-                    <figure class="icon-container">
+                        <li>
+                            Lorem ipsum dolor sit amet. Eum tenetur soluta qui voluptas incidunt id saepe consectetur sed voluptates quaerat et sapiente galisum est sunt molestiae
+                        </li>
 
-                    </figure>
-
-                    <figure class="icon-container">
-
-                    </figure>
-
-                    </div>
+                        <li>
+                            Lorem ipsum dolor sit amet. Eum tenetur soluta qui voluptas incidunt id saepe consectetur sed voluptates quaerat et sapiente galisum est sunt molestiae
+                        </li>
+                    </ul>
                 </div>
 
                 </div>

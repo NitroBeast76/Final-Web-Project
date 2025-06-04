@@ -6,6 +6,94 @@
     <title>Drip</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <script src="JavaScript/script.js"></script>
+
+    <style>
+        #contact-form {
+            background-color: #cee9e1;
+            padding: 3rem;
+            border-radius: 10px;
+            width: 170rem;
+            height: 55rem;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex-grow: 8;
+            margin-top: 5rem;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        legend {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #022627;
+            text-decoration: underline;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #022627;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #cfdcd8;
+            border-radius: 3px;
+            background-color: #e5efec;
+            font-size: 1.4rem;
+            color: #B4D0C8;
+        }
+
+        button {
+            background-color: #022627;
+            color: #09C0C3;
+            font-weight: bold;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        button:hover {
+            background-color: #022627;
+        }
+
+        #plea {
+            font-size: 1.8rem;
+            color: #022627;
+            font-weight: bold;
+            background-color: #78a799;
+            align-self: flex-start;
+            padding: 2rem;
+            padding-right: 6rem;
+        }
+        
+        #plea h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+
+        #contact-us {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 2rem;
+            margin: 2rem;
+            padding: 2rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,6 +109,50 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <div id="contact-us">
+            <div id="plea">
+                <h1>Any Issues?</h1>
+                <p>
+                    Lorem ipsum dolor sit amet. Qui ratione modi et expedita perspiciatis et beatae doloremque sit consequatur consequatur non quasi adipisci? A tempore harum et minima illum ea facere laudantium. 33 enim velit aut exercitationem iusto non unde vitae sed laudantium voluptas.
+                </p>
+            </div>
+
+            <form aria-labelledby="contactFormLegend" id="contact-form">
+                <fieldset>
+                <legend id="contactFormLegend">Contact Information</legend>
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Lorem ipsum dolor sit amet" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Lorem ipsum dolor sit amet" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" name="phone" type="tel" placeholder="Lorem ipsum dolor sit amet" />
+                </div>
+
+                <div class="form-group">
+                    <label for="concerns">Concerns</label>
+                    <textarea id="concerns" name="concerns" rows="2" placeholder="Lorem ipsum dolor sit amet"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input id="subject" name="subject" type="text" placeholder="Lorem ipsum dolor sit amet" />
+                </div>
+
+                <button type="submit">SUBMIT</button>
+                </fieldset>
+            </form>
+        </div>
+    </main>
 
     <footer>
         <figure>
