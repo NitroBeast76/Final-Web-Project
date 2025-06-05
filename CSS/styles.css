@@ -47,6 +47,7 @@ nav{
 }
 
 nav a{
+    position: relative;
     display: inline-block; /* Allows padding and margin to be applied */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none; /* Removes underline from links */
@@ -54,12 +55,49 @@ nav a{
     padding: 20px;
     margin-top: 0;
     font-size: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 nav a:hover{
     color: #405A53; /* Changes link color on hover for better visibility */
-    text-decoration: underline; /* Adds underline on hover for emphasis */
     transform: translate(0px, -5px) rotate(2deg) scale(1.05); /* Adds a slight transformation effect on hover */
+    opacity: 1;
+}
+
+nav a::after {
+    content: "";                    /* Required to render the pseudo-element */
+    position: absolute;            /* So it can be freely placed */
+    bottom: 0;                     /* Start from the bottom */
+    left: 0;
+    width: 100%;                   /* Cover the full width */
+    height: 0%;                    /* Hidden initially */
+    background-color: #09C0C3;     /* The sliding background color */
+    z-index: -1;                   /* Sit behind the link text */
+    transition: height 0.3s ease;  /* Animate smoothly */
+}
+
+nav a:hover::after {
+    height: 100%;
+}
+
+
+nav a::before{
+    content: "";
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 80%;
+    height: 0.2rem;
+    background-color: #022627;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 1s ease;
+    z-index: 1;
+}
+
+nav a:hover::before{
+    transform: translateX(-50%) scaleX(1);
 }
 
 nav ul{
@@ -76,9 +114,17 @@ main{
     padding: 20px; /* Adds padding around the main content */
     font-size: 1.6rem; /* Sets a smaller font size for the main content */
     margin: 10px; /* Adds margin around the main content */
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: fadeInForMain 1s ease-out forwards;
 }
 
-
+@keyframes fadeInForMain {
+    to {
+        opacity: 1;
+        transform: translateY(-2rem);
+    }
+}
 
 figcaption{
     font-size: 1.8rem; /* Sets a smaller font size for footer captions */

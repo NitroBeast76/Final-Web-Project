@@ -12,6 +12,23 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-size: 150%;
+            animation: background-image-zoom-out 1s ease-out forwards;
+            background-attachment: fixed;
+        }
+
+        
+
+        @keyframes background-image-zoom-out {
+            0%{
+                background-size: 150%;
+                filter: blur(0.1rem);
+            }
+
+            100%{
+                background-size: 100%;
+                filter: blur(0);
+            }
         }
 
         nav a {
@@ -27,6 +44,16 @@
             margin-top: 200px;
             padding: 50px;
             margin-bottom: 500px;
+            opacity: 0;
+            transform: translateY(1rem);
+            animation: transition-up 1s ease-out forwards;
+        }
+
+        @keyframes transition-up{
+            to {
+                opacity: 1;
+                transform: translateY(-10rem);
+            }
         }
 
         #hero-area h1 {
@@ -42,6 +69,7 @@
         }
 
         #hero-area button {
+            position: relative;
             padding: 20px;
             margin: 10px;
             margin-right: 0;
@@ -57,14 +85,32 @@
             justify-content: center;
             font-size: 2rem;
             font-weight: bold;
-            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, cursor 0.3s ease;
+        }
+
+        #hero-area button::after {
+            content: "";
+            position: absolute;
+            bottom: 0.5rem;
+            left: 50%;
+            width: 70%;
+            height: 0.2rem;
+            background-color: #022627;
+            transform: translateX(-50px) scaleX(0);
+            transform-origin: left;
+            transition: transform 1s ease;
+            z-index: 1;
+        }
+
+        #hero-area button:hover::after{
+            transform: translateX(-50px) scaleX(1);
         }
 
         #hero-area button:hover {
             background-color: #09c0c3;
             color: #022627;
-            text-decoration: underline;
-            transform: translate(10px, 0px);
+            transform: translate(10rem, 0);
+            cursor: pointer;
         }
 
         #hero-image img {

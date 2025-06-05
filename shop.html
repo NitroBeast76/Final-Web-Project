@@ -14,6 +14,22 @@
             text-align: left;
             margin-left: 12rem;
             font-size: 5rem;
+            transform: translateX(-16rem);
+            opacity: 0;
+            animation: slide-to-side 1s ease-out forwards;
+            /* background-image: url('Images/80cb0a8b-324b-4ef2-8590-f49a44e9cbc0.png');
+            background-repeat: no-repeat;
+            background-size: 150%;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 5rem;*/
+        }
+
+        @keyframes slide-to-side {
+            to {
+                opacity: 1;
+                transform: translateX(1rem);
+            }
         }
 
         .product-grid{
@@ -78,6 +94,9 @@
             border-radius: 10px;
             font-size: 1.6rem;
             font-weight: bold;
+            transform: translateX(-16rem);
+            opacity: 0;
+            animation: slide-to-side 1s ease-out forwards;
         }
 
         #filter-button:hover {
