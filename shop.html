@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drip</title>
     <link rel="stylesheet" href="CSS/styles.css">
-    <script src="JavaScript/script.js"></script>
+    <script src="JavaScript/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/b6f797d5b9.js" crossorigin="anonymous"></script>
 
     <style>
         
@@ -74,71 +75,38 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
-        .product-grid > figure p {
-            font-size: 1.2rem;
-            color: #022627;
-            font-weight: bold;
-            background-color: #B4D0C8;
-            border: 1px solid #a8bbb5;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-
-
-        #filter-button{
+        .filter-button{
             margin: 10px;
             padding: 10px;
             background-color: #09C0C3;
             color: #022627;
-            margin-left: 125rem;
-            width: 100px;
+            width: 10%;
             border-radius: 10px;
             font-size: 1.6rem;
             font-weight: bold;
             transform: translateX(-16rem);
             opacity: 0;
             animation: slide-to-side 1s ease-out forwards;
+            padding: 1rem;
+            margin: 4px;
+            cursor: pointer;
         }
 
-        #filter-button:hover {
+        .filter-button:hover {
             background-color: #022627;
             color: #09C0C3;
+        }   
+        
+        #whole-filter-button-holder {
+            margin-left: 13rem;
+        }
+
+        i {
+            margin-left: 5rem;
+            font-size: 4rem;
+            color: red;
         }
         
-        .heart-icon figure {
-            display: inline;
-        }
-
-        .heart-icon figure img {
-            height: auto;
-            width: 15%;
-            margin-left: 20px;
-            vertical-align: middle;
-            box-shadow: none;
-        }
-
-        .heart-icon figure img:hover {
-            filter: 
-                brightness(0) 
-                saturate(100%) 
-                invert(16%) 
-                sepia(99%) 
-                saturate(7404%) 
-                hue-rotate(4deg) 
-                brightness(95%) 
-                contrast(118%);
-        }
-
-        .heart-icon figure img:active {
-            backdrop-filter: 
-                brightness(0) 
-                saturate(100%) 
-                invert(16%) 
-                sepia(99%) 
-                saturate(7404%) 
-                hue-rotate(4deg) 
-                brightness(95%) 
-                contrast(118%);
-        }
     </style>
 </head>
 <body>
@@ -161,90 +129,87 @@
     <main>
         <section id="products">
             <h1><b>Products</b></h1>
-            <button id="filter-button">Filter</button>
+            <div id="whole-filter-button-holder">
+                <button class="filter-button holder">Filter</button>
+                <button class="filter-button active" data-filter="all">Show all</button>
+                <button class="filter-button" data-filter="élanSeries">Élan Series</button>
+                <button class="filter-button" data-filter="vantaFlare">VantaFlare</button>
+                <button class="filter-button" data-filter="glacierStream">GlacierStream</button>
+                <button class="filter-button" data-filter="noirSlate">NoirSlate</button>
+                <button class="filter-button" data-filter="amethystEdge">AmethystEdge</button>
+                <button class="filter-button" data-filter="carbonLuxe">CarbonLuxe</button>
+            </div>
 
             <div class="product-grid">
-                <figure>
+                <!-- Filter Buttons -->
+                <figure class="élanSeries">
                     <img src="Images/1st product.png" alt="Black and gold travel mug with handle and clear lid, DRiP logo on front.">
                     <figcaption>
-                        DRiP Élan Series – Obsidian Gold Travel Tumbler
+                        DRiP Élan Series - Obsidian Gold Travel Tumbler
                         <br>
                         CAD $49.00
-                        <span  class="heart-icon">
-                            <figure>
-                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
-                            </figure>
+                        <span class="heart-icon">
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
                         </span>
                     </figcaption>
-                    
                 </figure>
 
-                <figure>
+                <figure class="vantaFlare">
                     <img src="Images/3rd product.png" alt="Matte black transit bottle with glossy red accents and DRIP droplet icon; sleek and bold design.">
                     <figcaption>
-                        DRiP VantaFlare Transit Bottle
+                        DRiP VantaFlare Transit Bottle – Obsidian Red Finish
                         <br>
                         CAD $52.00
-                        <span  class="heart-icon">
-                            <figure>
-                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
-                            </figure>
+                        <span class="heart-icon">
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
                         </span>
                     </figcaption>
                 </figure>
 
-                <figure>
+                <figure class="glacierStream">
                     <img src="Images/4th product.png" alt="Brushed silver water bottle with pale blue accents, straw lid, and DRIP droplet icon.">
                     <figcaption>
-                        DRiP GlacierStream Hydration Bottle
+                        DRiP GlacierStream Hydration Bottle – Frostblue Finish
                         <br>
                         CAD $47.00
-                        <span  class="heart-icon">
-                            <figure>
-                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
-                            </figure>
+                        <span class="heart-icon">
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
                         </span>
                     </figcaption>
                 </figure>
 
-                <figure>
+                <figure class="noirSlate">
                     <img src="Images/5th product.png" alt="Flat black A6-shaped bottle with gold lid and DRIP logo; sleek, paper-like silhouette.">
                     <figcaption>
-                        DRiP NoirSlate A6 Flask
+                        DRiP NoirSlate A6 Flask – Noirgold Finish
                         <br>
                         CAD $45.00
-                        <span  class="heart-icon">
-                            <figure>
-                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
-                            </figure>
+                        <span class="heart-icon">
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
                         </span>
                     </figcaption>
                 </figure>
                 
-                <figure>
+                <figure class="amethystEdge">
                     <img src="Images/6th product.png" alt="Faceted matte black tumbler with purple accents and DRIP droplet icon; jewel-like design.">
                     <figcaption>
-                        DRiP AmethystEdge Tumbler
+                        DRiP AmethystEdge Tumbler – ChippedNoirAmethyst Finish
                         <br>
                         CAD $48.00
-                        <span  class="heart-icon">
-                            <figure>
-                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
-                            </figure>
+                        <span class="heart-icon">
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
                         </span>
                     </figcaption>
                 </figure>
 
-                <figure>
+                <figure class="carbonLuxe">
                     <img src="Images/7th product.png" alt="Matte black carbon fiber tumbler with iridescent purple accents and DRIP icon; sculptural and high-end design.">
                     <figcaption>
-                        DRiP CarbonLuxe Prism Tumbler
+                        DRiP CarbonLuxe Prism Tumbler – CarbonIridescent Finish
                         <br>
                         CAD $65.00
-                        <span  class="heart-icon">
-                            <figure>
-                                <img src ="Images/heart icon.png" alt="Heart Icon for Selection">
-                            </figure>
+                        <span class="heart-icon">
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
                         </span>
                     </figcaption>
                 </figure>
