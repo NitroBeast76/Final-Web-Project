@@ -10,7 +10,7 @@ const filterButtons = document.querySelectorAll(
 );
 
 // Gather all product figures
-const products = document.querySelectorAll('.product-grid figure');
+const products = document.querySelectorAll('.product-grid > figure');
 
 function filter(category) {
     products.forEach(product => {
@@ -35,3 +35,14 @@ filterButtons.forEach(btn => {
 
 // On page load, show all products
 filter('all');
+
+
+function detailsBoxOpen(element) {
+    element.querySelector(".details-box").style.display = "block";
+}
+
+function detailsBoxClose(element, event) {
+    event.stopPropagation(); // prevents parent clicks from firing
+    element.closest(".details-box").style.display = "none";
+}
+

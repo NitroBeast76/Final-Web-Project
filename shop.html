@@ -107,6 +107,78 @@
             color: red;
         }
         
+
+        .details-box{
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding: 20rem;
+            margin: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(70, 109, 99,0.2);
+            animation: appearMagic 1s ease-out;
+        }
+
+        @keyframes appearMagic {
+            0%{
+                opacity: 0;
+            }
+
+            100%{
+                opacity: 1;
+            }
+        }
+
+        .details-content-for-modal{
+            background-color: #a8bbb5;
+            margin: auto;
+            padding: 1.4rem;
+            border: 1px solid #B4D0C8;
+            width: 90%;
+            height: 100%;
+            display: flex;
+        }
+
+        .close{
+            color: #405A53;
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus{
+            color: #022627;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .details-content-for-modal > figure {
+            width: 50rem;
+            height: 50rem;
+        }
+
+        .details-content-for-modal > figure img {
+            width: 85%;
+            height: 85%;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .details-content-for-modal > figure figcaption{
+            background-color: #B4D0C8;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #022627;
+            padding: 1rem;
+            border: 1px solid #a8bbb5;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
     </style>
 </head>
 <body>
@@ -142,7 +214,7 @@
 
             <div class="product-grid">
                 <!-- Filter Buttons -->
-                <figure class="élanSeries">
+                <figure class="élanSeries" onclick="detailsBoxOpen(this)">
                     <img src="Images/1st product.png" alt="Black and gold travel mug with handle and clear lid, DRiP logo on front.">
                     <figcaption>
                         DRiP Élan Series - Obsidian Gold Travel Tumbler
@@ -151,10 +223,32 @@
                         <span class="heart-icon">
                             <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
                         </span>
-                    </figcaption>
+                        <br>
+                        <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
+                    </figcaption>   
+
+                    <div class="details-box">
+                        <div class="details-content-for-modal">
+                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <figure>
+                                <img src="Images/1st product.png" alt="Black and gold travel mug with handle and clear lid, DRiP logo on front.">
+                                <figcaption>
+                                    DRiP Élan Series - Obsidian Gold Travel Tumbler
+                                    <br>
+                                    CAD $49.00
+                                    <span class="heart-icon">
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                    </span>
+                                    <br>
+                                    <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
                 </figure>
 
-                <figure class="vantaFlare">
+                <figure class="vantaFlare" onclick="detailsBoxOpen(this)"> 
                     <img src="Images/3rd product.png" alt="Matte black transit bottle with glossy red accents and DRIP droplet icon; sleek and bold design.">
                     <figcaption>
                         DRiP VantaFlare Transit Bottle – Obsidian Red Finish
@@ -164,9 +258,27 @@
                             <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
                         </span>
                     </figcaption>
+                    
+                    <div class="details-box">
+                        <div class="details-content-for-modal">
+                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <figure>
+                                <img src="Images/3rd product.png" alt="Matte black transit bottle with glossy red accents and DRIP droplet icon; sleek and bold design.">
+                                <figcaption>
+                                    DRiP VantaFlare Transit Bottle – Obsidian Red Finish
+                                    <br>
+                                    CAD $52.00
+                                    <span class="heart-icon">
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
                 </figure>
 
-                <figure class="glacierStream">
+                <figure class="glacierStream" onclick="detailsBoxOpen(this)">
                     <img src="Images/4th product.png" alt="Brushed silver water bottle with pale blue accents, straw lid, and DRIP droplet icon.">
                     <figcaption>
                         DRiP GlacierStream Hydration Bottle – Frostblue Finish
@@ -176,9 +288,27 @@
                             <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
                         </span>
                     </figcaption>
+                    
+                    <div class="details-box">
+                        <div class="details-content-for-modal">
+                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <figure>
+                                <img src="Images/4th product.png" alt="Brushed silver water bottle with pale blue accents, straw lid, and DRIP droplet icon.">
+                                <figcaption>
+                                    DRiP GlacierStream Hydration Bottle – Frostblue Finish
+                                    <br>
+                                    CAD $47.00
+                                    <span class="heart-icon">
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
                 </figure>
 
-                <figure class="noirSlate">
+                <figure class="noirSlate" onclick="detailsBoxOpen(this)">
                     <img src="Images/5th product.png" alt="Flat black A6-shaped bottle with gold lid and DRIP logo; sleek, paper-like silhouette.">
                     <figcaption>
                         DRiP NoirSlate A6 Flask – Noirgold Finish
@@ -188,9 +318,27 @@
                             <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
                         </span>
                     </figcaption>
+
+                    <div class="details-box">
+                        <div class="details-content-for-modal">
+                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <figure>
+                                <img src="Images/5th product.png" alt="Flat black A6-shaped bottle with gold lid and DRIP logo; sleek, paper-like silhouette.">
+                                <figcaption>
+                                    DRiP NoirSlate A6 Flask – Noirgold Finish
+                                    <br>
+                                    CAD $45.00
+                                    <span class="heart-icon">
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
                 </figure>
                 
-                <figure class="amethystEdge">
+                <figure class="amethystEdge" onclick="detailsBoxOpen(this)">
                     <img src="Images/6th product.png" alt="Faceted matte black tumbler with purple accents and DRIP droplet icon; jewel-like design.">
                     <figcaption>
                         DRiP AmethystEdge Tumbler – ChippedNoirAmethyst Finish
@@ -200,9 +348,27 @@
                             <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
                         </span>
                     </figcaption>
+
+                    <div class="details-box">
+                        <div class="details-content-for-modal">
+                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <figure>
+                                <img src="Images/6th product.png" alt="Faceted matte black tumbler with purple accents and DRIP droplet icon; jewel-like design.">
+                                <figcaption>
+                                    DRiP AmethystEdge Tumbler – ChippedNoirAmethyst Finish
+                                    <br>
+                                    CAD $48.00
+                                    <span class="heart-icon">
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
                 </figure>
 
-                <figure class="carbonLuxe">
+                <figure class="carbonLuxe" onclick="detailsBoxOpen(this)">
                     <img src="Images/7th product.png" alt="Matte black carbon fiber tumbler with iridescent purple accents and DRIP icon; sculptural and high-end design.">
                     <figcaption>
                         DRiP CarbonLuxe Prism Tumbler – CarbonIridescent Finish
@@ -212,6 +378,23 @@
                             <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
                         </span>
                     </figcaption>
+
+                    <div class="details-box">
+                        <div class="details-content-for-modal">
+                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <figure>
+                                <img src="Images/7th product.png" alt="Matte black carbon fiber tumbler with iridescent purple accents and DRIP icon; sculptural and high-end design.">
+                                <figcaption>
+                                    DRiP CarbonLuxe Prism Tumbler – CarbonIridescent Finish
+                                    <br>
+                                    CAD $65.00
+                                    <span class="heart-icon">
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
                 </figure>
 
                 <!--
@@ -341,6 +524,8 @@
                     </figcaption>
                 </figure>
                 -->
+
+                
             </div>
 
                 <!-- Add more products as needed -->

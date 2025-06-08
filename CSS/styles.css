@@ -111,9 +111,9 @@ nav ul li{
 }
 
 main{
-    padding: 20px; /* Adds padding around the main content */
+    padding: 2rem; /* Adds padding around the main content */
     font-size: 1.6rem; /* Sets a smaller font size for the main content */
-    margin: 10px; /* Adds margin around the main content */
+    margin: 2rem; /* Adds margin around the main content */
     opacity: 0;
     transform: translateY(1rem);
     animation: fadeInForMain 1s ease-out forwards;
