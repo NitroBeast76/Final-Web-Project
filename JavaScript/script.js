@@ -4,45 +4,51 @@ function toggleHeartIcon(x){
 }
 
 
-// Gather all buttons that have a data-filter attribute
+// 1. FIND ALL FILTER BUTTONS
 const filterButtons = document.querySelectorAll(
     '#whole-filter-button-holder .filter-button[data-filter]'
 );
 
-// Gather all product figures
+// 2. FIND ALL PRODUCT CONTAINERS
 const products = document.querySelectorAll('.product-grid > figure');
 
+// 3. CREATE THE FILTER FUNCTION
 function filter(category) {
     products.forEach(product => {
-        product.style.display =
-            category === 'all' || product.classList.contains(category)
-                ? 'flex' // ← must be "flex" to match your CSS
-                : 'none';
+        if (category === 'all' || product.classList.contains(category)) {
+            product.style.display = 'flex';
+        } else {
+            product.style.display = 'none';
+        }
     });
 }
 
-// Attach click listeners to each filter button
+// 4. SET UP CLICK LISTENERS FOR FILTER BUTTONS
 filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-        // Remove "active" from all buttons, then add to the clicked one
+        // Update button active states
         filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-
+        
         // Apply filter
         filter(btn.getAttribute('data-filter'));
     });
 });
 
-// On page load, show all products
+// 5. INITIAL SETUP WHEN PAGE LOADS
 filter('all');
 
-
 function detailsBoxOpen(element) {
-    element.querySelector(".details-box").style.display = "block";
+  // climb up to the <figure> that wraps this <img>…
+  const fig = element.closest("figure");
+  if (!fig) return;
+  // …then find & show its details-box
+  fig.querySelector(".details-box").style.display = "block";
 }
 
 function detailsBoxClose(element, event) {
-    event.stopPropagation(); // prevents parent clicks from firing
-    element.closest(".details-box").style.display = "none";
+  event.stopPropagation(); // prevents parent clicks from firing
+  element.closest(".details-box").style.display = "none";
 }
+
 
