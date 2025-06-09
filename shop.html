@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <link rel="icon" type="Images/Favicon.png" href="Images/Favicon.png">
     <link rel="stylesheet" href="CSS/styles.css">
     <script src="JavaScript/script.js" defer></script>
@@ -18,6 +21,9 @@
             font-size: 5rem;
             transform: translateX(-16rem);
             opacity: 0;
+            font-family: "Audiowide", sans-serif;
+            font-weight: 400;
+            font-style: normal;
             animation: slide-to-side 1s ease-out forwards;
             /* background-image: url('Images/80cb0a8b-324b-4ef2-8590-f49a44e9cbc0.png');
             background-repeat: no-repeat;
@@ -63,8 +69,14 @@
             height: 85%;
             margin: 10px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             cursor: pointer;
+            transition: all 0.25s ease-out;
+        }
+
+        .product-grid > figure img:hover{
+            transform: scale(1.03);
+            box-shadow:  0 6px 12px 0 rgba(0, 0, 0, 0.19);
         }
 
         .product-grid > figure figcaption {
@@ -92,15 +104,23 @@
             padding: 1rem;
             margin: 4px;
             cursor: pointer;
+            transition: all 0.3s ease-out;
         }
 
         .filter-button:hover {
             background-color: #022627;
             color: #09C0C3;
+            width: 15%;
+            text-decoration: underline;
         }   
         
         #whole-filter-button-holder {
             margin-left: 13rem;
+            display: flex;              /* 1. Enable flex layout */
+            flex-wrap: wrap;            /* 2. Allow buttons to wrap onto new lines */
+            justify-content: center;    /* 3. Center them horizontally */
+            gap: 1rem;                  /* 4. Consistent spacing instead of random margins */
+            margin: 0 auto 2rem;        /* 5. Center the container & add bottom space */
         }
 
         i {
@@ -108,23 +128,15 @@
             font-size: 4rem;
             color: red;
             cursor: pointer;
+            transition: all 0.3s ease-out;
         }
         
-
-        .details-box{
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding: 2rem;
-            margin: 0;
-            width: 100%;
-            left: 0;
-            top: 0;
-            overflow: auto;
-            background-color: rgba(70, 109, 99,0.2);
-            animation: appearMagic 1s ease-out;
+        i:hover{
+            transform: scale(1.05);
+            color: #960F0F;
         }
 
+        
         @keyframes appearMagic {
             0%{
                 opacity: 0;
@@ -135,48 +147,50 @@
             }
         }
 
-        /* Lock the modal to viewport */
+        /* 
+        * Modal wrapper (details-box):
+        * Positioned absolutely relative to its nearest positioned ancestor (e.g., the figure).
+        * Appears as a semi-transparent overlay box near the clicked item.
+        */
         .details-box {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0,0,0,0.7);
-        z-index: 9999;
-        display: none;
-        overflow: auto;
-        padding: 2rem;
-        box-sizing: border-box;
+            position: absolute; /* Anchors the modal to the product's figure, not the full viewport */
+            background: rgba(0, 0, 0, 0.7); /* Dark translucent background for contrast */
+            z-index: 9999; /* Brings modal above most elements */
+            display: none; /* Hidden by default; shown via JS on click */
+            padding: 2rem; /* Internal spacing around modal content */
+            box-sizing: border-box; /* Includes padding in width/height calculations */
+            width: 90vw; /* Modal takes up 90% of the viewport width */
+            max-width: 60rem; /* Prevents modal from becoming too wide on large screens */
         }
 
-        /* Auto-center modal content */
+        /* 
+        * Modal content area:
+        * Holds the actual content of the modal (image, text, etc.).
+        * Styled with background, padding, and borders.
+        */
         .details-content-for-modal {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #a8bbb5;
-        padding: 1.4rem;
-        border: 1px solid #B4D0C8;
-        width: 90%;
-        max-width: 1200px;
-        max-height: 90vh;
-        overflow: auto;
-        box-sizing: border-box;
+            position: relative; /* Allows internal elements (like the close button) to be absolutely positioned within */
+            background-color: #a8bbb5; /* Light, desaturated green for contrast and aesthetics */
+            padding: 1.4rem; /* Internal padding for breathing room */
+            border: 1px solid #B4D0C8; /* Subtle border to define the modal area */
+            overflow: auto; /* Enables scrolling if content is too tall */
+            box-sizing: border-box; /* Includes padding in width/height */
         }
 
-
-        /* Close button positioning */
+        /* 
+        * Close button inside modal:
+        * Positioned in the top-right corner of the modal content box.
+        * Allows the user to close/hide the modal.
+        */
         .close {
-        position: absolute;
-        top: 1rem;
-        right: 1.5rem;
-        color: #405A53;
-        font-size: 2rem;
-        font-weight: bold;
-        float: none !important;
+            position: absolute; /* Anchored to the top-right of the modal content */
+            top: 1rem;
+            right: 1.5rem;
+            color: #405A53; /* Muted dark green/gray for visual harmony */
+            font-size: 2rem; /* Makes the × icon large enough to click easily */
+            font-weight: bold; /* Emphasizes the icon's visibility */
         }
+
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
@@ -197,6 +211,8 @@
         }
         }
 
+
+        
     </style>
 </head>
 <body>
@@ -217,11 +233,17 @@
     </header>
 
     <main>
+        <figure class="banner-images">
+            <img src="Images/Garden banner image.png" alt="A sleek, black insulated tumbler with a purple water droplet logo sits on a rustic wooden table.  The setting is outdoors, with blurred greenery and flowers in the background.">
+            <figcaption>
+                <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
+            </figcaption>
+        </figure>
         <section id="products">
             <h1><b>Products</b></h1>
+            <br>
             <div id="whole-filter-button-holder">
-                <button class="filter-button holder">Filter</button>
-                <button class="filter-button active" data-filter="all">Show all</button>
+                <button class="filter-button" data-filter="all">Show all</button>
                 <button class="filter-button" data-filter="élanSeries">Élan Series</button>
                 <button class="filter-button" data-filter="vantaFlare">VantaFlare</button>
                 <button class="filter-button" data-filter="glacierStream">GlacierStream</button>

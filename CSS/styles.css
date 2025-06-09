@@ -33,6 +33,8 @@ h1{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+
+
 h2{
     font-size: 1.8rem; /* Sets a smaller font size for subheadings */
     color: #022627; /* Sets a dark color for subheadings */
@@ -144,7 +146,7 @@ figcaption a:hover{
 footer{
     background-color: #022627; /* Sets a dark background color for the footer */
     color: #B4D0C8; /* Sets a light text color for contrast */
-    padding: 20px; /* Adds padding around the footer content */
+    padding: 2rem; /* Adds padding around the footer content */
     font-size: 1.4rem; /* Sets a smaller font size for the footer */
     position: relative;    /* ← new */
 }
@@ -207,19 +209,37 @@ footer a:hover{
 }
 
 .social-media-icons img{
-    width: 20px; /* Sets a fixed width for social media icons */
-    height: 20px; /* Sets a fixed height for social media icons */
+    width: 2rem; /* Sets a fixed width for social media icons */
+    height: 2rem; /* Sets a fixed height for social media icons */
 }
 
 .social-media-icons figure{
-    margin: 0 20px; /* Adds horizontal spacing between icons */
+    margin: 0 2rem; /* Adds horizontal spacing between icons */
 }
 
 
 .company-logo img{
-            width: 170px;
+            width: 17rem;
 }
 
 hr {
     border: 2px solid #022627; /* Sets a solid border for horizontal rules */
 }
+
+.banner-images {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    margin-bottom: 10rem;
+}
+
+.banner-images img {
+    width: 100%;
+    height: 60rem;           /* strip height */
+    object-fit: cover;       /* crop to fill area */
+    object-position: top;    /* align top of image, crop from bottom */
+    display: block;
+    border-radius: 79% 21% 3% 97% / 0% 100% 0% 100% ;
+}
+
+

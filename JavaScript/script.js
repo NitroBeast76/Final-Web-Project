@@ -38,17 +38,18 @@ filterButtons.forEach(btn => {
 // 5. INITIAL SETUP WHEN PAGE LOADS
 filter('all');
 
-function detailsBoxOpen(element) {
-  // climb up to the <figure> that wraps this <img>…
-  const fig = element.closest("figure");
-  if (!fig) return;
-  // …then find & show its details-box
-  fig.querySelector(".details-box").style.display = "block";
+function detailsBoxOpen(img) {
+  let figure = img.parentElement;
+  let box = figure.querySelector(".details-box");
+  box.style.display = "block";
 }
 
-function detailsBoxClose(element, event) {
-  event.stopPropagation(); // prevents parent clicks from firing
-  element.closest(".details-box").style.display = "none";
+function detailsBoxClose(button, event) {
+  event.stopPropagation();
+  // Go up from the close button to the nearest .details-box
+  let box = button.closest(".details-box");
+  box.style.display = "none";
 }
+
 
 
