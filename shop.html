@@ -13,197 +13,210 @@
     <script src="https://kit.fontawesome.com/b6f797d5b9.js" crossorigin="anonymous"></script>
 
     <style>
-        
-        #products h1{
-            text-transform: uppercase;
-            text-align: left;
-            margin-left: 12rem;
-            font-size: 5rem;
-            transform: translateX(-16rem);
-            opacity: 0;
-            animation: slide-to-side 1s ease-out forwards;
-            /* background-image: url('Images/80cb0a8b-324b-4ef2-8590-f49a44e9cbc0.png');
+        /* === Product Heading Styling === */
+        #products h1 {
+            text-transform: uppercase;         /* Converts all letters to uppercase for strong emphasis and visual consistency */
+            text-align: left;                  /* Aligns heading text to the left of its container */
+            margin-left: 12rem;                /* Adds space on the left to position the heading away from the edge */
+            font-size: 5rem;                   /* Sets a large font size for visual prominence */
+            transform: translateX(-16rem);     /* Initially shifts the element leftward off-screen (used with animation) */
+            opacity: 0;                        /* Initially hides the element (used with animation) */
+            animation: slide-to-side 1s ease-out forwards; /* Applies the custom slide-in animation */
+            /* 
+            The below background image section is commented out but would:
+            - Add a fixed, centered background image behind the heading text
+            - Use a larger-than-container size (150%) for a dramatic visual
+            - Add inner padding to ensure text doesn’t sit on the image’s edge
+            */
+            /*
+            background-image: url('Images/80cb0a8b-324b-4ef2-8590-f49a44e9cbc0.png');
             background-repeat: no-repeat;
             background-size: 150%;
             background-position: center;
             background-attachment: fixed;
-            padding: 5rem;*/
+            padding: 5rem;
+            */
         }
 
+        /* === Animation for Product Heading (Slide and Fade In) === */
         @keyframes slide-to-side {
             to {
-                opacity: 1;
-                transform: translateX(1rem);
+                opacity: 1;                    /* Fades in the element */
+                transform: translateX(1rem);   /* Moves element slightly rightward into visible area */
             }
         }
 
-        .product-grid{
-            display: grid;
-            row-gap: 20rem;
-            column-gap: 18rem;
-            grid-template-columns: 30rem 30rem 30rem;
-            padding: 2rem;
-            margin: 10rem;
-            margin-top: 7rem;
-            margin-left: 6rem;
-            align-items: center;
-            margin-bottom: 50rem;
-            
+        /* === Product Grid Layout === */
+        .product-grid {
+            display: grid;                    /* Enables CSS Grid layout system */
+            row-gap: 20rem;                   /* Sets vertical space between rows */
+            column-gap: 18rem;               /* Sets horizontal space between columns */
+            grid-template-columns: 30rem 30rem 30rem; /* Defines three fixed-width columns */
+            padding: 2rem;                   /* Adds padding inside the container */
+            margin: 10rem;                   /* Adds large outer spacing around the grid */
+            margin-top: 7rem;                /* Slight override of top margin */
+            margin-left: 6rem;               /* Adds spacing from left side */
+            align-items: center;            /* Vertically aligns content inside grid cells */
+            margin-bottom: 50rem;           /* Adds large space below the grid */
         }
 
+        /* === Individual Product Cards (figure elements) === */
         .product-grid > figure {
-            background-color: #a8bbb5;
-            border: 1px solid #a8bbb5;
-            width: 300px;
-            height: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-color: #a8bbb5;       /* Sets a light neutral background color */
+            border: 1px solid #a8bbb5;       /* Border matches background for seamless appearance */
+            width: 300px;                    /* Fixed width for consistent card size */
+            height: 300px;                   /* Fixed height for uniformity */
+            display: flex;                   /* Enables flexbox layout for inner elements */
+            flex-direction: column;         /* Stacks child elements vertically */
+            align-items: center;            /* Horizontally centers content */
+            box-shadow:                     /* Adds layered shadow for 3D elevation effect */
+                0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
+        /* === Product Images === */
         .product-grid > figure img {
-            width: 85%;
-            height: 85%;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            transition: all 0.25s ease-out;
-            filter: drop-shadow(26px 18px 14px #000000);
+            width: 85%;                      /* Makes image fill most of the figure’s width */
+            height: 85%;                     /* Sets proportional height */
+            margin: 10px;                    /* Adds spacing around image */
+            border-radius: 10px;             /* Rounds the corners */
+            box-shadow:                     /* Adds a soft shadow under image */
+                0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            cursor: pointer;                /* Indicates the image is interactive (e.g., click to view details) */
+            transition: all 0.25s ease-out; /* Smooth animation on hover */
+            filter: drop-shadow(26px 18px 14px #000000); /* Adds a dramatic shadow to the image */
         }
 
-        .product-grid > figure img:hover{
-            transform: scale(1.03);
-            box-shadow:  0 6px 12px 0 rgba(0, 0, 0, 0.19);
+        /* === Image Hover Effect === */
+        .product-grid > figure img:hover {
+            transform: scale(1.03);         /* Slightly enlarges image */
+            box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.19); /* Enhances shadow on hover */
         }
 
+        /* === Caption Below Product Images === */
         .product-grid > figure figcaption {
-            background-color: #B4D0C8;
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: #022627;
-            padding: 10px;
-            border: 1px solid #a8bbb5;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-color: #B4D0C8;       /* Sets a pale background to contrast the image */
+            font-size: 1.4rem;               /* Sets font size for the caption */
+            font-weight: bold;              /* Emphasizes caption text */
+            color: #022627;                 /* Dark color for text visibility */
+            padding: 10px;                  /* Adds space inside the caption box */
+            border: 1px solid #a8bbb5;      /* Matches surrounding figure styling */
+            box-shadow:                    /* Adds depth to caption */
+                0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
-        .filter-button{
-            margin: 1rem;
-            padding: 2rem;
-            background-color: #09C0C3;
-            color: #022627;
-            width: 10%;
-            border-radius: 10px;
-            font-size: 1.6rem;
-            font-weight: bold;
-            transform: translateX(-16rem);
-            opacity: 0;
-            animation: slide-to-side 1s ease-out forwards;
-            padding: 1rem;
-            margin: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease-out;
-            font-family: "Roboto", sans-serif;
+        /* === Filter Button === */
+        .filter-button {
+            margin: 1rem;                   /* Adds margin around button */
+            padding: 2rem;                  /* Adds internal space */
+            background-color: #09C0C3;      /* Sets a bright teal background */
+            color: #022627;                /* Dark text for contrast */
+            width: 10%;                    /* Button takes 10% width of its parent */
+            border-radius: 10px;           /* Rounds the button corners */
+            font-size: 1.6rem;             /* Sets font size */
+            font-weight: bold;            /* Emphasizes button text */
+            transform: translateX(-16rem); /* Initial off-screen position (animated) */
+            opacity: 0;                    /* Initially hidden (animated) */
+            animation: slide-to-side 1s ease-out forwards; /* Same slide-in animation as heading */
+            padding: 1rem;                 /* Padding (redeclared — note: previous 2rem is overridden) */
+            margin: 4px;                   /* Margin (overrides previous 1rem) */
+            cursor: pointer;              /* Pointer cursor indicates interactivity */
+            transition: all 0.3s ease-out; /* Smooth transition on hover */
+            font-family: "Roboto", sans-serif; /* Sets font family */
             font-optical-sizing: auto;
             font-style: normal;
         }
 
+        /* === Filter Button Hover === */
         .filter-button:hover {
-            background-color: #022627;
-            color: #09C0C3;
-            width: 15%;
-            text-decoration: underline;
-        }   
-        
+            background-color: #022627;     /* Inverts background color */
+            color: #09C0C3;               /* Inverts text color */
+            width: 15%;                   /* Enlarges width slightly */
+            text-decoration: underline;  /* Adds underline for emphasis */
+        }
+
+        /* === Filter Button Container === */
         #whole-filter-button-holder {
-            margin-left: 13rem;
-            display: flex;              /* 1. Enable flex layout */
-            flex-wrap: wrap;            /* 2. Allow buttons to wrap onto new lines */
-            justify-content: center;    /* 3. Center them horizontally */
-            gap: 1rem;                  /* 4. Consistent spacing instead of random margins */
-            margin: 0 auto 2rem;        /* 5. Center the container & add bottom space */
+            margin-left: 13rem;           /* Positions the container from the left */
+            display: flex;                /* Enables flexbox layout */
+            flex-wrap: wrap;              /* Allows buttons to wrap onto new lines */
+            justify-content: center;     /* Centers all buttons horizontally */
+            gap: 1rem;                    /* Consistent spacing between buttons */
+            margin: 0 auto 2rem;          /* Horizontally center and space below */
         }
 
+        /* === Heart Icon (e.g., Wishlist) === */
         .heart-icon > i {
-            margin-left: 5rem;
-            font-size: 4rem;
-            color: red;
-            cursor: pointer;
-            transition: all 0.3s ease-out;
-        }
-        
-        i:hover{
-            transform: scale(1.05);
-            color: #960F0F;
+            margin-left: 5rem;            /* Space from surrounding elements */
+            font-size: 4rem;              /* Large icon size */
+            color: red;                   /* Default red color */
+            cursor: pointer;              /* Shows it’s clickable */
+            transition: all 0.3s ease-out; /* Smooth animation on hover */
         }
 
-        
+        /* === Generic Icon Hover Effect === */
+        i:hover {
+            transform: scale(1.05);       /* Slight enlargement on hover */
+            color: #960F0F;               /* Darker red for hover state */
+        }
+
+        /* === Generic Fade In Animation === */
         @keyframes appearMagic {
-            0%{
-                opacity: 0;
+            0% {
+                opacity: 0;               /* Hidden initially */
             }
-
-            100%{
-                opacity: 1;
+            100% {
+                opacity: 1;               /* Fully visible at the end */
             }
         }
 
-        /* 
-        * Modal wrapper (details-box):
-        * Positioned absolutely relative to its nearest positioned ancestor (e.g., the figure).
-        * Appears as a semi-transparent overlay box near the clicked item.
-        */
+        /* === Modal Box === */
         .details-box {
-            position: absolute; /* Anchors the modal to the product's figure, not the full viewport */
-            background: rgba(0, 0, 0, 0.7); /* Dark translucent background for contrast */
-            z-index: 9999; /* Brings modal above most elements */
-            display: none; /* Hidden by default; shown via JS on click */
-            padding: 2rem; /* Internal spacing around modal content */
-            box-sizing: border-box; /* Includes padding in width/height calculations */
-            width: 90vw; /* Modal takes up 90% of the viewport width */
-            max-width: 60rem; /* Prevents modal from becoming too wide on large screens */
+            position: absolute;          /* Anchors box relative to parent */
+            background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+            z-index: 9999;               /* Sits above most other elements */
+            display: none;               /* Hidden until triggered */
+            padding: 2rem;               /* Inner spacing */
+            box-sizing: border-box;     /* Includes padding in size */
+            width: 90vw;                /* 90% of viewport width */
+            max-width: 60rem;           /* Maximum width */
         }
 
-        /* 
-        * Modal content area:
-        * Holds the actual content of the modal (image, text, etc.).
-        * Styled with background, padding, and borders.
-        */
+        /* === Modal Content === */
         .details-content-for-modal {
-            position: relative; /* Allows internal elements (like the close button) to be absolutely positioned within */
-            background-color: #a8bbb5; /* Light, desaturated green for contrast and aesthetics */
-            padding: 1.4rem; /* Internal padding for breathing room */
-            border: 1px solid #B4D0C8; /* Subtle border to define the modal area */
-            overflow: auto; /* Enables scrolling if content is too tall */
-            box-sizing: border-box; /* Includes padding in width/height */
+            position: relative;          /* Needed for absolute elements inside */
+            background-color: #a8bbb5;   /* Soft green background */
+            padding: 1.4rem;             /* Inner spacing */
+            border: 1px solid #B4D0C8;   /* Light border for definition */
+            overflow: auto;              /* Scroll if content exceeds height */
+            box-sizing: border-box;
         }
 
+        /* === Modal Text Content === */
         .details-content-for-modal > p {
             font-size: 2rem;
             font-weight: 500;
         }
 
-        /* 
-        * Close button inside modal:
-        * Positioned in the top-right corner of the modal content box.
-        * Allows the user to close/hide the modal.
-        */
+        /* === Close Button === */
         .close {
-            position: absolute; /* Anchored to the top-right of the modal content */
+            position: absolute;          /* Absolute position inside modal */
             top: 1rem;
             right: 1.5rem;
-            color: #405A53; /* Muted dark green/gray for visual harmony */
-            font-size: 2rem; /* Makes the × icon large enough to click easily */
-            font-weight: bold; /* Emphasizes the icon's visibility */
-            cursor: pointer;
+            color: #405A53;              /* Muted dark green/gray */
+            font-size: 2rem;             /* Easy to click */
+            font-weight: bold;
+            cursor: pointer;             /* Shows it is clickable */
         }
 
+        /* === Caption in Modal === */
         .details-content-for-modal > figure figcaption {
             font-family: 'Roboto', sans-serif;
             font-size: 2rem;
         }
 
+        /* === Generic Section Content Styling === */
         .tagline,
         .features,
         .specs,
@@ -216,7 +229,7 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Tagline: Standout Intro Text */
+        /* === Tagline Specific === */
         .tagline {
             font-size: 1.5rem;
             font-weight: 500;
@@ -225,7 +238,7 @@
             letter-spacing: 0.3px;
         }
 
-        /* Section Headings Highlight */
+        /* === Section Headings === */
         .features strong,
         .specs strong,
         .care strong,
@@ -235,43 +248,46 @@
             margin-bottom: 0.5rem;
         }
 
-        /* List Icons or Emphasis */
+        /* === Icon Styling in Lists === */
         .features i,
         .specs i,
         .care i,
         .shipping i {
-            color: #614900; /* soft gold tone for icons */
+            color: #614900;               /* Soft gold color */
             margin-right: 0.4rem;
             font-size: 1rem;
             vertical-align: middle;
         }
 
-
-
-        /* Responsive adjustments */
+        /* === Responsive Modal Adjustments (Mobile) === */
         @media (max-width: 768px) {
-        .details-content-for-modal {
-            width: 95%;
-            top: 50px;
-            transform: translateX(-50%);
-        }
-        
-        .details-content-for-modal > figure {
-            grid-template-columns: 1fr !important;
-            gap: 1rem !important;
-        }
-        
-        .details-content-for-modal > figure img {
-            width: 100% !important;
-            margin: 0 !important;
-        }
+            .details-content-for-modal {
+                width: 95%;               /* Wider on mobile */
+                top: 50px;                /* Push down from top */
+                transform: translateX(-50%); /* Center horizontally */
+            }
+
+            .details-content-for-modal > figure {
+                grid-template-columns: 1fr !important; /* Force single column layout */
+                gap: 1rem !important;                  /* Add space between items */
+            }
+
+            .details-content-for-modal > figure img {
+                width: 100% !important;               /* Full width images */
+                margin: 0 !important;                 /* Remove image margin */
+            }
         }
 
-
-        
+                
     </style>
 </head>
 <body>
+    <!-- 
+        Header Section:
+        - Contains the company logo (clickable, links to home page)
+        - Navigation bar with links to Home, Shop, About, and Contact pages
+        - Shopping bag icon (cart) with item count and click handler
+    -->
     <header>
         <figure class="company-logo">
             <a href="index.html">
@@ -286,21 +302,31 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <!--
+
         <div class="bag-for-shopping">
-            <i class="fa-solid fa-bag-shopping" title="Cart"></i>
+            <i class="fa-solid fa-bag-shopping" title="Cart" onclick="cartTravel()"></i>
             <span>0</span>
         </div>
-        -->
     </header>
 
     <main>
+        <!-- 
+            Banner Image Section:
+            - Displays a featured product image with a natural, outdoor background.
+            - Includes a source link for image attribution.
+        -->
         <figure class="banner-images">
             <img src="Images/Garden banner image.png" alt="A sleek, black insulated tumbler with a purple water droplet logo sits on a rustic wooden table.  The setting is outdoors, with blurred greenery and flowers in the background.">
             <figcaption>
                 <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
             </figcaption>
         </figure>
+
+        <!-- 
+            Products Section:
+            - Heading for the product grid.
+            - Filter buttons allow users to filter products by series.
+        -->
         <section id="products">
             <h1><b>Products</b></h1>
             <br>

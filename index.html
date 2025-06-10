@@ -17,13 +17,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drip</title>
+    <!-- Favicon for the website -->
     <link rel="icon" type="Images/Favicon.png" href="Images/Favicon.png">
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="CSS/styles.css">
+    <!-- Link to external JavaScript file -->
     <script src="JavaScript/script.js"></script>
+    <!-- Google Fonts preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts for custom typography -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style> 
+        /* Body background styling and animation */
         body {
             background-image: url("Images/uZ0iU9Lqsd9.png");
             background-size: cover;
@@ -34,28 +40,29 @@
             background-attachment: fixed;
         }
 
-        
-
+        /* Keyframes for background zoom-out animation */
         @keyframes background-image-zoom-out {
             0%{
                 background-size: 150%;
                 filter: blur(0.1rem);
             }
-
             100%{
                 background-size: 100%;
                 filter: blur(0);
             }
         }
 
+        /* Navigation link styles */
         nav a {
             color: #09c0c3;
         }
 
+        /* Navigation link hover effect */
         nav a:hover {
             color: #B4D0C8;
         }
 
+        /* Hero area section styling and animation */
         #hero-area {
             margin: 50px;
             margin-top: 200px;
@@ -66,6 +73,7 @@
             animation: transition-up 1s ease-out forwards;
         }
 
+        /* Keyframes for hero area transition */
         @keyframes transition-up{
             to {
                 opacity: 1;
@@ -73,18 +81,21 @@
             }
         }
 
+        /* Hero area main heading style */
         #hero-area h1 {
             font-size: 4rem;
             font-weight: bold;
             color: #09c0c3;
         }
 
+        /* Hero area subheading style */
         #hero-area h2 {
             font-size: 3rem;
             font-weight: bold;
             color: #09c0c3;
         }
 
+        /* Shop Now button styling */
         #hero-area button {
             position: relative;
             padding: 20px;
@@ -105,6 +116,7 @@
             transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, cursor 0.3s ease;
         }
 
+        /* Button underline effect */
         #hero-area button::after {
             content: "";
             position: absolute;
@@ -119,10 +131,12 @@
             z-index: 1;
         }
 
+        /* Button underline on hover */
         #hero-area button:hover::after{
             transform: translateX(-50px) scaleX(1);
         }
 
+        /* Button hover effect */
         #hero-area button:hover {
             background-color: #09c0c3;
             color: #022627;
@@ -130,6 +144,7 @@
             cursor: pointer;
         }
 
+        /* Hero image styling */
         #hero-image img {
             margin-top: 50px;
             height: auto;
@@ -141,11 +156,12 @@
 
 </head>
 <body>
+    <!-- Header section with logo and navigation -->
     <header>
         <figure class="company-logo">
-                    <a href="index.html">
-                        <img src="Images/Drop Logo for footer.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast.">
-                    </a>
+            <a href="index.html">
+                <img src="Images/Drop Logo for footer.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast.">
+            </a>
         </figure>
         <nav>
             <ul>
@@ -157,38 +173,36 @@
         </nav>
     </header>
 
-
+    <!-- Main content area -->
     <main>
+        <!-- Hero section with main message and shop button -->
         <section id="hero-area">
             <h1>
                 Stay Chill. Stay Cool.
             </h1>
-
             <h2>
                 Here are our Top Choices
             </h2>
-
             <div id="shop-now">
                 <button onclick="location.href='shop.html'">
                     Shop Now
                 </button>
             </div>
         </section>
-
-
     </main>
 
-
-
+    <!-- Footer section with logo, links, and social media icons -->
     <footer>
         <figure>
             <img src="Images/Drop Logo for footer.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast." style="width: 100px;">
             <figcaption>Stay Chill. Stay Cool</figcaption>
+            <!-- Footer navigation links -->
             <ul class="footer-links">
                 <li><a href="about.html">About</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
+            <!-- Legal links -->
             <ul class="legal-links">
                 <li>
                     <a href="#">Terms</a>
@@ -200,8 +214,10 @@
                     <a href="#">Cookies</a>
                 </li>
             </ul>
+            <!-- Social media icons -->
             <ul class="social-media-icons">
                 <li>
+                    <!--Instagram icon-->
                     <figure>
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                             <img src="Images/Instagram icon.png" alt="Instagram icon">
@@ -209,6 +225,7 @@
                     </figure>
                 </li>
                 <li>
+                    <!--Facebook icon-->
                     <figure>
                         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                             <img src="Images/facebook icon.png" alt="Facebook icon">
@@ -216,6 +233,7 @@
                     </figure>
                 </li>
                 <li>
+                    <!--X icon-->
                     <figure>
                         <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
                             <img src="Images/X icon.png" alt="X icon">
@@ -223,9 +241,11 @@
                     </figure>
                 </li>
                 <li>
+                    <!--LinkedIn icon-->
                     <figure>
                         <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
                             <img src="Images/LinkedIn icon..png" alt="LinkedIn icon">
+                        </a>
                     </figure>
                 </li>
             </ul>

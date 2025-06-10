@@ -1,284 +1,308 @@
+/* ==================== GLOBAL RESET ==================== */
 * {
-    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
-    line-height: 160%; /* Sets a consistent line height for better readability */
+    box-sizing: border-box; /* Includes padding and border in the total width and height of elements, preventing unexpected size overflow */
+    line-height: 160%;      /* Applies a consistent vertical spacing between lines across all elements, enhancing readability */
 }
 
 html {
-    font-size: 62.5%; /* Sets base font size to 10px for easier rem calculations */
+    font-size: 62.5%; /* Sets the base font size to 10px (assuming browser default is 16px). This makes rem calculations easier (1.6rem = 16px) */
 }
 
 body {
-    background-color: #B4D0C8; /* Sets the background color to a neutral tone */
-    box-sizing: border-box; /* Ensures consistent box model behavior */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
-    font-size: 1.8rem; /* Sets the default font size */
-    word-spacing: 0.1rem; /* Adds spacing between words for readability */
-    letter-spacing: 0.04rem; /* Adds slight spacing between letters */
-    font-family: "Roboto", sans-serif;
+    background-color: #B4D0C8; /* Sets the background color to a soft neutral greenish tone for a calming aesthetic */
+    box-sizing: border-box;   /* Reinforces border-box for body explicitly, though already inherited from * selector */
+    padding: 0;               /* Removes default browser padding around the body */
+    margin: 0;                /* Removes default browser margin around the body */
+    font-size: 1.8rem;        /* Default font size for the page body; 1.8rem = 18px based on html font size */
+    word-spacing: 0.1rem;     /* Adds spacing between words for improved legibility */
+    letter-spacing: 0.04rem;  /* Slightly increases letter spacing to enhance text clarity */
+    font-family: "Roboto", sans-serif; /* Primary sans-serif font with modern, clean design */
+    font-optical-sizing: auto; /* Allows font to adapt based on font size and display for optimal appearance */
+    font-weight: 400;          /* Sets default weight to regular */
+    font-style: normal;        /* Ensures font isn't italicized or oblique */
+}
+
+/* ==================== HEADER ==================== */
+header {
+    padding: 20px; /* Adds space inside the header for better visual breathing room */
+    display: flex; /* Uses flexbox to arrange header's child elements in a row */
+    justify-content: space-between; /* Pushes elements to far left and far right edges of the header */
+    align-items: center; /* Vertically centers items within the header line */
+}
+
+/* Main heading (logo/title) */
+h1 {
+    font-family: "Orbitron", sans-serif; /* Uses a futuristic, geometric font for branding emphasis */
     font-optical-sizing: auto;
+    font-weight: 500; /* Medium weight for a slightly bold but not overpowering title */
+    font-style: normal;
+    font-size: 2.4rem; /* Makes the heading noticeably larger (24px) */
+    color: #022627;    /* Deep teal for strong contrast against light background */
+    margin: 0;         /* Removes default spacing above and below heading */
+}
+
+/* Secondary headings (section titles) */
+h2 {
+    font-size: 1.8rem; /* Slightly smaller than h1 for visual hierarchy */
+    color: #022627;    /* Matches h1 color for consistent theme */
+    margin: 0;         /* Removes default vertical margins */
+    font-family: "Rajdhani", sans-serif; /* Uses a different sans-serif for variety and hierarchy */
     font-weight: 400;
     font-style: normal;
 }
 
-header{
-    padding: 20px;
-    display: flex;
-    justify-content: space-between; /* Distributes space between header elements */
-    align-items: center; /* Centers items vertically */
-
+/* ==================== NAVIGATION ==================== */
+nav {
+    gap: 20px; /* Adds space between child flex items if using flex */
+    padding: 20px; /* Internal spacing around nav container */
+    justify-content: space-between; /* Distribute nav content across width */
+    align-items: start; /* Aligns nav items to the top of their container */
 }
 
-h1{
+/* Individual nav links */
+nav a {
+    position: relative; /* Allows use of pseudo-elements (before/after) positioned relative to the link */
+    display: inline-block; /* Allows setting padding/margin and enables hover effects */
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: 2.4rem; /* Sets a larger font size for the main heading */
-    color: #022627; /* Sets a dark color for the heading */
-    margin: 0; /* Removes default margin */
+    text-decoration: none; /* Removes default underline */
+    color: #022627; /* Same dark teal for brand consistency */
+    padding: 20px; /* Expands clickable area and improves layout spacing */
+    margin-top: 0; /* Removes any unexpected margin stacking */
+    font-size: 2rem; /* Slightly larger font size for navigation prominence */
+    overflow: hidden; /* Ensures any pseudo-elements overflowing are clipped */
+    transition: all 0.3s ease; /* Smooth transition for any changes on hover */
 }
 
-
-
-h2{
-    font-size: 1.8rem; /* Sets a smaller font size for subheadings */
-    color: #022627; /* Sets a dark color for subheadings */
-    margin: 0; /* Removes default margin */
-    font-family: "Rajdhani", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+/* Hover effect for nav links */
+nav a:hover {
+    color: #405A53; /* Slightly lighter color for hover contrast */
+    transform: translate(0px, -5px) rotate(2deg) scale(1.05); /* Applies motion effect to catch user attention */
+    opacity: 1; /* Ensures link is fully opaque */
 }
 
-nav{
-    gap: 20px; /* Adds space between navigation items */
-    padding: 20px; /* Adds padding around the navigation */
-    justify-content: space-between;
-    align-items: start; /* Aligns items to the start vertically */
-}
-
-nav a{
-    position: relative;
-    display: inline-block; /* Allows padding and margin to be applied */
-    font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    text-decoration: none; /* Removes underline from links */
-    color: #022627;
-    padding: 20px;
-    margin-top: 0;
-    font-size: 2rem;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-nav a:hover{
-    color: #405A53; /* Changes link color on hover for better visibility */
-    transform: translate(0px, -5px) rotate(2deg) scale(1.05); /* Adds a slight transformation effect on hover */
-    opacity: 1;
-}
-
+/* Background slide effect on hover using ::after */
 nav a::after {
-    content: "";                    /* Required to render the pseudo-element */
-    position: absolute;            /* So it can be freely placed */
-    bottom: 0;                     /* Start from the bottom */
+    content: ""; /* Empty content just to enable styling a pseudo-element */
+    position: absolute;
+    bottom: 0;
     left: 0;
-    width: 100%;                   /* Cover the full width */
-    height: 0%;                    /* Hidden initially */
-    background-color: #09C0C3;     /* The sliding background color */
-    z-index: -1;                   /* Sit behind the link text */
-    transition: height 0.3s ease;  /* Animate smoothly */
+    width: 100%; /* Span full width of link */
+    height: 0%; /* Initially hidden */
+    background-color: #09C0C3; /* Teal highlight background */
+    z-index: -1; /* Places the background under the text */
+    transition: height 0.3s ease; /* Smoothly increases height on hover */
 }
 
+/* Expands the sliding background fully on hover */
 nav a:hover::after {
-    height: 100%;
+    height: 100%; /* Covers full height of link */
 }
 
-
-nav a::before{
+/* Underline animation using ::before */
+nav a::before {
     content: "";
     position: absolute;
-    bottom: 1rem;
-    left: 50%;
+    bottom: 1rem; /* Positions the line slightly above the bottom */
+    left: 50%; /* Center horizontally */
     width: 80%;
-    height: 0.2rem;
-    background-color: #022627;
-    transform: translateX(-50%) scaleX(0);
+    height: 0.2rem; /* Thin underline */
+    background-color: #022627; /* Same as text color */
+    transform: translateX(-50%) scaleX(0); /* Start with no width (scaled down) */
     transform-origin: center;
-    transition: transform 1s ease;
+    transition: transform 1s ease; /* Slow expansion animation */
     z-index: 1;
 }
 
-nav a:hover::before{
-    transform: translateX(-50%) scaleX(1);
+/* Triggers underline growth on hover */
+nav a:hover::before {
+    transform: translateX(-50%) scaleX(1); /* Grows from center */
 }
 
-nav ul{
-    list-style-type: none; /* Removes default list styling */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
+/* List styles in nav */
+nav ul {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* No inner spacing */
+    margin: 0; /* No outer spacing */
 }
 
-nav ul li{
-    display: inline; /* Displays list items inline */
+/* Displays nav list items in a row */
+nav ul li {
+    display: inline; /* Horizontally inline elements */
 }
 
-main{
-    padding: 2rem; /* Adds padding around the main content */
-    font-size: 1.6rem; /* Sets a smaller font size for the main content */
-    margin: 2rem; /* Adds margin around the main content */
-    opacity: 0;
-    transform: translateY(1rem);
-    animation: fadeInForMain 1s ease-out forwards;
+/* ==================== MAIN CONTENT ==================== */
+main {
+    padding: 2rem; /* Internal spacing for main content */
+    font-size: 1.6rem; /* Slightly smaller than body for dense content */
+    margin: 2rem; /* External spacing around main content block */
+    opacity: 0; /* Starts invisible */
+    transform: translateY(1rem); /* Offset position for animation start */
+    animation: fadeInForMain 1s ease-out forwards; /* Animates into view */
 }
 
+/* Defines the keyframes for fade-in animation */
 @keyframes fadeInForMain {
     to {
-        opacity: 1;
-        transform: translateY(-2rem);
+        opacity: 1; /* Ends fully visible */
+        transform: translateY(-2rem); /* Moves slightly upward while fading in */
     }
 }
 
-figcaption{
-    font-size: 1.8rem; /* Sets a smaller font size for footer captions */
-    color: #09C0C3;
+/* ==================== FIGCAPTION (used in footer/media) ==================== */
+figcaption {
+    font-size: 1.8rem; /* Readable caption size */
+    color: #09C0C3; /* Highlight teal color */
 }
 
-figcaption a{
-    color: #405a53; /* Sets link color in captions */
-    text-decoration: none; /* Removes underline from links */
-}
-    
-figcaption a:hover{
-    color: #09C0C3; /* Changes link color on hover for better visibility */
-    text-decoration: underline; /* Adds underline on hover for emphasis */
+figcaption a {
+    color: #405a53; /* Link color matching hover nav color */
+    text-decoration: none; /* No underline */
 }
 
-footer{
+figcaption a:hover {
+    color: #09C0C3; /* Brighter hover color for clarity */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* ==================== FOOTER ==================== */
+footer {
     font-family: "Rajdhani", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: #022627; /* Sets a dark background color for the footer */
-    color: #B4D0C8; /* Sets a light text color for contrast */
-    padding: 2rem; /* Adds padding around the footer content */
-    font-size: 1.4rem; /* Sets a smaller font size for the footer */
-    position: relative;    /* ← new */
+    background-color: #022627; /* Dark background for footer */
+    color: #B4D0C8; /* Light text for contrast */
+    padding: 2rem; /* Inner spacing */
+    font-size: 1.4rem; /* Smaller font for legal/footer info */
+    position: relative; /* Enables absolute positioning of internal sections */
 }
 
-footer figcaption{
-    font-size: 1.8rem; /* Sets a smaller font size for footer captions */
+/* Footer figcaptions (e.g., copyright) */
+footer figcaption {
+    font-size: 1.8rem;
     color: #09C0C3;
-    font-weight: bold; /* Makes the caption text bold for emphasis */
+    font-weight: bold;
 }
 
-footer ul{
-    list-style-type: none; /* Removes default list styling */
-    text-transform: uppercase;
-    line-height: 1.6rem; /* Sets line height for better readability */
+/* List styling in footer */
+footer ul {
+    list-style-type: none;
+    text-transform: uppercase; /* Makes all links uppercase */
+    line-height: 1.6rem;
 }
 
-footer a{
-    color: #09C0C3; /* Sets link color in the footer */
-    text-decoration: none; /* Removes underline from links */
-    font-size: 1.6rem; /* Sets a smaller font size for footer links */
+/* Footer links */
+footer a {
+    color: #09C0C3;
+    text-decoration: none;
+    font-size: 1.6rem;
 }
 
-footer a:hover{
-    color: #B4D0C8; /* Changes link color on hover for better visibility */
-    text-decoration: underline; /* Adds underline on hover for emphasis */
+footer a:hover {
+    color: #B4D0C8;
+    text-decoration: underline;
 }
 
-
-
-.footer-links{
+/* Footer links container (useful for grouping pages/about etc.) */
+.footer-links {
     position: absolute;
-    top: 10%;
+    top: 10%; /* Positions 10% from top of footer container */
     left: 57%;
-    text-align: center; /* Centers the list items */
+    text-align: center;
 }
 
-.footer-links a{
-    line-height: 200%;
+.footer-links a {
+    line-height: 200%; /* Doubles the spacing between links */
 }
 
-.legal-links{
+/* Legal disclaimer links (privacy, terms, etc.) */
+.legal-links {
     position: absolute;
     top: 10%;
     left: 70%;
-    text-align: center; /* Centers the list items */
+    text-align: center;
 }
 
-.legal-links a{
+.legal-links a {
     line-height: 200%;
 }
 
-.social-media-icons{
+/* Social media icons container */
+.social-media-icons {
     position: absolute;
     top: 50%;
     left: 80%;
-    text-align: center; /* Centers the list items */
-    display: flex; /* Uses flexbox for layout */
-    justify-content: center; /* Centers the icons horizontally */
-    align-items: center; /* Centers the icons vertically */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.social-media-icons img{
-    width: 2rem; /* Sets a fixed width for social media icons */
-    height: 2rem; /* Sets a fixed height for social media icons */
+/* Icons themselves */
+.social-media-icons img {
+    width: 2rem;
+    height: 2rem;
 }
 
-.social-media-icons figure{
-    margin: 0 2rem; /* Adds horizontal spacing between icons */
+/* Wraps each icon in space */
+.social-media-icons figure {
+    margin: 0 2rem;
 }
 
-
-.company-logo img{
-            width: 17rem;
+/* ==================== COMPANY LOGO ==================== */
+.company-logo img {
+    width: 17rem; /* Sets fixed width of logo (170px) */
 }
 
+/* ==================== DIVIDERS ==================== */
 hr {
-    border: 2px solid #022627; /* Sets a solid border for horizontal rules */
+    border: 2px solid #022627; /* Thick divider in dark theme color */
 }
 
+/* ==================== BANNER ==================== */
 .banner-images {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the container horizontally */
     height: auto;
-    margin-bottom: 10rem;
+    margin-bottom: 10rem; /* Large spacing below banner for separation */
 }
 
 .banner-images img {
     width: 100%;
-    height: 52rem;           /* strip height */
-    object-fit: cover;       /* crop to fill area */
-    object-position: top;    /* align top of image, crop from bottom */
-    display: block;
-    border-radius: 79% 21% 3% 97% / 0% 100% 0% 100% ;
-    border: 1px solid #B4D0C8 ;
+    height: 52rem; /* Fixed height strip for full-width hero banner */
+    object-fit: cover; /* Ensures image covers entire area */
+    object-position: top; /* Anchors to top of image, crops bottom */
+    display: block; /* Removes default inline spacing */
+    border-radius: 79% 21% 3% 97% / 0% 100% 0% 100%; /* Creates an abstract organic shape (curved blob) */
+    border: 1px solid #B4D0C8; /* Light border matching background for separation */
 }
 
-
-.bag-for-shopping span{
-    display: none;
+/* ==================== SHOPPING BAG BADGE ==================== */
+.bag-for-shopping span {
+    display: flex;
     width: 2rem;
     height: 2rem;
-    background-color: #022627;
+    background-color: #022627; /* Matches nav/footer color */
     justify-content: center;
     align-items: center;
-    color: #B4D0C8;
-    border-radius: 50%;
+    color: #B4D0C8; /* Light color for badge number */
+    border-radius: 50%; /* Circular shape */
     position: absolute;
     font-size: 1.5rem;
     top: 50%;
-    right: -20px;
+    right: -1rem; /* Slightly outside icon */
 }
 
-.bag-for-shopping{
-    display: none;
-    position: relative;
+/* Container for shopping icon */
+.bag-for-shopping {
+    display: flex;
+    position: relative; /* Enables badge to be positioned relative to icon */
 }
 
-.bag-for-shopping i{
+/* Shopping icon itself */
+.bag-for-shopping i {
     font-size: 3rem;
+    margin-right: 0;
 }

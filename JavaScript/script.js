@@ -1,3 +1,9 @@
+function cartTravel(){
+    location.href='cart.html'
+}
+
+
+
 function toggleHeartIcon(x){
     x.classList.toggle('far');
     x.classList.toggle('fas');
@@ -45,15 +51,14 @@ function detailsBoxOpen(img) {
 }
 
 function detailsBoxClose(button, event) {
-  event.stopPropagation();
+    event.stopPropagation();
   // Go up from the close button to the nearest .details-box
-  let box = button.closest(".details-box");
-  box.style.display = "none";
+    let box = button.closest(".details-box");
+    box.style.display = "none";
 }
 
 
-
-/*// Get key elements
+// Get key elements
 const closeBtn = document.querySelector('.exit');
 const buyBtn = document.querySelector('.buy');
 const cartList = document.querySelector('.cart-list');
@@ -119,4 +124,3 @@ function addToCartFromHeart(icon) {
     // Optional: confirmation
     alert(`${name} added to cart!`);
 }
-*/ 

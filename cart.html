@@ -1,4 +1,4 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,17 +13,17 @@
     <script src="https://kit.fontawesome.com/b6f797d5b9.js" crossorigin="anonymous"></script>
     <style>
         .cart-page {
-            max-width: 800px;
+            max-width: 100rem;
             margin: auto;
-            padding: 20px;
-            font-family: Poppins, sans-serif;
+            padding: 2rem;
             color: #333;
+            font-size: 3rem;
         }
 
         .cart-page h1 {
-            font-size: 2rem;
+            font-size: 4rem;
             font-weight: 400;
-            margin-bottom: 20px;
+            margin-bottom: 2rem;
             text-align: center;
         }
 
@@ -35,20 +35,17 @@
 
         .product-item-cart {
             display: grid;
-            grid-template-columns: 80px 1fr 80px 120px;
-            gap: 15px;
+            grid-template-columns: 25rem 1fr 8rem 12rem;
+            gap: 1.5rem;
             align-items: center;
-            padding: 15px 0;
+            padding: 1.5rem 0;
             border-bottom: 1px solid #eee;
         }
 
-        .product-item-cart:last-child {
-            border-bottom: none;
-        }
 
         .product-image img {
             width: 100%;
-            border-radius: 8px;
+            border-radius: 0.8rem;
         }
 
         .product-name {
@@ -65,16 +62,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 1rem;
             font-size: 1rem;
         }
 
         .product-quantity span {
             cursor: pointer;
-            padding: 5px 10px;
+            padding: 0.5rem 1rem;
             border-radius: 50%;
             background-color: #f5f5f5;
             transition: background-color 0.2s;
+            font-size: 1.2rem;
         }
 
         .product-quantity span:hover {
@@ -84,11 +82,11 @@
         .miscellaneous-buttons {
             display: flex;
             justify-content: space-between;
-            margin-top: 30px;
+            margin-top: 3rem;
         }
 
         .miscellaneous-buttons button {
-            padding: 10px 20px;
+            padding: 1rem 2rem;
             font-family: Poppins, sans-serif;
             font-weight: 500;
             border: none;
@@ -113,6 +111,10 @@
 
         .miscellaneous-buttons .buy:hover {
             background-color: #005f88;
+        }
+
+        .product-name, .product-pricing{
+            font-size: 1.8rem;
         }
 
         footer{
@@ -147,13 +149,13 @@
             <div class="cart-list">
                 <div class="product-item-cart">
                     <figure class="product-image">
-                        <img src="Images/1st product.png" alt="Matte black travel mug with ergonomic handle, polished gold-tone bands at rim and base, clear sliding lid, DRiP logo embossed in metallic gold on front.">
+                        <img src="Images/1st product 4th.png" alt="Matte black travel mug with ergonomic handle, polished gold-tone bands at rim and base, clear sliding lid, DRiP logo embossed in metallic gold on front.">
                     </figure>
                     <div class="product-name">
-                        NAME
+                        DRiP Élan Series - Sable Amethyst Travel Tumbler
                     </div>
                     <div class="product-pricing">
-                        $200
+                        CAD $55.00
                     </div>
                     <div class="product-quantity">
                         <span class="decrease"> &lt; </span>
@@ -163,7 +165,7 @@
                 </div>
             </div>
             <div class="miscellaneous-buttons">
-                <button class="exit">CLOSE</button>
+                <button class="exit" onclick="location.href='shop.html' ">CLOSE</button>
                 <button class="buy">CHECK OUT</button>
             </div>
         </section>
@@ -221,4 +223,4 @@
         </figure>
     </footer>
 </body>
-</html>-->
+</html>
