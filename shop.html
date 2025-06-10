@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drip</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="Images/Favicon.png" href="Images/Favicon.png">
     <link rel="stylesheet" href="CSS/styles.css">
     <script src="JavaScript/script.js" defer></script>
@@ -21,9 +21,6 @@
             font-size: 5rem;
             transform: translateX(-16rem);
             opacity: 0;
-            font-family: "Audiowide", sans-serif;
-            font-weight: 400;
-            font-style: normal;
             animation: slide-to-side 1s ease-out forwards;
             /* background-image: url('Images/80cb0a8b-324b-4ef2-8590-f49a44e9cbc0.png');
             background-repeat: no-repeat;
@@ -43,13 +40,14 @@
         .product-grid{
             display: grid;
             row-gap: 20rem;
-            column-gap: 180px;
-            grid-template-columns: 300px 300px 300px;
-            padding: 20px;
-            margin: 100px;
-            margin-top: 70px;
-            margin-left: 60px;
+            column-gap: 18rem;
+            grid-template-columns: 30rem 30rem 30rem;
+            padding: 2rem;
+            margin: 10rem;
+            margin-top: 7rem;
+            margin-left: 6rem;
             align-items: center;
+            margin-bottom: 50rem;
             
         }
 
@@ -72,6 +70,7 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             cursor: pointer;
             transition: all 0.25s ease-out;
+            filter: drop-shadow(26px 18px 14px #000000);
         }
 
         .product-grid > figure img:hover{
@@ -90,8 +89,8 @@
         }
 
         .filter-button{
-            margin: 10px;
-            padding: 10px;
+            margin: 1rem;
+            padding: 2rem;
             background-color: #09C0C3;
             color: #022627;
             width: 10%;
@@ -105,6 +104,9 @@
             margin: 4px;
             cursor: pointer;
             transition: all 0.3s ease-out;
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
         }
 
         .filter-button:hover {
@@ -123,7 +125,7 @@
             margin: 0 auto 2rem;        /* 5. Center the container & add bottom space */
         }
 
-        i {
+        .heart-icon > i {
             margin-left: 5rem;
             font-size: 4rem;
             color: red;
@@ -177,6 +179,11 @@
             box-sizing: border-box; /* Includes padding in width/height */
         }
 
+        .details-content-for-modal > p {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
         /* 
         * Close button inside modal:
         * Positioned in the top-right corner of the modal content box.
@@ -189,7 +196,56 @@
             color: #405A53; /* Muted dark green/gray for visual harmony */
             font-size: 2rem; /* Makes the × icon large enough to click easily */
             font-weight: bold; /* Emphasizes the icon's visibility */
+            cursor: pointer;
         }
+
+        .details-content-for-modal > figure figcaption {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+        }
+
+        .tagline,
+        .features,
+        .specs,
+        .care,
+        .shipping {
+            font-size: 1.8rem;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Tagline: Standout Intro Text */
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 500;
+            font-style: italic;
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
+
+        /* Section Headings Highlight */
+        .features strong,
+        .specs strong,
+        .care strong,
+        .shipping strong {
+            font-weight: 500;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* List Icons or Emphasis */
+        .features i,
+        .specs i,
+        .care i,
+        .shipping i {
+            color: #614900; /* soft gold tone for icons */
+            margin-right: 0.4rem;
+            font-size: 1rem;
+            vertical-align: middle;
+        }
+
 
 
         /* Responsive adjustments */
@@ -230,6 +286,12 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <!--
+        <div class="bag-for-shopping">
+            <i class="fa-solid fa-bag-shopping" title="Cart"></i>
+            <span>0</span>
+        </div>
+        -->
     </header>
 
     <main>
@@ -261,7 +323,7 @@
                         <br>
                         CAD $49.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -276,8 +338,45 @@
                                     DRiP Élan Series - Obsidian Gold Travel Tumbler
                                     <br>
                                     CAD $49.00
+                                    <p class="tagline">
+                                        Rugged elegance, crafted for the journey.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.8</strong> (129 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        Designed for those who demand both function and form, the DRiP Élan Series – Obsidian Gold Travel Tumbler combines modern outdoor durability with refined aesthetics. With a deep matte black finish and radiant gold accents, it’s a statement piece as much as a daily essential.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Double-wall vacuum insulation keeps drinks hot for 8 hours, cold for 12<br>
+                                        • Durable 18/8 stainless steel core with a carbon-fiber-inspired matte exterior<br>
+                                        • Ergonomic side handle offers a secure, comfortable grip on the go<br>
+                                        • Clear, BPA-free slider lid protects against spills and splashes<br>
+                                        • Finished with signature DRiP gold metallic branding – built to stand out
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 24 oz (710 ml) · Height: 9.2 in · Base Diameter: 3.1 in · Weight: 0.65 lb<br>
+                                        Material: Premium-grade stainless steel · Lid: BPA-free, slide-lock clear polycarbonate<br>
+                                        Finish: Matte black with electroplated gold detailing
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash recommended to preserve finish · Do not microwave · Avoid abrasive scrubbers
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship in 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -295,7 +394,7 @@
                         <br>
                         CAD $50.09
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -310,8 +409,45 @@
                                     DRiP Élan Series - Crimson Alloy Travel Tumbler
                                     <br>
                                     CAD $50.09
+                                    <p class="tagline">
+                                        Bold heat, cold precision—elevated in alloy.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.7</strong> (98 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        Fusing fiery color with cold-forged performance, the Crimson Alloy Travel Tumbler is where statement aesthetics meet outdoor-grade resilience. With a deep crimson body and black chrome accents, it’s unapologetically bold—designed for trailblazers, commuters, and creators alike.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Double-wall vacuum insulation maintains temperature for hours<br>
+                                        • Industrial-grade stainless steel core with a metallic red finish<br>
+                                        • Glossy black chrome accents for a modern, high-contrast look<br>
+                                        • Ergonomic side handle and BPA-free slider lid for spill-free portability<br>
+                                        • DRiP logo subtly embossed in glossy black—luxury in low light
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 24 oz (710 ml) · Height: 9.2 in · Base Diameter: 3.1 in · Weight: 0.67 lb<br>
+                                        Material: 18/8 stainless steel · Lid: BPA-free, slide-lock polycarbonate<br>
+                                        Finish: Metallic crimson body with black chrome detailing
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not microwave · Dry immediately to preserve finish
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – typically ships within 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ Easy 30-day returns – no questions asked
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -329,7 +465,7 @@
                         <br>
                         CAD $51.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -344,8 +480,46 @@
                                     DRiP Élan Series - Pearl Onyx Travel Tumbler
                                     <br>
                                     CAD $51.00
+                                    <p class="tagline">
+                                        Radiance meets resilience—crafted for every destination.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.9</strong> (142 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        Understated yet unmistakable, the Pearl Onyx Travel Tumbler channels a sense of clean luxury with its shimmering white pearl finish and contrasting high-gloss black accents. Engineered to perform in any climate and styled to elevate any setting, it’s the perfect companion for refined adventurers.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Advanced vacuum insulation for up to 12 hours cold and 8 hours hot<br>
+                                        • Smooth ergonomic handle for all-day comfort<br>
+                                        • Iridescent pearl-white finish resists scratches and smudging<br>
+                                        • High-gloss black trim for a sleek, high-contrast look<br>
+                                        • Clear spill-resistant slider lid, BPA-free and travel-safe<br>
+                                        • Embossed DRiP logo in jet black—minimal, iconic
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 24 oz (710 ml) · Height: 9.2 in · Base Diameter: 3.1 in · Weight: 0.66 lb<br>
+                                        Material: Premium stainless steel · Lid: BPA-free clear polycarbonate<br>
+                                        Finish: Iridescent pearl with black gloss accents
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash recommended · Do not microwave · Wipe dry to maintain luster
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – usually ships in 1–2 business days<br>
+                                        ✅ Free shipping across Canada on orders over CAD $75<br>
+                                        ✅ Hassle-free 30-day returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -363,7 +537,7 @@
                         <br>
                         CAD $55.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -378,8 +552,45 @@
                                     DRiP Élan Series - Sable Amethyst Travel Tumbler
                                     <br>
                                     CAD $55.00
+                                    <p class="tagline">
+                                        Deep tone. Rare presence. Designed to command quiet attention.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                        &nbsp;<strong>4.8</strong> (121 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The Sable Amethyst Travel Tumbler embodies bold elegance—crafted in a royal matte purple with accents of dark nickel, it evokes sophistication and mystery. Engineered for long-haul performance and refined enough for any setting, this tumbler is a statement piece for modern explorers.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Double-wall vacuum insulation for superior temperature retention<br>
+                                        • Ergonomic matte-finish body for secure grip and timeless appeal<br>
+                                        • Rich royal purple exterior with luxe dark nickel bands<br>
+                                        • BPA-free clear slider lid ensures clean sipping and spill resistance<br>
+                                        • DRiP logo embossed in violet-black metallic—bold yet tasteful
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 24 oz (710 ml) · Height: 9.2 in · Base Diameter: 3.1 in · Weight: 0.68 lb<br>
+                                        Material: 18/8 stainless steel · Lid: BPA-free clear polycarbonate<br>
+                                        Finish: Matte royal purple with dark nickel trim
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not microwave · Dry immediately to maintain finish depth
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship within 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day risk-free return policy
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -397,7 +608,7 @@
                         <br>
                         CAD $55.60
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -412,8 +623,45 @@
                                     DRiP Élan Series - SapphireHalo Travel Tumbler
                                     <br>
                                     CAD $55.60
+                                    <p class="tagline">
+                                        Dark elegance meets luminous performance.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                        &nbsp;<strong>4.9</strong> (134 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The SapphireHalo Travel Tumbler combines a sleek matte black carbon fiber body with radiant sapphire-blue titanium accents that catch every ray of light. Designed for the outdoors and urban adventurers alike, it balances cutting-edge materials with refined style.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • High-grade vacuum insulation keeps beverages hot or cold for up to 12 hours<br>
+                                        • Carbon fiber body with diamond-cut facets enhances grip and visual depth<br>
+                                        • Sapphire-blue titanium bands on rim and base for a striking, durable finish<br>
+                                        • Ergonomic handle and BPA-free sliding lid for secure, spill-resistant use<br>
+                                        • DRiP logo embossed in matching metallic sapphire-blue, subtle yet bold
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 24 oz (710 ml) · Height: 9.2 in · Base Diameter: 3.1 in · Weight: 0.65 lb<br>
+                                        Material: Carbon fiber with titanium trim · Lid: BPA-free polycarbonate slider<br>
+                                        Finish: Matte black with sapphire-blue titanium accents
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash recommended · Avoid abrasive cleaners · Do not microwave · Dry immediately
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ships within 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day return guarantee
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -431,7 +679,7 @@
                         <br>
                         CAD $52.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -446,8 +694,45 @@
                                     DRiP VantaFlare Series - Obsidian Red Transit Bottle
                                     <br>
                                     CAD $52.00
+                                    <p class="tagline">
+                                        Bold contrast. Ultimate endurance. Your go-to hydration companion.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.7</strong> (98 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The Obsidian Red Transit Bottle from the VantaFlare Series blends matte black resilience with vivid glossy red accents for a striking silhouette. Built for active lifestyles and rugged adventures, it keeps your beverage fresh and bold wherever you roam.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Vacuum-insulated stainless steel construction for hot or cold retention up to 10 hours<br>
+                                        • Matte black finish with glossy red detailing and signature DRiP droplet icon<br>
+                                        • Slim, sleek design fits most cup holders and backpacks<br>
+                                        • Leak-resistant, BPA-free screw-on cap for secure transport<br>
+                                        • Ergonomic grip for easy handling on the move
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 20 oz (590 ml) · Height: 10.5 in · Diameter: 2.8 in · Weight: 0.55 lb<br>
+                                        Material: 18/8 stainless steel · Lid: BPA-free screw cap<br>
+                                        Finish: Matte black with glossy red accents
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash recommended · Do not microwave · Thoroughly dry after cleaning
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ships in 1–2 business days<br>
+                                        ✅ Free shipping on Canadian orders over CAD $75<br>
+                                        ✅ 30-day return policy
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -465,7 +750,7 @@
                         <br>
                         CAD $52.30
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -480,8 +765,45 @@
                                     DRiP VantaFlare Series - Cobalt Mirage Transit Bottle
                                     <br>
                                     CAD $52.30
+                                    <p class="tagline">
+                                        Sleek sophistication meets secure hydration.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                        &nbsp;<strong>4.8</strong> (112 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The Cobalt Mirage Transit Bottle blends a matte black base with striking cobalt-blue accents and a locking drink-through lid, designed for the adventurer who demands both style and function. Compact yet durable, it keeps your beverages secure and fresh throughout your day.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Vacuum-insulated stainless steel retains temperature up to 10 hours<br>
+                                        • Matte black finish contrasted by glossy cobalt-blue bands and flip-lock<br>
+                                        • Locking drink-through lid prevents spills and leaks on the go<br>
+                                        • DRiP droplet icon embossed in metallic cobalt-blue for subtle branding<br>
+                                        • Ergonomic shape fits comfortably in hand and most vehicle cup holders
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 16 oz (473 ml) · Height: 9.5 in · Diameter: 2.7 in · Weight: 0.50 lb<br>
+                                        Material: 18/8 stainless steel · Lid: BPA-free locking flip lid<br>
+                                        Finish: Matte black with cobalt-blue accents
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Avoid abrasive cleaners · Do not microwave · Dry thoroughly after washing
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ Available now – ships within 1–2 business days<br>
+                                        ✅ Free shipping on Canadian orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -499,7 +821,7 @@
                         <br>
                         CAD $55.30
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -514,8 +836,45 @@
                                     DRiP VantaFlare Series - Graphite Ember Transit Bottle
                                     <br>
                                     CAD $55.30
+                                    <p class="tagline">
+                                        Ignite your journey with vibrant style and dependable performance.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                        &nbsp;<strong>4.8</strong> (104 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The Graphite Ember Transit Bottle pairs a matte charcoal finish with glowing ember-orange accents, delivering a dynamic look that’s as bold as your adventures. Featuring a locking drink-through lid for spill-proof sipping, this 16 oz bottle balances form and function perfectly.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Double-wall vacuum insulation keeps drinks hot or cold for up to 10 hours<br>
+                                        • Matte charcoal body with high-gloss ember-orange bands and flip-lock<br>
+                                        • Locking drink-through lid for secure, spill-resistant hydration<br>
+                                        • DRiP drop icon embossed in ember-orange for a signature look<br>
+                                        • Slim, ergonomic design for easy handling and transport
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 16 oz (473 ml) · Height: 9.5 in · Diameter: 2.7 in · Weight: 0.52 lb<br>
+                                        Material: 18/8 stainless steel · Lid: BPA-free locking flip lid<br>
+                                        Finish: Matte charcoal with ember-orange accents
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash recommended · Avoid harsh detergents · Do not microwave · Air dry thoroughly
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ships in 1–2 business days<br>
+                                        ✅ Free shipping on Canadian orders over CAD $75<br>
+                                        ✅ Easy 30-day return policy
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -533,7 +892,7 @@
                         <br>
                         CAD $56.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -548,8 +907,53 @@
                                     DRiP VantaFlare Series - Phantom Violet Transit Bottle
                                     <br>
                                     CAD $56.00
+                                    <p class="tagline">
+                                    Sleek elegance meets unbeatable performance — travel with bold confidence.
+                                    </p>
+
+                                    <p class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    &nbsp;<strong>4.7</strong> (87 reviews)
+                                    </p>
+
+                                    <p class="overview">
+                                    <strong>Product Overview:</strong><br>
+                                    Featuring a matte black body accented with shimmering phantom violet bands, this 16 oz transit bottle blends style with functionality. Its locking drink-through lid ensures spill-free hydration on the go, while the signature DRiP drop icon in violet-black adds a touch of exclusivity.
+                                    </p>
+
+                                    <p class="features">
+                                    <strong>Key Features:</strong><br>
+                                    • Double-wall vacuum insulation keeps beverages hot or cold for up to 10 hours<br>
+                                    • Matte black finish with high-gloss phantom violet bands and secure flip-lock<br>
+                                    • Locking drink-through lid designed for spill-resistant, easy sipping<br>
+                                    • DRiP drop icon embossed in violet-black for a premium look<br>
+                                    • Slim and ergonomic design fits comfortably in hand and most cup holders
+                                    </p>
+
+                                    <p class="specifications">
+                                    <strong>Specifications:</strong><br>
+                                    Capacity: 16 oz (473 ml) · Height: 9.5 in · Diameter: 2.7 in · Weight: 0.53 lb<br>
+                                    Material: 18/8 stainless steel · Lid: BPA-free locking flip lid<br>
+                                    Finish: Matte black with phantom violet accents
+                                    </p>
+
+                                    <p class="care-instructions">
+                                    <strong>Care Instructions:</strong><br>
+                                    Hand wash only · Avoid abrasive cleaners · Do not microwave · Allow to air dry thoroughly
+                                    </p>
+
+                                    <p class="shipping-info">
+                                    <strong>Availability & Shipping:</strong><br>
+                                    ✅ In stock – ships within 1–2 business days<br>
+                                    ✅ Free shipping on Canadian orders over CAD $75<br>
+                                    ✅ Hassle-free 30-day return policy
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -567,7 +971,7 @@
                         <br>
                         CAD $51.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -582,8 +986,45 @@
                                     DRiP VantaFlare Series - PhotonWave Transit Bottle
                                     <br>
                                     CAD $51.00
+                                    <p class="tagline">
+                                        Futuristic hydration, engineered to electrify.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.7</strong> (98 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        Designed for the bold and dynamic, the DRiP VantaFlare Series – PhotonWave Transit Bottle brings high-voltage energy to your daily hydration. With neon-green wave inlays and hardware set against a matte obsidian finish, this 16 oz bottle fuses performance with eye-catching aesthetics.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Double-wall insulation keeps beverages hot for 6 hours, cold for 10<br>
+                                        • Sleek 18/8 stainless steel body with electro-coated matte black finish<br>
+                                        • Locking drink-through lid prevents leaks during travel<br>
+                                        • Compact profile fits most cup holders and backpack pockets<br>
+                                        • Embossed DRiP drop icon in neon green – bold and unmistakable
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 16 oz (473 ml) · Height: 8.5 in · Base Diameter: 2.8 in · Weight: 0.58 lb<br>
+                                        Material: Food-grade stainless steel · Lid: BPA-free locking polycarbonate<br>
+                                        Finish: Matte obsidian with neon-green accents and wave inlays
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not microwave · Avoid prolonged exposure to direct sunlight
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship in 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -601,7 +1042,7 @@
                         <br>
                         CAD $47.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -616,8 +1057,45 @@
                                     DRiP GlacierStream Hydration Bottle – Frostblue Finish
                                     <br>
                                     CAD $47.00
+                                    <p class="tagline">
+                                        Crisp clarity, chilled to perfection.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.6</strong> (112 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The DRiP GlacierStream Hydration Bottle – Frostblue Finish brings cool sophistication to everyday hydration. With its brushed silver body, soft blue accents, and integrated straw lid, it’s built for those who value clean design and easy sipping, whether at the gym or on the trail.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Double-wall insulation keeps beverages cold for up to 14 hours<br>
+                                        • Durable stainless steel build with a frost-touched brushed finish<br>
+                                        • Integrated straw lid for quick, convenient hydration<br>
+                                        • Slim design fits comfortably in hand and standard cup holders<br>
+                                        • Finished with the signature DRiP droplet icon in matching frostblue
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 20 oz (591 ml) · Height: 9.0 in · Base Diameter: 2.9 in · Weight: 0.6 lb<br>
+                                        Material: Brushed stainless steel · Lid: BPA-free straw top with silicone seal<br>
+                                        Finish: Brushed silver with frostblue detailing
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash recommended · Do not microwave · Do not freeze
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship in 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -635,7 +1113,7 @@
                         <br>
                         CAD $50.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -650,8 +1128,45 @@
                                     DRiP GlacierStream Series - Alpine Jade Hydration Bottle
                                     <br>
                                     CAD $50.00
+                                    <p class="tagline">
+                                        Peak performance, bottled in steel and stone.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.7</strong> (105 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        Built for high-altitude ambitions and everyday endurance, the DRiP GlacierStream Series – Alpine Jade Hydration Bottle pairs rugged utility with minimalist design. Featuring a brushed stainless steel body and smoky-gray details, it's equipped with a flip-through straw lid and an embossed DRiP icon for subtle strength and function.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Large 32 oz capacity for all-day hydration<br>
+                                        • Double-wall vacuum insulation keeps drinks cold for up to 18 hours<br>
+                                        • Flip-through straw lid for one-handed sipping on the go<br>
+                                        • Wide carry loop and textured grip band for easy transport<br>
+                                        • Embossed smoky-gray DRiP drop icon adds refined contrast
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 32 oz (946 ml) · Height: 10.4 in · Base Diameter: 3.3 in · Weight: 0.72 lb<br>
+                                        Material: Brushed stainless steel · Lid: BPA-free polycarbonate with silicone straw<br>
+                                        Finish: Brushed steel with smoky-gray accents
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not microwave · Avoid harsh detergents
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship in 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -669,7 +1184,7 @@
                         <br>
                         CAD $58.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -684,8 +1199,45 @@
                                     DRiP GlacierStream Series - Glacier Smoke Hydration Bottle
                                     <br>
                                     CAD $58.00
+                                    <p class="tagline">
+                                    Pure chill, forged in steel and mist.
+                                </p>
+
+                                <p class="features">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                    &nbsp;<strong>4.8</strong> (117 reviews)
+                                    <br><br>
+                                    <strong>Product Overview:</strong><br>
+                                    The DRiP GlacierStream Series – Glacier Smoke Hydration Bottle merges glacial tones with stainless steel durability. With its pale jade-green accents and flip-through straw lid, this 32 oz hydration companion is crafted for clarity, comfort, and cold retention on your longest adventures.
+                                    <br><br>
+                                    <strong>Key Features:</strong><br>
+                                    • Generous 32 oz capacity for extended hydration<br>
+                                    • Double-wall insulation keeps beverages cold for up to 18 hours<br>
+                                    • Flip-through straw lid enables easy, mess-free sipping<br>
+                                    • Textured grip band and integrated carry loop for effortless transport<br>
+                                    • Embossed jade-green DRiP icon offers a subtle, modern aesthetic
+                                </p>
+
+                                <p class="specs">
+                                    <strong>Specifications:</strong><br>
+                                    Capacity: 32 oz (946 ml) · Height: 10.4 in · Base Diameter: 3.3 in · Weight: 0.72 lb<br>
+                                    Material: Brushed stainless steel · Lid: BPA-free straw-top with silicone components<br>
+                                    Finish: Brushed steel with pale jade-green detailing
+                                </p>
+
+                                <p class="care">
+                                    <strong>Care Instructions:</strong><br>
+                                    Hand wash only · Do not microwave · Store with lid off when not in use
+                                </p>
+
+                                <p class="shipping">
+                                    <strong>Availability & Shipping:</strong><br>
+                                    ✅ In stock – ready to ship in 1–2 business days<br>
+                                    ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                    ✅ 30-day hassle-free returns
+                                </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -703,7 +1255,7 @@
                         <br>
                         CAD $58.80
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -718,8 +1270,45 @@
                                     DRiP GlacierStream Series - Ice Quartz Hydration Bottle
                                     <br>
                                     CAD $58.80
+                                    <p class="tagline">
+                                        Icy elegance, built to endure.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.9</strong> (121 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The DRiP GlacierStream Series – Ice Quartz Hydration Bottle delivers crisp, minimalist style with high-performance insulation. Featuring a brushed stainless steel body and translucent ice-white detailing, this 32 oz bottle is perfect for those who favor refined function with a glacial edge.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • 32 oz capacity ideal for long outings and daily use<br>
+                                        • Double-wall vacuum insulation keeps drinks cold for up to 18 hours<br>
+                                        • Flip-through straw lid for smooth, controlled hydration<br>
+                                        • Ice-white grip band and loop offer clean contrast and easy handling<br>
+                                        • Embossed DRiP drop icon in matching translucent white for subtle branding
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 32 oz (946 ml) · Height: 10.4 in · Base Diameter: 3.3 in · Weight: 0.72 lb<br>
+                                        Material: Brushed stainless steel · Lid: BPA-free straw lid with silicone gasket<br>
+                                        Finish: Brushed steel with translucent ice-white accents
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not microwave · Keep lid and straw dry between uses
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship in 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -737,7 +1326,7 @@
                         <br>
                         CAD $53.20
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -752,8 +1341,45 @@
                                     DRiP GlacierStream Series - PolarMist Hydration Bottle
                                     <br>
                                     CAD $53.20
+                                    <p class="tagline">
+                                        Glacial clarity, made to move.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.8</strong> (109 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The DRiP GlacierStream Series – PolarMist Hydration Bottle offers a refreshing fusion of design and utility. With its semi-transparent 32 oz body featuring a glacier-blue to mist gradient and frost-white accents, it's a sleek and functional companion for hydration on the go.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • 32 oz semi-transparent body shows fill level at a glance<br>
+                                        • Gradient design shifts from glacier blue to soft mist tones<br>
+                                        • Straw lid with frost-white accents for smooth, easy sipping<br>
+                                        • Lightweight and shatter-resistant for everyday durability<br>
+                                        • Embossed pearly white DRiP icon adds a clean, elegant touch
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 32 oz (946 ml) · Height: 10.3 in · Base Diameter: 3.2 in · Weight: 0.56 lb<br>
+                                        Material: BPA-free translucent Tritan plastic · Lid: Straw lid with silicone gasket<br>
+                                        Finish: Frosted gradient (glacier blue to mist) with frost-white detailing
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not microwave · Avoid boiling liquids
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship in 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -773,7 +1399,7 @@
                         <br>
                         CAD $45.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -788,8 +1414,45 @@
                                     DRiP NoirSlate Series - Noirgold A6 Flask
                                     <br>
                                     CAD $45.00
+                                    <p class="tagline">
+                                        Slim. Sophisticated. Unapologetically bold.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.6</strong> (94 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The DRiP NoirSlate Series – Noirgold A6 Flask redefines minimalism with a sharp silhouette and matte black finish. Styled like a slim notebook and capped with a striking gold lid, this ultra-portable flask brings elegance and efficiency to your hydration ritual.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Compact A6 paper-size form factor fits easily in bags and pockets<br>
+                                        • Matte flat-black finish with metallic gold twist cap<br>
+                                        • Lightweight and discreet for travel, meetings, or daily commutes<br>
+                                        • Durable BPA-free construction with leak-resistant seal<br>
+                                        • Embossed DRiP logo adds a sleek designer touch
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 13 oz (385 ml) · Dimensions: 5.8 in × 4.1 in × 1.2 in · Weight: 0.42 lb<br>
+                                        Material: BPA-free Tritan plastic · Lid: Electroplated gold ABS<br>
+                                        Finish: Matte flat black with gold detailing
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not microwave · Store dry when not in use
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship in 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -807,7 +1470,7 @@
                         <br>
                         CAD $52.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -822,8 +1485,45 @@
                                     DRiP NoirSlate Series - GraphiteRose A6 Flask
                                     <br>
                                     CAD $52.00
+                                    <p class="tagline">
+                                        Refined contrast, reimagined for the pocket.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.7</strong> (102 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The DRiP NoirSlate Series – GraphiteRose A6 Flask brings understated luxury to everyday essentials. With a satin graphite-black body, rose-gold detailing, and vertically embossed branding, this flask balances sleek form with distinctive flourish.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Slim A6 silhouette ideal for pockets, clutches, or slim bags<br>
+                                        • Satin graphite finish with rose-gold neck and lid<br>
+                                        • Lightweight and durable for travel or discreet hydration<br>
+                                        • Leak-resistant twist top ensures mess-free storage<br>
+                                        • Embossed vertical “DRiP” branding and drop icon in rose-gold foil
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 13 oz (385 ml) · Dimensions: 5.8 in × 4.1 in × 1.2 in · Weight: 0.42 lb<br>
+                                        Material: BPA-free Tritan plastic · Lid: ABS with rose-gold electroplating<br>
+                                        Finish: Satin graphite-black with rose-gold detailing
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not microwave · Dry thoroughly before storing
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship in 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -841,7 +1541,7 @@
                         <br>
                         CAD $50.10
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -856,8 +1556,45 @@
                                     DRiP NoirSlate Series - ChromeOnyx A6 Flask
                                     <br>
                                     CAD $50.10
+                                    <p class="tagline">
+                                        Liquid shine in a pocket-sized form.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.7</strong> (98 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The DRiP NoirSlate Series – ChromeOnyx A6 Flask makes a bold statement with its high-gloss jet-black body and mirror-chrome accents. Designed for those who prefer their minimalism with a bit of flash, this flask is equal parts elegance and edge.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • A6-sized flask easily fits into compact bags and inner coat pockets<br>
+                                        • High-gloss jet-black body with mirror-finish chrome neck and lid<br>
+                                        • Durable and lightweight BPA-free build for everyday convenience<br>
+                                        • Leak-resistant lid with a secure twist seal<br>
+                                        • Embossed DRiP branding and drop icon in reflective chrome
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 13 oz (385 ml) · Dimensions: 5.8 in × 4.1 in × 1.2 in · Weight: 0.42 lb<br>
+                                        Material: BPA-free Tritan plastic · Lid: Chrome-plated ABS<br>
+                                        Finish: High-gloss black with chrome detailing
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not microwave · Avoid abrasive cleaners
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship in 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -875,7 +1612,7 @@
                         <br>
                         CAD $52.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -890,8 +1627,45 @@
                                     DRiP NoirSlate Series - ShadowCopper A6 Flask
                                     <br>
                                     CAD $52.00
+                                    <p class="tagline">
+                                        Understated power, refined in copper tones.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.8</strong> (87 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The DRiP NoirSlate Series – ShadowCopper A6 Flask embodies stealth sophistication. With a matte charcoal-black body and burnished copper detailing, this compact flask is both rugged and refined—ideal for urban explorers and minimalist aesthetes alike.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • A6 notebook-style silhouette for ultra-portable functionality<br>
+                                        • Matte charcoal finish paired with copper-tone lid and neck<br>
+                                        • Leak-resistant twist cap for secure, mess-free transport<br>
+                                        • BPA-free construction for lightweight durability<br>
+                                        • Vertical “DRiP” branding and drop icon embossed in copper foil
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 13 oz (385 ml) · Dimensions: 5.8 in × 4.1 in × 1.2 in · Weight: 0.42 lb<br>
+                                        Material: BPA-free Tritan plastic · Lid: Burnished copper-tone ABS<br>
+                                        Finish: Matte charcoal-black with copper detailing
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not microwave · Keep dry between uses
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship in 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -909,7 +1683,7 @@
                         <br>
                         CAD $50.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -924,8 +1698,45 @@
                                     DRiP NoirSlate Series - SlateSilver A6 Flask
                                     <br>
                                     CAD $50.00
+                                    <p class="tagline">
+                                        Sleek contrast, forged in silver and slate.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.6</strong> (76 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The DRiP NoirSlate Series – SlateSilver A6 Flask delivers sharp elegance in a flat silhouette. Its matte slate-black body is accented by razor-thin silver splinter inlays and polished hardware—perfect for those who thrive on bold minimalism.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Compact A6 design easily slides into bags, pockets, and portfolios<br>
+                                        • Matte slate-black body with polished silver detailing<br>
+                                        • Sleek splinter inlays provide subtle texture and shine<br>
+                                        • Leak-resistant twist cap ensures no-spill transport<br>
+                                        • DRiP drop icon and vertical logo embossed in silver
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 13 oz (385 ml) · Dimensions: 5.8 in × 4.1 in × 1.2 in · Weight: 0.42 lb<br>
+                                        Material: BPA-free Tritan plastic · Lid: Polished silver-tone ABS<br>
+                                        Finish: Matte slate-black with silver inlay detailing
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash recommended · Do not microwave · Store with lid off to dry
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship in 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -943,7 +1754,7 @@
                         <br>
                         CAD $48.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -958,8 +1769,44 @@
                                     DRiP AmethystEdge Series - ChippedNoirAmethyst Tumbler
                                     <br>
                                     CAD $48.00
+                                    <p class="tagline">
+                                        Geometric glamour meets everyday grit.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.7</strong> (102 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The DRiP AmethystEdge Series – ChippedNoirAmethyst Tumbler fuses edgy geometry with bold elegance. Its matte black faceted body paired with deep amethyst accents makes it as much a style piece as a functional tumbler—perfect for those who carry art in motion.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Double-walled insulation keeps drinks hot for 6 hours, cold for 10<br>
+                                        • Faceted exterior for improved grip and visual intrigue<br>
+                                        • Matte black finish with striking amethyst-purple detailing<br>
+                                        • Spill-resistant slide lid ensures secure sipping on the move<br>
+                                        • DRiP droplet icon embossed for signature branding
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 20 oz (590 ml) · Height: 7.8 in · Diameter: 3.3 in · Weight: 0.58 lb<br>
+                                        Material: Stainless steel with BPA-free lid · Finish: Matte black with amethyst accents
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not microwave · Avoid bleach-based cleaners
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship in 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -977,7 +1824,7 @@
                         <br>
                         CAD $62.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -992,8 +1839,45 @@
                                     DRiP AmethystEdge Series - RoseQuartzGraphite Tumbler
                                     <br>
                                     CAD $62.00
+                                    <p class="tagline">
+                                        Diamond-cut design with a blush of brilliance.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.8</strong> (88 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        Where structure meets softness — the DRiP AmethystEdge Series – RoseQuartzGraphite Tumbler delivers bold form in a matte graphite body with delicate rose-pink faceted detailing. Engineered to elevate your hydration style with elegance and edge.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Double-wall vacuum insulation for long-lasting temperature control<br>
+                                        • Sculpted diamond-cut body for modern grip and standout style<br>
+                                        • Matte graphite finish with electroplated rose-quartz faceting<br>
+                                        • Snap-in BPA-free lid with secure pink trim<br>
+                                        • Signature DRiP drop icon in matching rose-pink emboss
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 20 oz (590 ml) · Height: 7.9 in · Diameter: 3.2 in · Weight: 0.6 lb<br>
+                                        Material: Insulated stainless steel · Lid: BPA-free snap-in lid with silicone seal<br>
+                                        Finish: Matte graphite with rose-pink plated facets
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not microwave · Keep lid dry after cleaning to maintain seal
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship in 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1011,7 +1895,7 @@
                         <br>
                         CAD $62.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1026,8 +1910,45 @@
                                     DRiP AmethystEdge Series - CobaltEmber Tumbler
                                     <br>
                                     CAD $62.00
+                                    <p class="tagline">
+                                        Bold heat, cool edge — where fire meets finesse.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                        &nbsp;<strong>4.7</strong> (76 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        Ignite your everyday with the DRiP AmethystEdge Series – CobaltEmber Tumbler. Featuring a burnt-orange diamond-cut body and high-gloss cobalt-blue edges, this piece balances radiant warmth with a cool geometric finish. For those who sip with attitude.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Double-wall vacuum insulation for superior temperature control<br>
+                                        • Diamond-cut silhouette with enhanced grip and visual appeal<br>
+                                        • Burnt-orange matte base with cobalt-blue high-gloss faceting<br>
+                                        • Snap-in BPA-free lid with matching blue trim<br>
+                                        • Embossed DRiP icon in deep cobalt for signature flair
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 20 oz (590 ml) · Height: 7.9 in · Diameter: 3.2 in · Weight: 0.6 lb<br>
+                                        Material: Premium stainless steel · Lid: BPA-free, snap-lock polycarbonate<br>
+                                        Finish: Matte burnt-orange with gloss cobalt-blue faceted edges
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash recommended · Not microwave-safe · Dry lid thoroughly after washing
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship in 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day hassle-free returns
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1045,7 +1966,7 @@
                         <br>
                         CAD $62.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1060,8 +1981,45 @@
                                     DRiP AmethystEdge Series - JadeAshGold Tumbler
                                     <br>
                                     CAD $62.00
+                                    <p class="tagline">
+                                        Elegance redefined — jade shimmer, golden whisper.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                        &nbsp;<strong>4.8</strong> (89 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        Discover a new level of luxury with the DRiP AmethystEdge Series – JadeAshGold Tumbler. This standout piece pairs matte ash-black with pearlescent jade-green edges and subtle gold-flake accents for a finish that's striking yet sophisticated.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Advanced vacuum insulation keeps drinks hot or cold for hours<br>
+                                        • Faceted design with jade-green pearlescent shimmer<br>
+                                        • Matte ash-black body with metallic gold-flake detail<br>
+                                        • Snap-in, leak-resistant lid with matching jade trim<br>
+                                        • Signature DRiP icon embossed in jade-green
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 20 oz (590 ml) · Height: 7.9 in · Diameter: 3.2 in · Weight: 0.6 lb<br>
+                                        Material: Stainless steel · Lid: BPA-free snap-top<br>
+                                        Finish: Matte ash-black with jade pearl and gold accents
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Not microwave-safe · Avoid abrasive cleaners to preserve finish
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ships within 1–2 business days<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day satisfaction guarantee
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1069,6 +2027,7 @@
                             </figure>
                         </div>
                     </div>
+
                 </figure>
 
                 <figure class="amethystEdge"> 
@@ -1078,7 +2037,7 @@
                         <br>
                         CAD $62.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1093,8 +2052,45 @@
                                     DRiP AmethystEdge Series - TopazRift Tumbler
                                     <br>
                                     CAD $62.00
+                                    <p class="tagline">
+                                        Forged in fire — the glow of topaz veins in midnight steel.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                        &nbsp;<strong>4.9</strong> (102 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        Ignite your daily ritual with the DRiP AmethystEdge Series – TopazRift Tumbler. Featuring glowing topaz-orange facet veins across a matte charcoal-black body, this tumbler channels the drama of molten earth with geometric precision.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Diamond-cut design with topaz-orange glowing facet accents<br>
+                                        • Durable matte charcoal-black stainless steel body<br>
+                                        • Advanced thermal insulation keeps beverages hot or cold for hours<br>
+                                        • Snap-in, spill-resistant lid with color-matching orange trim<br>
+                                        • Embossed DRiP droplet logo in topaz-orange
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 20 oz (590 ml) · Height: 8 in · Diameter: 3.25 in · Weight: 0.62 lb<br>
+                                        Material: Food-grade stainless steel · Lid: BPA-free, snap-top<br>
+                                        Finish: Matte charcoal with topaz-orange highlight inlays
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash recommended · Do not microwave · Avoid harsh abrasives on inlays
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ Available now – dispatches within 1–2 business days<br>
+                                        ✅ Free standard shipping in Canada on orders over CAD $75<br>
+                                        ✅ Backed by a 30-day return policy
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1102,6 +2098,7 @@
                             </figure>
                         </div>
                     </div>
+
                 </figure>
 
 
@@ -1112,7 +2109,7 @@
                         <br>
                         CAD $65.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1127,8 +2124,45 @@
                                     DRiP CarbonLuxe Prism Series - CarbonIridescent Tumbler
                                     <br>
                                     CAD $65.00
+                                    <p class="tagline">
+                                        Engineered elegance — where carbon meets color.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        &nbsp;<strong>5.0</strong> (87 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        Uniting high-tech materials with high-art form, the DRiP CarbonLuxe Prism Series – CarbonIridescent Tumbler is a celebration of structural sophistication. Its matte black carbon fiber body is accented with iridescent purple, shifting color as it catches the light — a showpiece in motion.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Sculpted carbon fiber exterior with premium matte finish<br>
+                                        • Iridescent purple accents reflect light with prismatic effect<br>
+                                        • Double-walled vacuum insulation for maximum temperature retention<br>
+                                        • Precision-engineered, snap-in leak-resistant lid<br>
+                                        • DRiP droplet icon embossed for minimalist flair
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 20 oz (590 ml) · Height: 8.2 in · Diameter: 3.3 in · Weight: 0.58 lb<br>
+                                        Material: Reinforced carbon fiber composite · Lid: BPA-free, color-trimmed<br>
+                                        Finish: Matte black with iridescent prism highlights
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not microwave · Store dry to preserve iridescent finish
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ Limited release – ships in 1–2 business days<br>
+                                        ✅ Free expedited shipping in Canada for orders over CAD $75<br>
+                                        ✅ Covered by DRiP's premium 30-day satisfaction guarantee
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1145,7 +2179,7 @@
                         <br>
                         CAD $65.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1160,8 +2194,45 @@
                                     DRiP CarbonLuxe Prism Series - NebulaChrome Tumbler
                                     <br>
                                     CAD $65.00
+                                    <p class="tagline">
+                                        Cosmic sheen meets structural elegance.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                        &nbsp;<strong>4.8</strong> (102 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The DRiP CarbonLuxe Prism Series – NebulaChrome Tumbler embodies stellar brilliance in a vessel designed for the extraordinary. With its matte dark steel base and multidimensional chrome inlays, each facet reflects a shifting aurora of copper, violet, and teal — a fluid spectrum forged in metal.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Faceted matte steel body with iridescent prism chrome inlays<br>
+                                        • Color-shift effect flows from copper to violet to teal<br>
+                                        • 24 oz double-wall vacuum insulation for all-day hot/cold retention<br>
+                                        • Precision snap-in lid with matching chrome-teal trim<br>
+                                        • Embossed DRiP icon in mirrored gradient finish
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 24 oz (710 ml) · Height: 8.5 in · Diameter: 3.4 in · Weight: 0.64 lb<br>
+                                        Material: Brushed stainless steel alloy with chrome-polymer inlay<br>
+                                        Finish: Matte dark steel with liquid-gradient prism insets
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not microwave · Keep dry when stored to maintain gradient luster
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ships within 24 hours<br>
+                                        ✅ Free express delivery in Canada on orders over CAD $75<br>
+                                        ✅ Covered by DRiP’s LuxeCare 30-day return policy
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1178,7 +2249,7 @@
                         <br>
                         CAD $65.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1193,8 +2264,45 @@
                                     DRiP CarbonLuxe Prism Series - GraphiteSpectral Tumbler
                                     <br>
                                     CAD $65.00
+                                    <p class="tagline">
+                                        Where subtle graphite meets the shimmer of the spectrum.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        &nbsp;<strong>5.0</strong> (89 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The DRiP CarbonLuxe Prism Series – GraphiteSpectral Tumbler strikes the perfect balance between understated sophistication and futuristic brilliance. Its soft matte graphite-black body is elevated with spectral nano-coated trim that shifts seamlessly between violet, cyan, and deep blue, delivering elegance with a prismatic edge.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Diamond-faceted graphite-black finish with soft-touch coating<br>
+                                        • Nano-coated spectral trim refracts vibrant blue, violet, and cyan hues<br>
+                                        • 24 oz vacuum-insulated stainless steel construction for long-lasting temperature control<br>
+                                        • Snap-in lid with color-matching violet-blue edge<br>
+                                        • DRiP drop icon filled with shimmering prismatic resin
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 24 oz (710 ml) · Height: 8.6 in · Diameter: 3.4 in · Weight: 0.66 lb<br>
+                                        Material: Stainless steel core with nano-prism polyblend accents<br>
+                                        Finish: Soft matte graphite with light-reactive spectrum coating
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash with mild soap · Avoid abrasive scrubbers · Not microwave or dishwasher safe
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock – ready to ship within 1 business day<br>
+                                        ✅ Free tracked shipping in Canada for orders over CAD $75<br>
+                                        ✅ Protected by DRiP’s LuxeCare 30-day guarantee
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1211,7 +2319,7 @@
                         <br>
                         CAD $65.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1226,8 +2334,45 @@
                                     DRiP CarbonLuxe Prism Series - OnyxFlare Tumbler
                                     <br>
                                     CAD $65.00
+                                    <p class="tagline">
+                                        Ignite boldness with the fusion of ember and titanium.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                        &nbsp;<strong>4.8</strong> (77 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The DRiP CarbonLuxe Prism Series – OnyxFlare Tumbler is a striking embodiment of fiery contrast and metallic elegance. With its high-gloss onyx-black body, faceted with precision and accented in ember-orange and titanium-blue, this tumbler is made to stand out while keeping your drink perfectly tempered.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Glossy onyx-black finish with geometric prism facets<br>
+                                        • Ember-orange and titanium-blue trim for a bold, dual-tone aesthetic<br>
+                                        • Double-wall vacuum insulation to keep beverages hot or cold for hours<br>
+                                        • Snap-in lid with ember-orange trim for a secure seal<br>
+                                        • Titanium-blue DRiP drop icon embossed on the front
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 24 oz (710 ml) · Height: 8.6 in · Diameter: 3.4 in · Weight: 0.68 lb<br>
+                                        Material: Premium stainless steel with gloss polymer overlays<br>
+                                        Finish: Mirror-polished black with metallic accent detailing
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash only · Do not use bleach or abrasives · Not safe for microwave or dishwasher
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ In stock and ships within 1 business day<br>
+                                        ✅ Free Canada-wide shipping on orders over CAD $75<br>
+                                        ✅ 30-day LuxeCare return policy included
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1244,7 +2389,7 @@
                         <br>
                         CAD $65.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1259,8 +2404,45 @@
                                     DRiP CarbonLuxe Prism Series - NovaSpectrum Tumbler
                                     <br>
                                     CAD $65.00
+                                    <p class="tagline">
+                                        Radiate brilliance — every spectrum, every sip.
+                                    </p>
+
+                                    <p class="features">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        &nbsp;<strong>5.0</strong> (91 reviews)
+                                        <br><br>
+                                        <strong>Product Overview:</strong><br>
+                                        The DRiP CarbonLuxe Prism Series – NovaSpectrum Tumbler is the apex of expressive design and premium engineering. Its matte black carbon fiber shell is faceted for grip and visual depth, while three spectral prism bands ripple asymmetrically across the surface, creating a shifting play of light and color with every angle.
+                                        <br><br>
+                                        <strong>Key Features:</strong><br>
+                                        • Ultra-light carbon fiber composite with diamond-cut prism faceting<br>
+                                        • Multiband spectral inlays: violet-indigo, emerald-cyan, and gold-crimson<br>
+                                        • Prism-lacquer-filled DRiP icon on front for iridescent detail<br>
+                                        • Snap-in lid with multichrome-edged spout<br>
+                                        • Advanced vacuum insulation keeps beverages hot for 8h, cold for 12h
+                                    </p>
+
+                                    <p class="specs">
+                                        <strong>Specifications:</strong><br>
+                                        Capacity: 24 oz (710 ml) · Height: 8.6 in · Diameter: 3.4 in · Weight: 0.64 lb<br>
+                                        Material: Aerospace-grade carbon fiber, premium prism polymer accents<br>
+                                        Finish: Matte black base with multi-spectrum reflective detailing
+                                    </p>
+
+                                    <p class="care">
+                                        <strong>Care Instructions:</strong><br>
+                                        Hand wash with warm water · Avoid prolonged sun exposure · Do not microwave or freeze
+                                    </p>
+
+                                    <p class="shipping">
+                                        <strong>Availability & Shipping:</strong><br>
+                                        ✅ Ready to ship — dispatches in 24h<br>
+                                        ✅ Free Canada-wide shipping over CAD $75<br>
+                                        ✅ Covered by DRiP’s LuxeCare 30-day satisfaction guarantee
+                                    </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to wishlist"></i>
+                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
