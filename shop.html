@@ -216,47 +216,48 @@
             font-size: 2rem;
         }
 
-        /* === Generic Section Content Styling === */
+        
+        /* === Modal Product Details Section Styling === */
         .tagline,
         .features,
         .specs,
         .care,
         .shipping {
-            font-size: 1.8rem;
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.7;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
+            font-size: 1.8rem;                  /* Sets a readable font size for modal details */
+            font-family: 'Roboto', sans-serif;  /* Uses Roboto for consistency and clarity */
+            line-height: 1.7;                   /* Increases line spacing for better readability */
+            font-weight: 400;                   /* Normal font weight for body text */
+            margin-bottom: 1.5rem;              /* Adds space below each section */
         }
 
-        /* === Tagline Specific === */
+        /* === Tagline Specific Styling === */
         .tagline {
-            font-size: 1.5rem;
-            font-weight: 500;
-            font-style: italic;
-            text-align: center;
-            letter-spacing: 0.3px;
+            font-size: 1.5rem;                  /* Slightly smaller for taglines */
+            font-weight: 500;                   /* Medium weight for emphasis */
+            font-style: italic;                 /* Italicized for distinction */
+            text-align: center;                 /* Centers tagline text */
+            letter-spacing: 0.3px;              /* Slightly increases spacing between letters */
         }
 
-        /* === Section Headings === */
+        /* === Section Headings in Modal Details === */
         .features strong,
         .specs strong,
         .care strong,
         .shipping strong {
-            font-weight: 500;
-            display: block;
-            margin-bottom: 0.5rem;
+            font-weight: 500;                   /* Medium weight for headings */
+            display: block;                     /* Makes headings appear on their own line */
+            margin-bottom: 0.5rem;              /* Adds space below headings */
         }
 
-        /* === Icon Styling in Lists === */
+        /* === Icon Styling in Modal Lists === */
         .features i,
         .specs i,
         .care i,
         .shipping i {
-            color: #614900;               /* Soft gold color */
-            margin-right: 0.4rem;
-            font-size: 1rem;
-            vertical-align: middle;
+            color: #614900;                     /* Soft gold color for icons */
+            margin-right: 0.4rem;               /* Space between icon and text */
+            font-size: 1rem;                    /* Small icon size for subtlety */
+            vertical-align: middle;             /* Aligns icon with text baseline */
         }
 
         /* === Responsive Modal Adjustments (Mobile) === */
@@ -278,7 +279,69 @@
             }
         }
 
-                
+        /* === Responsive styles for tablets and smaller devices === */
+            @media (max-width: 1024px) {
+                #products h1 {
+                    font-size: 3.5rem;
+                    margin-left: 6rem;
+                    transform: translateX(-8rem);
+                }
+
+                .product-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    column-gap: 5rem;
+                    row-gap: 10rem;
+                    margin: 5rem;
+                    margin-bottom: 30rem;
+                }
+
+                .filter-button {
+                    width: 30%;
+                    font-size: 1.4rem;
+                }
+            }
+
+            /* === Responsive styles for phones === */
+            @media (max-width: 600px) {
+                #products h1 {
+                    font-size: 2.5rem;
+                    margin-left: 2rem;
+                    transform: translateX(-4rem);
+                    text-align: center;
+                }
+
+                .product-grid {
+                    grid-template-columns: 1fr;
+                    margin: 2rem;
+                    row-gap: 6rem;
+                }
+
+                .product-grid > figure {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .product-grid > figure img {
+                    width: 90%;
+                    height: auto;
+                }
+
+                .filter-button {
+                    width: 80%;
+                    font-size: 1.2rem;
+                }
+
+                #whole-filter-button-holder {
+                    margin-left: 0;
+                    justify-content: center;
+                }
+
+                .heart-icon > i {
+                    font-size: 3rem;
+                    margin-left: 1rem;
+                }
+            }
+
     </style>
 </head>
 <body>
@@ -331,6 +394,7 @@
             <h1><b>Products</b></h1>
             <br>
             <div id="whole-filter-button-holder">
+                <!-- Filter Buttons -->
                 <button class="filter-button" data-filter="all">Show all</button>
                 <button class="filter-button" data-filter="élanSeries">Élan Series</button>
                 <button class="filter-button" data-filter="vantaFlare">VantaFlare</button>
@@ -341,9 +405,11 @@
             </div>
 
             <div class="product-grid">
-                <!-- Filter Buttons -->
+                <!--
+                    Products in the grid, with its images, and short descriptions, accompanied with its modal content with more details.
+                -->
                 <figure class="élanSeries">
-                    <img src="Images/1st product.png" alt="Matte black travel mug with ergonomic handle, polished gold-tone bands at rim and base, clear sliding lid, DRiP logo embossed in metallic gold on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/1st product.png" alt="Matte black travel mug with ergonomic handle, polished gold-tone bands at rim and base, clear sliding lid, DRiP logo embossed in metallic gold on front."  onclick="detailsBoxOpen(this)"  tabindex="0">
                     <figcaption>
                         DRiP Élan Series - Obsidian Gold Travel Tumbler
                         <br>
@@ -2486,15 +2552,18 @@
         </section>
     </main>
 
+    <!-- Footer section with logo, links, and social media icons -->
     <footer>
         <figure>
             <img src="Images/Drop Logo for footer.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast." style="width: 100px;">
             <figcaption>Stay Chill. Stay Cool</figcaption>
+            <!-- Footer navigation links -->
             <ul class="footer-links">
                 <li><a href="about.html">About</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
+            <!-- Legal links -->
             <ul class="legal-links">
                 <li>
                     <a href="#">Terms</a>
@@ -2506,8 +2575,10 @@
                     <a href="#">Cookies</a>
                 </li>
             </ul>
+            <!-- Social media icons -->
             <ul class="social-media-icons">
                 <li>
+                    <!--Instagram icon-->
                     <figure>
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                             <img src="Images/Instagram icon.png" alt="Instagram icon">
@@ -2515,6 +2586,7 @@
                     </figure>
                 </li>
                 <li>
+                    <!--Facebook icon-->
                     <figure>
                         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                             <img src="Images/facebook icon.png" alt="Facebook icon">
@@ -2522,6 +2594,7 @@
                     </figure>
                 </li>
                 <li>
+                    <!--X icon-->
                     <figure>
                         <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
                             <img src="Images/X icon.png" alt="X icon">
@@ -2529,9 +2602,11 @@
                     </figure>
                 </li>
                 <li>
+                    <!--LinkedIn icon-->
                     <figure>
                         <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
                             <img src="Images/LinkedIn icon..png" alt="LinkedIn icon">
+                        </a>
                     </figure>
                 </li>
             </ul>

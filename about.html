@@ -4,130 +4,342 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drip</title>
+    <!-- Favicon -->
     <link rel="icon" type="Images/Favicon.png" href="Images/Favicon.png">
+    <!-- Main CSS -->
     <link rel="stylesheet" href="CSS/styles.css">
+    <!-- Custom JS -->
     <script src="JavaScript/script.js"></script>
+    <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/b6f797d5b9.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
-
+        /* Section: Our Story */
+        /* Styles the main container for the About page's story section */
         #our-story {
-            position: relative;
-            margin-bottom: 400px;
+            position: relative; /* Allows absolutely positioned children */
+            margin-bottom: 400px; /* Adds space below the section */
         }
 
+        /* Intro Section */
+        /* Styles the introduction text and heading */
         #intro{
-            font-size: 1.8rem;
-            margin-bottom: 50px;
-            margin: 20px;
-            padding: 20px;
-            color: #405A53;
-            font-weight:  bold;
+            font-size: 1.8rem; /* Sets font size for intro text */
+            margin-bottom: 50px; /* Space below intro */
+            margin: 20px; /* Space around intro */
+            padding: 20px; /* Inner space for intro */
+            color: #405A53; /* Text color */
+            font-weight:  bold; /* Makes text bold */
         }
 
         #intro h1 {
-            font-size: 5rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            text-decoration: underline;
-            text-align: center;
+            font-size: 5rem; /* Large heading */
+            margin-bottom: 20px; /* Space below heading */
+            text-transform: uppercase; /* Uppercase letters */
+            text-decoration: underline; /* Underline heading */
+            text-align: center; /* Center heading */
         }
 
+        /* Reasons and Qualities Grid */
+        /* Lays out the reasons and qualities columns with a vertical border in between */
         #reasons-qualities {
-            display: grid;
-            grid-template-columns: 500px auto 550px;
-            gap: 20px;
-            margin: 20px;
-            padding: 20px;
-            margin-top: 50px;
-            margin-bottom: 100px;
+            display: grid; /* Uses CSS grid layout */
+            grid-template-columns: 500px auto 550px; /* Three columns: left, border, right */
+            gap: 20px; /* Space between columns */
+            margin: 20px; /* Space around grid */
+            padding: 20px; /* Inner space for grid */
+            margin-top: 50px; /* Space above grid */
+            margin-bottom: 100px; /* Space below grid */
         }
 
+        /* Vertical Border */
+        /* Creates a vertical line between the two columns */
         #border{
-            border-left: 3.5px solid #022627;
-            height: 50rem;
-            position: absolute;
-            left: 50%;
-            grid-area: 1 / 2 / span 1 / span 1;
-            margin-left: 0px;
+            border-left: 3.5px solid #022627; /* Vertical line style */
+            height: 50rem; /* Height of the border */
+            position: absolute; /* Absolute positioning */
+            left: 50%; /* Center horizontally */
+            grid-area: 1 / 2 / span 1 / span 1; /* Grid placement */
+            margin-left: 0px; /* No extra left margin */
         }
 
+        /* Reasons Section */
+        /* Styles the left column with reasons text */
         #reasons {
-            font-size: 1.8rem;
-            color: #405A53;
-            font-weight: bold;
-            grid-area: 1 / 1 / span 1 / span 1;
+            font-size: 1.8rem; /* Font size for reasons */
+            color: #405A53; /* Text color */
+            font-weight: bold; /* Bold text */
+            grid-area: 1 / 1 / span 1 / span 1; /* Grid placement */
         }
 
         #reasons h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            text-decoration: underline;
+            font-size: 3rem; /* Heading size */
+            margin-bottom: 20px; /* Space below heading */
+            text-transform: uppercase; /* Uppercase heading */
+            text-decoration: underline; /* Underline heading */
         }
 
+        /* Qualities Section */
+        /* Styles the right column with qualities list */
         #qualities {
-            font-size: 1.8rem;
-            color: #405A53;
-            font-weight: bold;
-            grid-area: 1 / 3 / span 1 / span 1;
+            font-size: 1.8rem; /* Font size for qualities */
+            color: #405A53; /* Text color */
+            font-weight: bold; /* Bold text */
+            grid-area: 1 / 3 / span 1 / span 1; /* Grid placement */
         }
 
-        
         #qualities ul {
-            padding: 0;
+            padding: 0; /* Remove default list padding */
         }
 
         #qualities li {
-            margin-bottom: 20px;
-            line-height: 1.5;
-            background-color: #93ada5;
-            border-radius: 1rem;
-            padding: 1rem;
-            opacity: 0;
-            transform: translateX(-5rem);
-            animation: slide-left 2s ease forwards;
+            margin-bottom: 20px; /* Space below each list item */
+            line-height: 1.5; /* Line height for readability */
+            background-color: #93ada5; /* Background color for list item */
+            border-radius: 1rem; /* Rounded corners */
+            padding: 1rem; /* Inner space for list item */
+            opacity: 0; /* Start invisible for animation */
+            transform: translateX(-5rem); /* Start shifted left for animation */
+            /* Animation for sliding in */
+            animation: slide-left 2s ease forwards; /* Animate slide-in */
+            -webkit-animation: slide-left 2s ease forwards; /* Safari/Chrome */
+            -moz-animation: slide-left 2s ease forwards; /* Firefox */
+            -o-animation: slide-left 2s ease forwards; /* Opera */
         }
 
+        /* Drip Identity Text */
+        /* Highlights the brand identity phrase */
         .drip-identity {
-            font-weight: bold;
-            color: #022627;
-            font-size: 2.3rem;
-            text-transform: uppercase;
+            font-weight: bold; /* Bold text */
+            color: #022627; /* Brand color */
+            font-size: 2.3rem; /* Larger font size */
+            text-transform: uppercase; /* Uppercase text */
         }
 
+        /* Font Awesome List Icons */
+        /* Styles the icons in the qualities list and animates them */
         .fa-li  {
-            font-size: 5rem;
-            margin-right: 10rem;
-            color: #405A53;
-            opacity: 0;
-            transform: translateX(-4rem);
-            animation: slide-left 2s ease forwards;
-            transition: all 0.25s ease-out;
+            font-size: 5rem; /* Large icon size */
+            margin-right: 10rem; /* Space to the right of icon */
+            color: #405A53; /* Icon color */
+            opacity: 0; /* Start invisible for animation */
+            transform: translateX(-4rem); /* Start shifted left for animation */
+            /* Animation for sliding in */
+            animation: slide-left 2s ease forwards; /* Animate slide-in */
+            -webkit-animation: slide-left 2s ease forwards; /* Safari/Chrome */
+            -moz-animation: slide-left 2s ease forwards; /* Firefox */
+            -o-animation: slide-left 2s ease forwards; /* Opera */
+            transition: all 0.25s ease-out; /* Smooth transition on hover */
+            -webkit-transition: all 0.25s ease-out; /* Safari/Chrome */
+            -moz-transition: all 0.25s ease-out; /* Firefox */
+            -o-transition: all 0.25s ease-out; /* Opera */
         }
 
         .fa-li> i:hover{
-            transform: scale(1.3);
+            /* Enlarge icon on hover */
+            transform: scale(1.3); /* Grow icon */
+            -webkit-transform: scale(1.3); /* Safari/Chrome */
+            -moz-transform: scale(1.3); /* Firefox */
+            -o-transform: scale(1.3); /* Opera */
         }
 
+        /* Keyframes for slide-left animation */
+        /* Animates elements from left to right and fades them in */
         @keyframes slide-left{
             to {
-                opacity: 1;
-                transform: translateX(1rem);
+            opacity: 1; /* Fade in */
+            transform: translateX(1rem); /* Slide to final position */
+            }
+        }
+        @-webkit-keyframes slide-left{
+            to {
+            opacity: 1; /* Fade in */
+            -webkit-transform: translateX(1rem); /* Slide to final position */
+            }
+        }
+        @-moz-keyframes slide-left{
+            to {
+            opacity: 1; /* Fade in */
+            -moz-transform: translateX(1rem); /* Slide to final position */
+            }
+        }
+        @-o-keyframes slide-left{
+            to {
+            opacity: 1; /* Fade in */
+            -o-transform: translateX(1rem); /* Slide to final position */
+            }
+        }
+        
+        /* =============================== */
+        /* 📏 Laptops & Smaller (≤ 1024px) */
+        /* =============================== */
+        @media (max-width: 1024px) {
+        /* Shrinks intro text for medium screens and centers it */
+            #intro {
+                font-size: clamp(1.4rem, 2vw, 1.6rem); /* Responsive scaling */
+                margin: 1rem;
+                padding: 1rem;
+                text-align: center; /* Center aligns text for readability */
+            }
+
+            /* Responsively scales intro heading for medium screens */
+            #intro h1 {
+                font-size: clamp(3rem, 5vw, 4rem);
+            }
+
+            /* Converts grid to a single-column stack layout */
+            #reasons-qualities {
+                grid-template-columns: 1fr; /* Collapse into one column */
+                gap: 2rem; /* Add space between stacked items */
+                padding: 1rem;
+                margin: 2rem 1rem;
+                position: relative;
+            }
+
+            /* Hides the vertical border line (useless in single-column) */
+            #border {
+                display: none;
+            }
+
+            /* Adjusts text size and removes hard grid-area placement */
+            #reasons,
+            #qualities {
+                grid-area: unset; /* Let natural flow dictate placement */
+                font-size: clamp(1.4rem, 2vw, 1.6rem);
+                text-align: center;
+            }
+
+            /* Scales section headers responsively */
+            #reasons h1,
+            #qualities h1 {
+                font-size: clamp(2.2rem, 4vw, 3rem);
+            }
+
+            /* Shrinks icon size and spacing to fit medium screens */
+            .fa-li {
+                font-size: 3.5rem;
+                margin-right: 3rem;
+            }
+
+            /* Adjusts padding/text size of list items */
+            #qualities li {
+                font-size: 1.6rem;
+                padding: 1rem;
+            }
+        }
+
+
+        /* ============================ */
+        /* 📱 Tablets & Small Devices  */
+        /* (≤ 768px: iPads & Small Tabs) */
+        /* ============================ */
+        @media (max-width: 768px) {
+            /* Tightens intro spacing and font for smaller devices */
+            #intro {
+                font-size: 1.3rem;
+                padding: 1rem;
+            }
+
+            /* Shrinks intro heading */
+            #intro h1 {
+                font-size: 3rem;
+            }
+
+            /* Shrinks paragraph-level text */
+            #reasons,
+            #qualities {
+                font-size: 1.3rem;
+                padding: 0 1rem;
+            }
+
+            /* Shrinks brand identity emphasis text */
+            .drip-identity {
+                font-size: 1.8rem;
+            }
+
+            /* Makes list items more compact */
+            #qualities li {
+                font-size: 1.4rem;
+                padding: 0.8rem;
+                margin-bottom: 1rem;
+            }
+
+            /* Reduces icon size and spacing */
+            .fa-li {
+                font-size: 2.8rem;
+                margin-right: 2rem;
+            }
+        }
+
+
+        /* ====================== */
+        /* 📵 Phones (≤ 480px) */
+        /* ====================== */
+        @media (max-width: 480px) {
+            /* Compress intro section even more */
+            #intro {
+                font-size: 1.2rem;
+                padding: 0.8rem;
+            }
+
+            /* Shrinks main heading for small phone screens */
+            #intro h1 {
+                font-size: 2.4rem;
+            }
+
+            /* Even more compact for body sections */
+            #reasons,
+            #qualities {
+                font-size: 1.2rem;
+            }
+
+            /* Shrinks brand ID text */
+            .drip-identity {
+                font-size: 1.5rem;
+            }
+
+            /* Tighter list item styling */
+            #qualities li {
+                font-size: 1.3rem;
+                padding: 0.6rem;
+            }
+
+            /* Smallest icon size and spacing for cramped screens */
+            .fa-li {
+                font-size: 2.2rem;
+                margin-right: 1.5rem;
+            }
+        }
+
+
+        /* ===================================== */
+        /* 💤 Optional: Kill Animation on Phones */
+        /* Avoids animation jank on low-power UI */
+        /* ===================================== */
+        @media (max-width: 480px) {
+            #qualities li,
+            .fa-li {
+                animation: none !important; /* Kill animations */
+                opacity: 1; /* Instantly show */
+                transform: translateX(0); /* Reset transform */
             }
         }
     </style>
 
 </head>
 <body>
+    <!-- Header with Logo and Navigation -->
     <header>
+        <!-- Company Logo links to homepage -->
         <figure class="company-logo">
-            <a href="index.html">
-                        <img src="Images/Drop Logo.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast.">
+            <a href="index.html"></a>
+                <img src="Images/Drop Logo.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast.">
             </a>
         </figure>
+        <!-- Main Navigation Menu -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -136,6 +348,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <!-- Shopping Cart Icon with Item Count -->
         <div class="bag-for-shopping">
             <i class="fa-solid fa-bag-shopping" title="Cart" onclick="cartTravel()"></i>
             <span>0</span>
@@ -143,16 +356,22 @@
     </header>
 
     <main>
+        <!-- Banner Image Section -->
         <figure class="banner-images">
+            <!-- Main banner image for the About page -->
             <img src="Images/snow banner image.png" alt="A silver water bottle with a light teal lid and a water droplet logo sits nestled in a snowdrift, with a snowy, out-of-focus background of evergreen trees.">
             <figcaption>
+                <!-- Image source attribution -->
                 <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
             </figcaption>
         </figure>
+        <!-- Our Story Section: Company Introduction and Values -->
         <section id="our-story">
+            <!-- Introductory Text: Who We Are -->
             <div id="intro">
                 <h1><b>Who are we?</b></h1>
                 <p>
+                    <!-- Company mission and background -->
                     At Drip, we believe drinkware should do more than hold your beverage — it should hold your identity. We started with a frustration: too many bottles were flimsy, forgettable, and uninspired. So, we created something better.
 
                     Born in Canada, Drip merges rugged performance with refined design. Every tumbler, mug, and bottle we craft is double-wall insulated, made from premium 18/8 stainless steel, and built to elevate your everyday—from first sip to final drop.
@@ -172,49 +391,56 @@
                     <br>
                     <br>
 
+                    <!-- Brand identity statement -->
                     <span class="drip-identity">This is Drip.</span>
                 </p>
             </div>
 
             <hr>
 
+            <!-- Reasons and Qualities Grid Layout -->
             <div id="reasons-qualities">
+                <!-- Reasons Column: Why Choose Drip -->
                 <div id="reasons">
                     <h1>Why Us?</h1>
                     <p>
+                        <!-- Explanation of company philosophy and benefits -->
                         At Drip, we believe that your drinkware should do more than carry your beverage — it should carry your values. That's why we've fused elite performance with everyday elegance. Whether you're on a trail, at your desk, or on the go, Drip delivers a flawless blend of function, durability, and personal style. 
                         <br>
                         <br>
+                        <!-- Tagline emphasizing customer journey -->
                         <span class="drip-identity">You bring the journey — we'll bring the bottle.</span>
                     </p>
                 </div>  
 
+                <!-- Vertical Border: Visual Divider Between Columns -->
                 <div id="border"></div>
 
+                <!-- Qualities Column: List of Product Features -->
                 <div id="qualities">
-
                     <ul class="fa-ul">
+                        <!-- Feature 1: Temperature Retention -->
                         <li>
                             <span class="fa-li">
                                 <i class="fa fa-thermometer-full" aria-hidden="true"></i>
                             </span>
                             Keeps your drinks icy cold for 36+ hours or piping hot all day — built for every season and every sip.
                         </li>
-
+                        <!-- Feature 2: Durability and Material Quality -->
                         <li>
                             <span class="fa-li">
                                 <i class="fa fa-shield-alt" aria-hidden="true"></i>
                             </span>
                             Constructed from food-grade 18/8 stainless steel, every Drip product is made to last, with a flawless finish that resists wear and tear.
                         </li>
-
+                        <!-- Feature 3: Design and Aesthetics -->
                         <li>
                             <span class="fa-li">
                                 <i class="fa fa-palette" aria-hidden="true"></i>
                             </span>
                             We obsess over every curve, contour, and color to deliver timeless aesthetics that match your lifestyle — sharp, modern, and clean.
                         </li>
-
+                        <!-- Feature 4: Sustainability -->
                         <li>
                             <span class="fa-li">
                                 <i class="fa fa-recycle" aria-hidden="true"></i>
@@ -223,21 +449,23 @@
                         </li>
                     </ul>
                 </div>
-
-                </div>
-
+            </div>
         </section>
     </main>
 
+    <!-- Footer Section: Company Info, Links, and Social Media -->
     <footer>
         <figure>
+            <!-- Footer Logo -->
             <img src="Images/Drop Logo for footer.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast." style="width: 100px;">
             <figcaption>Stay Chill. Stay Cool</figcaption>
+            <!-- Footer Navigation Links -->
             <ul class="footer-links">
                 <li><a href="about.html">About</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
+            <!-- Legal and Policy Links -->
             <ul class="legal-links">
                 <li>
                     <a href="#">Terms</a>
@@ -249,6 +477,7 @@
                     <a href="#">Cookies</a>
                 </li>
             </ul>
+            <!-- Social Media Icons with Links -->
             <ul class="social-media-icons">
                 <li>
                     <figure>

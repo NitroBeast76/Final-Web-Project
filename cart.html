@@ -1,128 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Sets the language to English -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drip</title>
+    <meta charset="UTF-8"> <!-- Sets character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design for mobile -->
+    <title>Drip</title> <!-- Page title shown in browser tab -->
+    <!-- Google Fonts preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importing custom fonts from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Favicon for browser tab -->
     <link rel="icon" type="Images/Favicon.png" href="Images/Favicon.png">
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="CSS/styles.css">
+    <!-- Main JavaScript file, loaded after HTML parsing -->
     <script src="JavaScript/script.js" defer></script>
+    <!-- Font Awesome icons -->
     <script src="https://kit.fontawesome.com/b6f797d5b9.js" crossorigin="anonymous"></script>
+    <!-- Inline CSS for cart page styling -->
     <style>
+        /* Container for the cart page */
         .cart-page {
-            max-width: 100rem;
-            margin: auto;
-            padding: 2rem;
-            color: #333;
-            font-size: 3rem;
+            max-width: 100rem; /* Maximum width of the cart page */
+            margin: auto; /* Center the cart page horizontally */
+            padding: 2rem; /* Padding around the cart page */
+            color: #333; /* Text color */
+            font-size: 3rem; /* Base font size */
         }
 
+        /* Cart page heading */
         .cart-page h1 {
-            font-size: 4rem;
-            font-weight: 400;
-            margin-bottom: 2rem;
-            text-align: center;
+            font-size: 4rem; /* Large font size for heading */
+            font-weight: 400; /* Normal font weight */
+            margin-bottom: 2rem; /* Space below heading */
+            text-align: center; /* Center the heading */
         }
 
+        /* Cart list container */
         .cart-list {
-            border-top: 1px solid #ddd;
-            border-bottom: 1px solid #ddd;
-            padding: 10px 0;
+            border-top: 1px solid #ddd; /* Top border */
+            border-bottom: 1px solid #ddd; /* Bottom border */
+            padding: 10px 0; /* Vertical padding */
         }
 
+        /* Individual product item in cart */
         .product-item-cart {
-            display: grid;
-            grid-template-columns: 25rem 1fr 8rem 12rem;
-            gap: 1.5rem;
-            align-items: center;
-            padding: 1.5rem 0;
-            border-bottom: 1px solid #eee;
+            display: grid; /* Use CSS Grid for layout */
+            grid-template-columns: 25rem 1fr 8rem 12rem; /* Define column sizes */
+            gap: 1.5rem; /* Space between columns */
+            align-items: center; /* Vertically center items */
+            padding: 1.5rem 0; /* Vertical padding */
+            border-bottom: 1px solid #eee; /* Separator between items */
         }
 
-
+        /* Product image styling */
         .product-image img {
-            width: 100%;
-            border-radius: 0.8rem;
+            width: 100%; /* Image takes full width of container */
+            border-radius: 0.8rem; /* Rounded corners */
+            -webkit-border-radius: 0.8rem; /* Vendor prefix for Safari */
+            -moz-border-radius: 0.8rem; /* Vendor prefix for Firefox */
+            -ms-border-radius: 0.8rem; /* Vendor prefix for IE10+ */
+            -o-border-radius: 0.8rem; /* Vendor prefix for Opera */
         }
 
+        /* Product name styling */
         .product-name {
-            font-size: 1rem;
-            font-weight: 500;
+            font-size: 1rem; /* Font size for product name */
+            font-weight: 500; /* Medium font weight */
         }
 
+        /* Product pricing styling */
         .product-pricing {
-            font-size: 1rem;
-            text-align: center;
+            font-size: 1rem; /* Font size for price */
+            text-align: center; /* Center the price */
         }
 
+        /* Product quantity controls */
         .product-quantity {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            font-size: 1rem;
+            display: flex; /* Use Flexbox for layout */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            gap: 1rem; /* Space between controls */
+            font-size: 1rem; /* Font size for quantity */
         }
 
+        /* Quantity control buttons */
         .product-quantity span {
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            border-radius: 50%;
-            background-color: #f5f5f5;
-            transition: background-color 0.2s;
-            font-size: 1.2rem;
+            cursor: pointer; /* Pointer cursor on hover */
+            padding: 0.5rem 1rem; /* Padding for clickable area */
+            border-radius: 50%; /* Circular buttons */
+            -webkit-border-radius: 50%; /* Vendor prefix for Safari */
+            -moz-border-radius: 50%; /* Vendor prefix for Firefox */
+            -ms-border-radius: 50%; /* Vendor prefix for IE10+ */
+            -o-border-radius: 50%; /* Vendor prefix for Opera */
+            background-color: #f5f5f5; /* Light background */
+            transition: background-color 0.2s; /* Smooth background transition */
+            -webkit-transition: background-color 0.2s; /* Vendor prefix for Safari */
+            -moz-transition: background-color 0.2s; /* Vendor prefix for Firefox */
+            -o-transition: background-color 0.2s; /* Vendor prefix for Opera */
+            font-size: 1.2rem; /* Larger font for arrows */
         }
 
+        /* Hover effect for quantity buttons */
         .product-quantity span:hover {
-            background-color: #ddd;
+            background-color: #ddd; /* Darker background on hover */
         }
 
+        /* Container for miscellaneous buttons (close, checkout) */
         .miscellaneous-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 3rem;
+            display: flex; /* Use Flexbox for layout */
+            justify-content: space-between; /* Space buttons apart */
+            margin-top: 3rem; /* Space above buttons */
         }
 
+        /* Styling for all buttons in miscellaneous-buttons */
         .miscellaneous-buttons button {
-            padding: 1rem 2rem;
-            font-family: Poppins, sans-serif;
-            font-weight: 500;
-            border: none;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: background-color 0.3s;
+            padding: 1rem 2rem; /* Padding inside buttons */
+            font-family: Poppins, sans-serif; /* Button font */
+            font-weight: 500; /* Medium font weight */
+            border: none; /* Remove border */
+            cursor: pointer; /* Pointer cursor */
+            border-radius: 6px; /* Rounded corners */
+            -webkit-border-radius: 6px; /* Vendor prefix for Safari */
+            -moz-border-radius: 6px; /* Vendor prefix for Firefox */
+            -ms-border-radius: 6px; /* Vendor prefix for IE10+ */
+            -o-border-radius: 6px; /* Vendor prefix for Opera */
+            transition: background-color 0.3s; /* Smooth background transition */
+            -webkit-transition: background-color 0.3s; /* Vendor prefix for Safari */
+            -moz-transition: background-color 0.3s; /* Vendor prefix for Firefox */
+            -o-transition: background-color 0.3s; /* Vendor prefix for Opera */
         }
 
+        /* Exit (close) button styling */
         .miscellaneous-buttons .exit {
-            background-color: #e0e0e0;
-            color: #333;
+            background-color: #e0e0e0; /* Light gray background */
+            color: #333; /* Dark text */
         }
 
+        /* Checkout (buy) button styling */
         .miscellaneous-buttons .buy {
-            background-color: #0077aa;
-            color: white;
+            background-color: #0077aa; /* Blue background */
+            color: white; /* White text */
         }
 
+        /* Hover effect for exit button */
         .miscellaneous-buttons .exit:hover {
-            background-color: #ccc;
+            background-color: #ccc; /* Darker gray on hover */
         }
 
+        /* Hover effect for buy button */
         .miscellaneous-buttons .buy:hover {
-            background-color: #005f88;
+            background-color: #005f88; /* Darker blue on hover */
         }
 
+        /* Larger font for product name and pricing */
         .product-name, .product-pricing{
-            font-size: 1.8rem;
+            font-size: 1.8rem; /* Increase font size */
         }
 
+        /* Footer styling */
         footer{
-            margin-top: 10rem;
+            margin-top: 10rem; /* Large space above footer */
         }
     </style>
 </head>
 <body>
+    <!-- Header section with logo, navigation, and cart icon -->
     <header>
         <figure class="company-logo">
             <a href="index.html">
@@ -131,22 +174,24 @@
         </figure>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Home</a></li> <!-- Link to home page -->
+                <li><a href="shop.html">Shop</a></li> <!-- Link to shop page -->
+                <li><a href="about.html">About</a></li> <!-- Link to about page -->
+                <li><a href="contact.html">Contact</a></li> <!-- Link to contact page -->
             </ul>
         </nav>
         <div class="bag-for-shopping">
-            <i class="fa-solid fa-bag-shopping" title="Cart"></i>
-            <span>0</span>
+            <i class="fa-solid fa-bag-shopping" title="Cart"></i> <!-- Shopping bag icon -->
+            <span>0</span> <!-- Number of items in cart -->
         </div>
     </header>
 
     <main>
+        <!-- Main cart section -->
         <section class="cart-page">
-            <h1>Shopping Cart</h1>
+            <h1>Shopping Cart</h1> <!-- Cart heading -->
             <div class="cart-list">
+                <!-- Example product item in cart -->
                 <div class="product-item-cart">
                     <figure class="product-image">
                         <img src="Images/1st product 4th.png" alt="Matte black travel mug with ergonomic handle, polished gold-tone bands at rim and base, clear sliding lid, DRiP logo embossed in metallic gold on front.">
@@ -158,19 +203,21 @@
                         CAD $55.00
                     </div>
                     <div class="product-quantity">
-                        <span class="decrease"> &lt; </span>
-                        <span>1</span>
-                        <span class="increase"> &gt; </span>
+                        <span class="decrease"> &lt; </span> <!-- Decrease quantity button -->
+                        <span>1</span> <!-- Current quantity -->
+                        <span class="increase"> &gt; </span> <!-- Increase quantity button -->
                     </div>
                 </div>
             </div>
+            <!-- Buttons for closing cart or checking out -->
             <div class="miscellaneous-buttons">
-                <button class="exit" onclick="location.href='shop.html' ">CLOSE</button>
-                <button class="buy">CHECK OUT</button>
+                <button class="exit" onclick="location.href='shop.html' ">CLOSE</button> <!-- Close cart button -->
+                <button class="buy">CHECK OUT</button> <!-- Checkout button -->
             </div>
         </section>
     </main>
 
+    <!-- Footer section with logo, links, and social media icons -->
     <footer>
         <figure>
             <img src="Images/Drop Logo for footer.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast." style="width: 100px;">

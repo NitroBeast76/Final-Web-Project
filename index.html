@@ -31,19 +31,19 @@
     <style> 
         /* Body background styling and animation */
         body {
-            background-image: url("Images/uZ0iU9Lqsd9.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 150%;
-            animation: background-image-zoom-out 1s ease-out forwards;
-            background-attachment: fixed;
+            background-image: url("Images/uZ0iU9Lqsd9.png"); /* Set background image */
+            background-size: cover; /* Cover entire viewport */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: 150%; /* Initial zoomed-in background size */
+            animation: background-image-zoom-out 1s ease-out forwards; /* Animate zoom-out */
+            -webkit-animation: background-image-zoom-out 1s ease-out forwards; /* Vendor prefix for animation */
+            background-attachment: fixed; /* Fix background during scroll */
         }
 
         /* Keyframes for background zoom-out animation */
         @keyframes background-image-zoom-out {
             0%{
-                background-size: 150%;
                 filter: blur(0.1rem);
             }
             100%{
@@ -144,38 +144,116 @@
             cursor: pointer;
         }
 
-        /* Hero image styling */
-        #hero-image img {
-            margin-top: 50px;
-            height: auto;
-            width: 100%;
-            border-radius: 20px 80px 20px;
+
+        /* ==================== MEDIA QUERIES FOR SMALLER SCREENS ==================== */
+
+        /* -------- Mobile devices (max-width: 600px) -------- */
+        @media (max-width: 600px) {
+            body {
+                background-size: cover;               /* Let it fully cover small viewports */
+                background-position: top center;      /* Shift focus higher for tighter vertical screens */
+                background-attachment: scroll;        /* Prevent lag on mobile scroll */
+            }
+
+            #hero-area {
+                margin: 2rem 1rem; /* Reduced side margins */
+                margin-top: 10rem;  /* Less top space on small screens */
+                margin-bottom: 5rem;
+                padding: 2rem;
+                text-align: center; /* Center-align content on small screens */
+            }
+
+            #hero-area h1 {
+                font-size: 2.4rem;
+            }
+
+            #hero-area h2 {
+                font-size: 1.8rem;
+            }
+
+            #hero-area button {
+                width: 100%;
+                font-size: 1.6rem;
+                height: 40px;
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+
+            #hero-area button:hover {
+                transform: none; /* Disable translate effect on mobile to avoid layout issues */
+            }
+
+            #hero-image img {
+                width: 100%;
+                height: auto;
+                border-radius: 20px; /* Simpler curve for smaller screens */
+                margin-top: 2rem;
+            }
         }
-        
+
+        /* -------- Tablets (601px to 900px) -------- */
+        @media (min-width: 601px) and (max-width: 900px) {
+            body {
+                background-size: 130%;                /* Slight zoom for mid-range screens */
+                background-position: center;          /* Centered look on wider displays */
+                background-attachment: fixed;         /* Restore fixed for supported tablet devices */
+            }
+
+            #hero-area {
+                margin: 4rem 2rem;
+                margin-top: 12rem;
+                margin-bottom: 8rem;
+                padding: 3rem;
+                text-align: center;
+            }
+
+            #hero-area h1 {
+                font-size: 3rem;
+            }
+
+            #hero-area h2 {
+                font-size: 2.2rem;
+            }
+
+            #hero-area button {
+                font-size: 1.8rem;
+                width: 80%;
+            }
+
+            #hero-image img {
+                width: 100%;
+                height: auto;
+                border-radius: 30px 60px;
+                margin-top: 3rem;
+            }
+        }
+
     </style>
 
 </head>
 <body>
-    <!-- Header section with logo and navigation -->
+    <!-- Header section containing the company logo and navigation menu -->
     <header>
+        <!-- Company logo as a clickable link to the homepage -->
         <figure class="company-logo">
             <a href="index.html">
                 <img src="Images/Drop Logo for footer.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast.">
             </a>
         </figure>
+        <!-- Main navigation bar for site pages -->
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Home</a></li> <!-- Link to homepage -->
+                <li><a href="shop.html">Shop</a></li> <!-- Link to shop page -->
+                <li><a href="about.html">About</a></li> <!-- Link to about page -->
+                <li><a href="contact.html">Contact</a></li> <!-- Link to contact page -->
             </ul>
         </nav>
     </header>
 
-    <!-- Main content area -->
+    <!-- Main content area of the page -->
     <main>
-        <!-- Hero section with main message and shop button -->
+        <!-- Hero section: prominent area with main message and call-to-action button -->
         <section id="hero-area">
             <h1>
                 Stay Chill. Stay Cool.
@@ -183,6 +261,7 @@
             <h2>
                 Here are our Top Choices
             </h2>
+            <!-- Shop Now button that redirects users to the shop page -->
             <div id="shop-now">
                 <button onclick="location.href='shop.html'">
                     Shop Now
@@ -191,33 +270,35 @@
         </section>
     </main>
 
-    <!-- Footer section with logo, links, and social media icons -->
+    <!-- Footer section containing logo, navigation links, legal links, and social media icons -->
     <footer>
         <figure>
+            <!-- Footer logo image -->
             <img src="Images/Drop Logo for footer.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast." style="width: 100px;">
+            <!-- Footer slogan -->
             <figcaption>Stay Chill. Stay Cool</figcaption>
-            <!-- Footer navigation links -->
+            <!-- Footer navigation links for quick access to important pages -->
             <ul class="footer-links">
-                <li><a href="about.html">About</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About</a></li> <!-- About page link -->
+                <li><a href="shop.html">Shop</a></li> <!-- Shop page link -->
+                <li><a href="contact.html">Contact Us</a></li> <!-- Contact page link -->
             </ul>
-            <!-- Legal links -->
+            <!-- Legal links for terms, privacy, and cookies policies -->
             <ul class="legal-links">
                 <li>
-                    <a href="#">Terms</a>
+                    <a href="#">Terms</a> <!-- Terms of service link -->
                 </li>
                 <li>
-                    <a href="#">Privacy</a>
+                    <a href="#">Privacy</a> <!-- Privacy policy link -->
                 </li>
                 <li>
-                    <a href="#">Cookies</a>
+                    <a href="#">Cookies</a> <!-- Cookies policy link -->
                 </li>
             </ul>
-            <!-- Social media icons -->
+            <!-- Social media icons for external social profiles -->
             <ul class="social-media-icons">
                 <li>
-                    <!--Instagram icon-->
+                    <!-- Instagram icon linking to Instagram profile -->
                     <figure>
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                             <img src="Images/Instagram icon.png" alt="Instagram icon">
@@ -225,7 +306,7 @@
                     </figure>
                 </li>
                 <li>
-                    <!--Facebook icon-->
+                    <!-- Facebook icon linking to Facebook profile -->
                     <figure>
                         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                             <img src="Images/facebook icon.png" alt="Facebook icon">
@@ -233,7 +314,7 @@
                     </figure>
                 </li>
                 <li>
-                    <!--X icon-->
+                    <!-- X (formerly Twitter) icon linking to X profile -->
                     <figure>
                         <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
                             <img src="Images/X icon.png" alt="X icon">
@@ -241,7 +322,7 @@
                     </figure>
                 </li>
                 <li>
-                    <!--LinkedIn icon-->
+                    <!-- LinkedIn icon linking to LinkedIn profile -->
                     <figure>
                         <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
                             <img src="Images/LinkedIn icon..png" alt="LinkedIn icon">

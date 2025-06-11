@@ -4,132 +4,316 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drip</title>
+    <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/b6f797d5b9.js" crossorigin="anonymous"></script>
+    <!-- Favicon -->
     <link rel="icon" type="Images/Favicon.png" href="Images/Favicon.png">
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="CSS/styles.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Main JS -->
     <script src="JavaScript/script.js"></script>
 
     <style>
+        /* Contact form styling */
         #contact-form {
-            background-color: #c2dfd6;
-            padding: 3rem;
-            margin: 3rem;
-            width: 55rem;
-            height: 80rem;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-top: 5rem;
-            margin-bottom: 5rem;
-            position: absolute;
-            left: 55%;
-            top: 40%;
-            opacity: 0;
-            transform: translateY(1rem);
-            animation:  rise 1s ease-out forwards;
+            background-color: #c2dfd6; /* Light green background for the form */
+            padding: 3rem; /* Padding inside the form */
+            margin: 3rem; /* Margin outside the form */
+            width: 55rem; /* Fixed width */
+            height: 80rem; /* Fixed height */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+            margin-top: 5rem; /* Extra space above */
+            margin-bottom: 5rem; /* Extra space below */
+            position: absolute; /* Absolute positioning */
+            left: 55%; /* Position from the left */
+            top: 40%; /* Position from the top */
+            opacity: 0; /* Start hidden for animation */
+            transform: translateY(1rem); /* Start slightly lower for animation */
+            animation: rise 1s ease-out forwards; /* Animate rising in */
+            /* Vendor prefixes for animation */
+            -webkit-animation: rise 1s ease-out forwards;
+            -moz-animation: rise 1s ease-out forwards;
+            -o-animation: rise 1s ease-out forwards;
         }
 
-
+        /* Animation for form rise-in */
         @keyframes rise {
             to {
-                opacity: 1;
-                transform: translateY(-3rem);
+            opacity: 1; /* End fully visible */
+            transform: translateY(-3rem); /* End slightly higher */
+            }
+        }
+        @-webkit-keyframes rise {
+            to {
+            opacity: 1; /* End fully visible (webkit) */
+            -webkit-transform: translateY(-3rem); /* End higher (webkit) */
+            }
+        }
+        @-moz-keyframes rise {
+            to {
+            opacity: 1; /* End fully visible (moz) */
+            -moz-transform: translateY(-3rem); /* End higher (moz) */
+            }
+        }
+        @-o-keyframes rise {
+            to {
+            opacity: 1; /* End fully visible (opera) */
+            -o-transform: translateY(-3rem); /* End higher (opera) */
             }
         }
 
+        /* Remove default fieldset border and spacing */
         fieldset {
-            border: none;
-            padding: 0;
-            margin: 0;
+            border: none; /* No border */
+            padding: 0; /* No padding */
+            margin: 0; /* No margin */
         }
 
+        /* Legend styling */
         legend {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            color: #022627;
-            text-decoration: underline;
-            font-family: "Orbitron", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
+            font-size: 2.5rem; /* Large font size */
+            font-weight: bold; /* Bold text */
+            margin-bottom: 1rem; /* Space below */
+            color: #022627; /* Dark blue color */
+            text-decoration: underline; /* Underline text */
+            font-family: "Orbitron", sans-serif; /* Custom font */
+            font-optical-sizing: auto; /* Font optimization */
+            font-weight: 400; /* Normal weight */
+            font-style: normal; /* Normal style */
         }
 
+        /* Form group spacing */
         .form-group {
-            margin-bottom: 4rem;
-            margin-left: 0.7rem;
+            margin-bottom: 4rem; /* Space below each group */
+            margin-left: 0.7rem; /* Indent from the left */
         }
 
+        /* Label styling */
         label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-            color: #022627;
+            display: block; /* Each label on its own line */
+            margin-bottom: 0.5rem; /* Space below label */
+            font-weight: bold; /* Bold text */
+            color: #022627; /* Dark blue color */
+        }
+
+        /* Input and textarea styling */
+        input,
+        textarea {
+            width: 200%; /* (Overridden below) */
+            padding: 1.3rem; /* Padding inside fields */
+            border: 1px solid #cfdcd8; /* Light border */
+            border-radius: 2rem; /* Rounded corners */
+            background-color: #e5efec; /* Light background */
+            font-size: 1.4rem; /* Larger text */
+            color: #022627; /* Dark blue text */
+            width: 68%; /* Actual width used */
+            /* Vendor prefixes for border-radius */
+            -webkit-border-radius: 2rem;
+            -moz-border-radius: 2rem;
+            -o-border-radius: 2rem;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #022627; /* Dark blue background */
+            color: #09C0C3; /* Aqua text */
+            font-weight: bold; /* Bold text */
+            border: none; /* No border */
+            padding: 0.1rem 1rem; /* Padding inside button */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 1.5rem; /* Larger text */
+            cursor: pointer; /* Pointer cursor on hover */
+            text-align: center; /* Center text */
+            width: 20%; /* Button width */
+            height: 3rem; /* Button height */
+            text-transform: capitalize; /* Capitalize text */
+            transition: all 0.3s ease-out; /* Smooth transition */
+            /* Vendor prefixes for border-radius and transition */
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -o-border-radius: 10px;
+            -webkit-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #022627; /* Keep background */
+            color: #09C0C3; /* Keep text color */
+            width: 30%; /* Grow button */
+            text-decoration: underline; /* Underline text */
+            font-size: 1.59rem; /* Slightly larger text */
+        }
+
+        /* Plea section styling */
+        #plea {
+            font-size: 1.8rem; /* Larger text */
+            color: #022627; /* Dark blue text */
+            font-weight: bold; /* Bold text */
+            background-color: #93ada5; /* Light green background */
+            padding: 2rem; /* Padding inside */
+            padding-right: 70rem; /* Large right padding */
+            position: relative; /* Relative positioning */
+            margin-bottom: 70rem; /* Large space below */
+        }
+        
+        #plea h1 {
+            font-size: 4rem; /* Very large heading */
+            font-weight: bold; /* Bold heading */
+            text-transform: uppercase; /* Uppercase text */
+            text-decoration: underline; /* Underline heading */
+        }
+
+        /* =============================== */
+        /* 📏 Laptops & Smaller (≤ 1024px) */
+        /* =============================== */
+        @media (max-width: 1024px) {
+        #contact-form {
+            width: 90%; /* More fluid */
+            height: auto; /* Let it expand naturally */
+            left: 50%;
+            top: 5%;
+            transform: translate(-50%, 0); /* Center it horizontally */
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        #plea {
+            font-size: 1.6rem;
+            padding: 2rem;
+            padding-right: 10rem; /* Reduce insane padding */
+            margin-bottom: 10rem;
+        }
+
+        #plea h1 {
+            font-size: 3rem;
+        }
+
+        button {
+            width: 30%; /* Wider on smaller screen */
+        }
+
+        button:hover {
+            width: 35%;
+            font-size: 1.55rem;
+        }
+        }
+
+
+        /* ============================ */
+        /* 📱 Tablets & Small Devices  */
+        /* (≤ 768px: iPads & Small Tabs) */
+        /* ============================ */
+        @media (max-width: 768px) {
+        #contact-form {
+            width: 95%;
+            padding: 1.5rem;
+            margin: 1.5rem auto;
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, 0);
+            position: relative; /* More flexible layout */
+            box-shadow: none; /* Remove shadow for cleaner mobile look */
         }
 
         input,
         textarea {
-            width: 200%;
-            padding: 1.3rem;
-            border: 1px solid #cfdcd8;
-            border-radius: 2rem;
-            background-color: #e5efec;
-            font-size: 1.4rem;
-            color: #022627;
-            width: 68%;
+            width: 100%; /* Full width inputs */
+            font-size: 1.2rem;
         }
 
         button {
-            background-color: #022627;
-            color: #09C0C3;
-            font-weight: bold;
-            border: none;
-            padding: 0.1rem 1rem;
-            border-radius: 10px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            text-align: center;
-            width: 20%;
-            height: 3rem;
-            text-transform: capitalize;
-            transition: all 0.3s ease-out;
+            width: 50%;
+            height: 3.2rem;
+            font-size: 1.4rem;
         }
 
         button:hover {
-            background-color: #022627;
-            color: #09C0C3;
-            width: 30%;
-            text-decoration: underline;
-            font-size: 1.59rem;
+            width: 55%;
+            font-size: 1.48rem;
         }
 
         #plea {
-            font-size: 1.8rem;
-            color: #022627;
-            font-weight: bold;
-            background-color: #93ada5;
-            padding: 2rem;
-            padding-right: 70rem;
-            position: relative;
-            margin-bottom: 70rem;
+            font-size: 1.5rem;
+            padding-right: 5rem;
+            margin-bottom: 6rem;
         }
-        
+
         #plea h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-decoration: underline;
+            font-size: 2.8rem;
+        }
+        }
+
+
+        /* ====================== */
+        /* 📵 Phones (≤ 480px) */
+        /* ====================== */
+        @media (max-width: 480px) {
+        #contact-form {
+            width: 100%;
+            padding: 1rem;
+            margin: 1rem 0;
+            height: auto;
+            box-shadow: none;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            font-size: 1.1rem;
+            padding: 1rem;
+        }
+
+        button {
+            width: 80%;
+            font-size: 1.3rem;
+            height: 3rem;
+        }
+
+        button:hover {
+            width: 85%;
+            font-size: 1.38rem;
+        }
+
+        legend {
+            font-size: 2rem;
+        }
+
+        #plea {
+            font-size: 1.3rem;
+            padding: 1rem;
+            padding-right: 2rem;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #plea h1 {
+            font-size: 2.4rem;
+        }
         }
     </style>
 </head>
 <body>
+    <!-- ===========================
+        Header with logo and navigation
+    =========================== -->
     <header>
+        <!-- Company logo links to homepage -->
         <figure class="company-logo">
             <a href="index.html">
                 <img src="Images/Drop Logo.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast.">
             </a>
         </figure>
+        <!-- Main navigation menu -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -139,81 +323,100 @@
             </ul>
         </nav>
         
+        <!-- Shopping cart icon with item count -->
         <div class="bag-for-shopping">
             <i class="fa-solid fa-bag-shopping" title="Cart" onclick="cartTravel()"></i>
             <span>0</span>
         </div>
-        
     </header>
 
     <main>
+        <!-- ===========================
+            Banner image section
+        =========================== -->
         <figure class="banner-images">
             <img src="Images/wood banner image.png" alt="A sleek, black insulated tumbler with a purple water droplet logo sits on a rustic wooden table.  The setting is outdoors, with blurred greenery and flowers in the background.">
             <figcaption>
                 <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
             </figcaption>
         </figure>
+
         <div id="contact-us">
+            <!-- ===========================
+                Contact plea/information section
+            =========================== -->
             <div id="plea">
                 <h1>Any Issues?</h1>
                 <p>
+                    <!-- Brief message encouraging users to reach out for help -->
                     Have a question, concern, or just want to say hello? Our team at Drip is always happy to help. Whether it's about an order, a product, shipping, or something else entirely — don't hesitate to reach out.
                     <br>
                     <br>
                     We aim to respond to all inquiries within 24-48 hours, Monday to Friday.
                     <br>
                     <br>
+                    <!-- Support email address -->
                     Email Us Anytime: <br>
                     <b><i>support@drinkdrip.com</i></b>
                 </p>
             </div>
 
+            <!-- ===========================
+                Contact form for user inquiries
+            =========================== -->
             <form aria-labelledby="contactFormLegend" id="contact-form">
                 <fieldset>
-                <legend id="contactFormLegend">Contact Information</legend>
-
-                <br>
-
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input id="name" name="name" type="text" placeholder="Lebron James" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input id="email" name="email" type="email" placeholder="kingstars@email.com" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input id="phone" name="phone" type="tel" placeholder="+1 234-678-90" />
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input id="subject" name="subject" type="text" placeholder="DRip GlacierStream Series" />
-                </div>
-
-                <div class="form-group">
-                    <label for="concerns">Concerns</label>
-                    <textarea id="concerns" name="concerns" rows="2" placeholder="I am having an issue with...."></textarea>
-                </div>
-
-                <button type="submit">SUBMIT</button>
+                    <!-- Form legend for accessibility -->
+                    <legend id="contactFormLegend">Contact Information</legend>
+                    <br>
+                    <!-- Name input field -->
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Lebron James" required />
+                    </div>
+                    <!-- Email input field -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="kingstars@email.com" required />
+                    </div>
+                    <!-- Phone number input field (optional) -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" name="phone" type="tel" placeholder="+1 234-678-90" />
+                    </div>
+                    <!-- Subject input field -->
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input id="subject" name="subject" type="text" placeholder="DRip GlacierStream Series" />
+                    </div>
+                    <!-- Concerns textarea for detailed message -->
+                    <div class="form-group">
+                        <label for="concerns">Concerns</label>
+                        <textarea id="concerns" name="concerns" rows="2" placeholder="I am having an issue with...."></textarea>
+                    </div>
+                    <!-- Submit button -->
+                    <button type="submit">SUBMIT</button>
                 </fieldset>
             </form>
         </div>
+        
     </main>
 
+    <!-- ===========================
+        Footer with logo, navigation links, legal, and social media icons
+    =========================== -->
     <footer>
         <figure>
+            <!-- Footer logo -->
             <img src="Images/Drop Logo for footer.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast." style="width: 100px;">
             <figcaption>Stay Chill. Stay Cool</figcaption>
+            <!-- Footer navigation links -->
             <ul class="footer-links">
                 <li><a href="about.html">About</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
+            <!-- Legal links (Terms, Privacy, Cookies) -->
             <ul class="legal-links">
                 <li>
                     <a href="#">Terms</a>
@@ -225,6 +428,7 @@
                     <a href="#">Cookies</a>
                 </li>
             </ul>
+            <!-- Social media icons with external links -->
             <ul class="social-media-icons">
                 <li>
                     <figure>
@@ -251,6 +455,7 @@
                     <figure>
                         <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
                             <img src="Images/LinkedIn icon..png" alt="LinkedIn icon">
+                        </a>
                     </figure>
                 </li>
             </ul>
