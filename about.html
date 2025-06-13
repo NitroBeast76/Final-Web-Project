@@ -141,6 +141,7 @@
         /* Showcase Video Styling */
         /* Styles the video element in the showcase section for responsiveness and visual appeal */
         #showcase-video video {
+            margin: auto; /* Centers the video. */
             max-width: 100%; /* Ensures video does not overflow its container */
             height: auto; /* Maintains aspect ratio */
             border-radius: 1.6rem; /* Rounded corners */
@@ -479,8 +480,9 @@
                     type="video/mp4" 
                     autoplay 
                     muted 
+                    loop
                     aria-label="Showcase video of Drip products"
-                    style="width: 120rem;"
+                    style="width: 120rem;
                 >
                     <!-- Fallback content for browsers that do not support HTML5 video -->
                     Your browser does not support HTML5 video playback. You can
