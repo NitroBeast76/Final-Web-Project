@@ -21,7 +21,7 @@
         /* Styles the main container for the About page's story section */
         #our-story {
             position: relative; /* Allows absolutely positioned children */
-            margin-bottom: 400px; /* Adds space below the section */
+            margin-bottom: 10rem; /* Adds space below the section */
         }
 
         /* Intro Section */
@@ -137,6 +137,20 @@
             -moz-transition: all 0.25s ease-out; /* Firefox */
             -o-transition: all 0.25s ease-out; /* Opera */
         }
+
+        /* Showcase Video Styling */
+        /* Styles the video element in the showcase section for responsiveness and visual appeal */
+        #showcase-video video {
+            max-width: 100%; /* Ensures video does not overflow its container */
+            height: auto; /* Maintains aspect ratio */
+            border-radius: 1.6rem; /* Rounded corners */
+            -webkit-border-radius: 1.6rem; /* Safari/Chrome */
+            -moz-border-radius: 1.6rem; /* Firefox */
+            box-shadow: 35px 20px 45px 1px rgba(128,128,128,0.89); /* Adds a soft shadow */
+            -webkit-box-shadow: 35px 20px 45px 1px rgba(128,128,128,0.89); /* Safari/Chrome */
+            -moz-box-shadow: 35px 20px 45px 1px rgba(128,128,128,0.89); /* Firefox */
+        }
+
 
         .fa-li> i:hover{
             /* Enlarge icon on hover */
@@ -333,9 +347,9 @@
 <body>
     <!-- Header with Logo and Navigation -->
     <header>
-        <!-- Company Logo links to homepage -->
+        <!-- Company logo as a clickable link to the homepage -->
         <figure class="company-logo">
-            <a href="index.html"></a>
+            <a href="index.html">
                 <img src="Images/Drop Logo.png" alt="A drop of water with the accompanying text 'Drip' in a modern font. The drop is blue with a gradient effect, and the text is black for contrast.">
             </a>
         </figure>
@@ -449,6 +463,34 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+
+            <!-- Showcase Video Section: Product Demo Video -->
+            <div id="showcase-video" aria-label="Showcase video of Drip products">
+                <!-- 
+                    Video element displaying a showcase of Drip products.
+                    - autoplay: Video starts playing automatically.
+                    - muted: Video is muted by default (required for autoplay in most browsers).
+                    - style: Sets a fixed width for the video on large screens.
+                    - Fallback text and download link provided for unsupported browsers.
+                -->
+                <video 
+                    src="Showcase Video of DRIP Products..mp4" 
+                    type="video/mp4" 
+                    autoplay 
+                    muted 
+                    aria-label="Showcase video of Drip products"
+                    style="width: 120rem;"
+                >
+                    <!-- Fallback content for browsers that do not support HTML5 video -->
+                    Your browser does not support HTML5 video playback. You can
+                    <a 
+                        href="Showcase Video of DRIP Products..mp4" 
+                        download="Showcase Video of DRIP Products..mp4"
+                        aria-label="Download showcase video of Drip products"
+                    >download</a>
+                    the video file instead, or try viewing this content in a modern browser like Chrome, Firefox, or Edge.
+                </video>
             </div>
         </section>
     </main>

@@ -406,16 +406,19 @@
 
             <div class="product-grid">
                 <!--
-                    Products in the grid, with its images, and short descriptions, accompanied with its modal content with more details.
+                    Products in the grid, with their images and short descriptions, each opening a modal with more details.
+                    Interactive elements like images, close buttons, and icons use the onkeydown attribute
+                    to allow Enter and Space keys to trigger actions, just like a button click.
                 -->
+
                 <figure class="élanSeries">
-                    <img src="Images/1st product.png" alt="Matte black travel mug with ergonomic handle, polished gold-tone bands at rim and base, clear sliding lid, DRiP logo embossed in metallic gold on front."  onclick="detailsBoxOpen(this)"  tabindex="0">
+                    <img src="Images/1st product.png" alt="Matte black travel mug with ergonomic handle, polished gold-tone bands at rim and base, clear sliding lid, DRiP logo embossed in metallic gold on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP Élan Series - Obsidian Gold Travel Tumbler
                         <br>
                         CAD $49.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -423,7 +426,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/1st product.png" alt="Matte black travel mug with ergonomic handle, polished gold-tone bands at rim and base, clear sliding lid, DRiP logo embossed in metallic gold on front.">
                                 <figcaption>
@@ -468,7 +471,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -480,13 +483,13 @@
                 </figure>
 
                 <figure class="élanSeries">
-                    <img src="Images/1st product 2nd.png" alt="Deep crimson travel mug with ergonomic handle, glossy black chrome bands at rim and base, clear sliding lid, DRIP logo embossed in glossy black on front." onclick="detailsBoxOpen(this)">
+                    <img src="Images/1st product 2nd.png" alt="Deep crimson travel mug with ergonomic handle, glossy black chrome bands at rim and base, clear sliding lid, DRIP logo embossed in glossy black on front." onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP Élan Series - Crimson Alloy Travel Tumbler
                         <br>
                         CAD $50.09
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -494,7 +497,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/1st product 2nd.png" alt="Deep crimson travel mug with ergonomic handle, glossy black chrome bands at rim and base, clear sliding lid, DRIP logo embossed in glossy black on front.">
                                 <figcaption>
@@ -539,7 +542,7 @@
                                         ✅ Easy 30-day returns – no questions asked
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -551,13 +554,13 @@
                 </figure>
 
                 <figure class="élanSeries">
-                    <img src="Images/1st product 3rd.png" alt="Iridescent pearl‑white travel mug with ergonomic handle, high‑gloss black bands at rim and base, clear sliding lid, DRIP logo embossed in high‑gloss black on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/1st product 3rd.png" alt="Iridescent pearl‑white travel mug with ergonomic handle, high‑gloss black bands at rim and base, clear sliding lid, DRIP logo embossed in high‑gloss black on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP Élan Series - Pearl Onyx Travel Tumbler
                         <br>
                         CAD $51.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -565,7 +568,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/1st product 3rd.png" alt="Iridescent pearl‑white travel mug with ergonomic handle, high‑gloss black bands at rim and base, clear sliding lid, DRIP logo embossed in high‑gloss black on front.">
                                 <figcaption>
@@ -611,7 +614,7 @@
                                         ✅ Hassle-free 30-day returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -623,13 +626,13 @@
                 </figure>
 
                 <figure class="élanSeries">
-                    <img src="Images/1st product 4th.png" alt="Matte royal purple travel mug with ergonomic handle, dark nickel bands at rim and base, clear sliding lid, DRIP logo embossed in metallic violet‑black on front." onclick="detailsBoxOpen(this)">
+                    <img src="Images/1st product 4th.png" alt="Matte royal purple travel mug with ergonomic handle, dark nickel bands at rim and base, clear sliding lid, DRIP logo embossed in metallic violet‑black on front." onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP Élan Series - Sable Amethyst Travel Tumbler
                         <br>
                         CAD $55.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -637,7 +640,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/1st product 4th.png" alt="Matte royal purple travel mug with ergonomic handle, dark nickel bands at rim and base, clear sliding lid, DRIP logo embossed in metallic violet‑black on front.">
                                 <figcaption>
@@ -682,7 +685,7 @@
                                         ✅ 30-day risk-free return policy
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -694,13 +697,13 @@
                 </figure>
 
                 <figure class="élanSeries">
-                    <img src="Images/1st product 5th.png" alt="Matte black carbon fiber travel mug with ergonomic handle, sapphire‑blue titanium bands at rim and base, clear sliding lid, DRIP logo embossed in metallic sapphire‑blue on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/1st product 5th.png" alt="Matte black carbon fiber travel mug with ergonomic handle, sapphire‑blue titanium bands at rim and base, clear sliding lid, DRIP logo embossed in metallic sapphire‑blue on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP Élan Series - SapphireHalo Travel Tumbler
                         <br>
                         CAD $55.60
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -708,7 +711,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/1st product 5th.png" alt="Matte black carbon fiber travel mug with ergonomic handle, sapphire‑blue titanium bands at rim and base, clear sliding lid, DRIP logo embossed in metallic sapphire‑blue on front.">
                                 <figcaption>
@@ -753,7 +756,7 @@
                                         ✅ 30-day return guarantee
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -765,13 +768,13 @@
                 </figure>
 
                 <figure class="vantaFlare"> 
-                    <img src="Images/3rd product.png" alt="Matte black transit bottle with glossy red accents and DRIP droplet icon; sleek and bold design."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/3rd product.png" alt="Matte black transit bottle with glossy red accents and DRIP droplet icon; sleek and bold design."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP VantaFlare Series - Obsidian Red Transit Bottle
                         <br>
                         CAD $52.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -779,7 +782,7 @@
                     
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/3rd product.png" alt="Matte black transit bottle with glossy red accents and DRIP droplet icon; sleek and bold design.">
                                 <figcaption>
@@ -824,7 +827,7 @@
                                         ✅ 30-day return policy
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -836,13 +839,13 @@
                 </figure>
 
                 <figure class="vantaFlare">
-                    <img src="Images/3rd product  2nd.png" alt="Matte black 16 oz transit bottle with locking drink‑through lid, glossy cobalt‑blue bands and flip‑lock, DRIP drop icon embossed in cobalt‑blue on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/3rd product  2nd.png" alt="Matte black 16 oz transit bottle with locking drink‑through lid, glossy cobalt‑blue bands and flip‑lock, DRIP drop icon embossed in cobalt‑blue on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP VantaFlare Series - Cobalt Mirage Transit Bottle
                         <br>
                         CAD $52.30
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -850,7 +853,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/3rd product  2nd.png" alt="Matte black 16 oz transit bottle with locking drink‑through lid, glossy cobalt‑blue bands and flip‑lock, DRIP drop icon embossed in cobalt‑blue on front.">
                                 <figcaption>
@@ -895,7 +898,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -907,13 +910,13 @@
                 </figure>
 
                 <figure class="vantaFlare">
-                    <img src="Images/3rd product 3rd.png" alt="Matte charcoal 16 oz transit bottle with locking drink‑through lid, high‑polish ember‑orange bands and flip‑lock, DRIP drop icon embossed in ember‑orange on front."  onclick="detailsBoxOpen(this)"> 
+                    <img src="Images/3rd product 3rd.png" alt="Matte charcoal 16 oz transit bottle with locking drink‑through lid, high‑polish ember‑orange bands and flip‑lock, DRIP drop icon embossed in ember‑orange on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }"> 
                     <figcaption>
                         DRiP VantaFlare Series - Graphite Ember Transit Bottle
                         <br>
                         CAD $55.30
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -921,7 +924,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/3rd product 3rd.png" alt="Matte charcoal 16 oz transit bottle with locking drink‑through lid, high‑polish ember‑orange bands and flip‑lock, DRIP drop icon embossed in ember‑orange on front.">
                                 <figcaption>
@@ -966,7 +969,7 @@
                                         ✅ Easy 30-day return policy
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -978,13 +981,13 @@
                 </figure>
 
                 <figure class="vantaFlare">
-                    <img src="Images/3rd product 4th.png" alt="Matte black 16 oz transit bottle with locking drink‑through lid, high‑gloss phantom violet bands and flip‑lock, DRIP drop icon embossed in violet‑black on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/3rd product 4th.png" alt="Matte black 16 oz transit bottle with locking drink‑through lid, high‑gloss phantom violet bands and flip‑lock, DRIP drop icon embossed in violet‑black on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP VantaFlare Series - Phantom Violet Transit Bottle
                         <br>
                         CAD $56.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -992,7 +995,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/3rd product 4th.png" alt="Matte black 16 oz transit bottle with locking drink‑through lid, high‑gloss phantom violet bands and flip‑lock, DRIP drop icon embossed in violet‑black on front.">
                                 <figcaption>
@@ -1045,7 +1048,7 @@
                                     ✅ Hassle-free 30-day return policy
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1057,13 +1060,13 @@
                 </figure>
 
                 <figure class="vantaFlare">
-                    <img src="Images/3rd product 5th.png" alt="Matte obsidian 16 oz transit bottle with locking drink‑through lid, neon‑green wave inlays and hardware, DRIP drop icon embossed in neon‑green on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/3rd product 5th.png" alt="Matte obsidian 16 oz transit bottle with locking drink‑through lid, neon‑green wave inlays and hardware, DRIP drop icon embossed in neon‑green on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP VantaFlare Series - PhotonWave Transit Bottle
                         <br>
                         CAD $51.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1071,7 +1074,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/3rd product 5th.png" alt="Matte obsidian 16 oz transit bottle with locking drink‑through lid, neon‑green wave inlays and hardware, DRIP drop icon embossed in neon‑green on front.">
                                 <figcaption>
@@ -1116,7 +1119,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1128,13 +1131,13 @@
                 </figure>
 
                 <figure class="glacierStream">
-                    <img src="Images/4th product.png" alt="Brushed silver water bottle with pale blue accents, straw lid, and DRIP droplet icon." onclick="detailsBoxOpen(this)">
+                    <img src="Images/4th product.png" alt="Brushed silver water bottle with pale blue accents, straw lid, and DRIP droplet icon." onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP GlacierStream Series - Frostblue Hydration Bottle
                         <br>
                         CAD $47.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1142,7 +1145,7 @@
                     
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/4th product.png" alt="Brushed silver water bottle with pale blue accents, straw lid, and DRIP droplet icon.">
                                 <figcaption>
@@ -1187,7 +1190,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1199,13 +1202,13 @@
                 </figure>
 
                 <figure class="glacierStream">
-                    <img src="Images/4th product 2nd.png" alt="Brushed stainless steel 32 oz hydration bottle with flip‑through straw lid, smoky‑gray accents on lid, loop, and band, DRIP drop icon embossed in smoky‑gray on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/4th product 2nd.png" alt="Brushed stainless steel 32 oz hydration bottle with flip‑through straw lid, smoky‑gray accents on lid, loop, and band, DRIP drop icon embossed in smoky‑gray on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP GlacierStream Series - Alpine Jade Hydration Bottle
                         <br>
                         CAD $50.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1213,7 +1216,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/4th product 2nd.png" alt="Brushed stainless steel 32 oz hydration bottle with flip‑through straw lid, smoky‑gray accents on lid, loop, and band, DRIP drop icon embossed in smoky‑gray on front.">
                                 <figcaption>
@@ -1258,7 +1261,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1270,13 +1273,13 @@
                 </figure>
 
                 <figure class="glacierStream">
-                    <img src="Images/4th product 3rd.png" alt="Brushed stainless steel 32 oz hydration bottle with flip‑through straw lid, pale jade‑green accents on lid, loop, and band, DRIP drop icon embossed in jade‑green on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/4th product 3rd.png" alt="Brushed stainless steel 32 oz hydration bottle with flip‑through straw lid, pale jade‑green accents on lid, loop, and band, DRIP drop icon embossed in jade‑green on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP GlacierStream Series - Glacier Smoke Hydration Bottle
                         <br>
                         CAD $58.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1284,7 +1287,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/4th product 3rd.png" alt="Brushed stainless steel 32 oz hydration bottle with flip‑through straw lid, pale jade‑green accents on lid, loop, and band, DRIP drop icon embossed in jade‑green on front.">
                                 <figcaption>
@@ -1329,7 +1332,7 @@
                                     ✅ 30-day hassle-free returns
                                 </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1341,13 +1344,13 @@
                 </figure>
 
                 <figure class="glacierStream">
-                    <img src="Images/4th product 4th.png" alt="Brushed stainless steel 32 oz hydration bottle with flip‑through straw lid, translucent ice‑white accents on lid, loop, and band, DRIP drop icon embossed in ice‑white on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/4th product 4th.png" alt="Brushed stainless steel 32 oz hydration bottle with flip‑through straw lid, translucent ice‑white accents on lid, loop, and band, DRIP drop icon embossed in ice‑white on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP GlacierStream Series - Ice Quartz Hydration Bottle
                         <br>
                         CAD $58.80
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1355,7 +1358,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/4th product 4th.png" alt="Brushed stainless steel 32 oz hydration bottle with flip‑through straw lid, translucent ice‑white accents on lid, loop, and band, DRIP drop icon embossed in ice‑white on front.">
                                 <figcaption>
@@ -1400,7 +1403,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1412,13 +1415,13 @@
                 </figure>
 
                 <figure class="glacierStream">
-                    <img src="Images/4th product 5th.png" alt="Frosted semi‑transparent 32 oz hydration bottle with straw lid, glacier‑blue‑to‑mist gradient body and frost‑white lid accents, DRIP drop icon embossed in pearly white on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/4th product 5th.png" alt="Frosted semi‑transparent 32 oz hydration bottle with straw lid, glacier‑blue‑to‑mist gradient body and frost‑white lid accents, DRIP drop icon embossed in pearly white on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP GlacierStream Series - PolarMist Hydration Bottle
                         <br>
                         CAD $53.20
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1426,7 +1429,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/4th product 5th.png" alt="Frosted semi‑transparent 32 oz hydration bottle with straw lid, glacier‑blue‑to‑mist gradient body and frost‑white lid accents, DRIP drop icon embossed in pearly white on front.">
                                 <figcaption>
@@ -1471,7 +1474,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1485,13 +1488,13 @@
                 
 
                 <figure class="noirSlate">
-                    <img src="Images/5th product.png" alt="Flat black A6-shaped bottle with gold lid and DRIP logo; sleek, paper-like silhouette."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/5th product.png" alt="Flat black A6-shaped bottle with gold lid and DRIP logo; sleek, paper-like silhouette."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP NoirSlate Series - Noirgold A6 Flask
                         <br>
                         CAD $45.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1499,7 +1502,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/5th product.png" alt="Flat black A6-shaped bottle with gold lid and DRIP logo; sleek, paper-like silhouette.">
                                 <figcaption>
@@ -1544,7 +1547,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1556,13 +1559,13 @@
                 </figure>   
 
                 <figure class="noirSlate">
-                    <img src="Images/5th product 2nd.png" alt="Satin graphite‑black A6‑shaped flask with rose‑gold neck and lid, DRIP drop icon and vertical “DRiP” text embossed in rose‑gold on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/5th product 2nd.png" alt="Satin graphite‑black A6‑shaped flask with rose‑gold neck and lid, DRIP drop icon and vertical “DRiP” text embossed in rose‑gold on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP NoirSlate Series - GraphiteRose A6 Flask
                         <br>
                         CAD $52.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1570,7 +1573,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/5th product 2nd.png" alt="Satin graphite‑black A6‑shaped flask with rose‑gold neck and lid, DRIP drop icon and vertical “DRiP” text embossed in rose‑gold on front.">
                                 <figcaption>
@@ -1615,7 +1618,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1627,13 +1630,13 @@
                 </figure>
                 
                 <figure class="noirSlate">
-                    <img src="Images/5th product 3rd.png" alt="High‑gloss jet‑black A6‑shaped flask with mirror‑chrome neck and lid, DRIP drop icon and vertical “DRiP” text embossed in chrome on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/5th product 3rd.png" alt="High‑gloss jet‑black A6‑shaped flask with mirror‑chrome neck and lid, DRIP drop icon and vertical “DRiP” text embossed in chrome on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP NoirSlate Series - ChromeOnyx A6 Flask
                         <br>
                         CAD $50.10
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1641,7 +1644,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/5th product 3rd.png" alt="High‑gloss jet‑black A6‑shaped flask with mirror‑chrome neck and lid, DRIP drop icon and vertical “DRiP” text embossed in chrome on front.">
                                 <figcaption>
@@ -1686,7 +1689,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1698,13 +1701,13 @@
                 </figure>
 
                 <figure class="noirSlate">
-                    <img src="Images/5th product 4th.png" alt="Matte charcoal‑black A6‑shaped flask with burnished copper neck and lid, DRIP drop icon and vertical “DRiP” text embossed in copper on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/5th product 4th.png" alt="Matte charcoal‑black A6‑shaped flask with burnished copper neck and lid, DRIP drop icon and vertical “DRiP” text embossed in copper on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP NoirSlate Series - ShadowCopper A6 Flask
                         <br>
                         CAD $52.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1712,7 +1715,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/5th product 4th.png" alt="Matte charcoal‑black A6‑shaped flask with burnished copper neck and lid, DRIP drop icon and vertical “DRiP” text embossed in copper on front.">
                                 <figcaption>
@@ -1757,7 +1760,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1769,13 +1772,13 @@
                 </figure>
 
                 <figure class="noirSlate">
-                    <img src="Images/5th product 5th.png" alt="Matte slate‑black A6‑shaped flask with hairline‑thin polished silver splinter inlays, silver‑tone neck and lid, DRIP drop icon and vertical “DRiP” text embossed in silver on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/5th product 5th.png" alt="Matte slate‑black A6‑shaped flask with hairline‑thin polished silver splinter inlays, silver‑tone neck and lid, DRIP drop icon and vertical “DRiP” text embossed in silver on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP NoirSlate Series - SlateSilver A6 Flask
                         <br>
                         CAD $50.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1783,7 +1786,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/5th product 5th.png" alt="Matte slate‑black A6‑shaped flask with hairline‑thin polished silver splinter inlays, silver‑tone neck and lid, DRIP drop icon and vertical “DRiP” text embossed in silver on front.">
                                 <figcaption>
@@ -1828,7 +1831,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1840,13 +1843,13 @@
                 </figure>
 
                 <figure class="amethystEdge">
-                    <img src="Images/6th product.png" alt="Faceted matte black tumbler with purple accents and DRIP droplet icon; jewel-like design."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/6th product.png" alt="Faceted matte black tumbler with purple accents and DRIP droplet icon; jewel-like design."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP AmethystEdge Series - ChippedNoirAmethyst Tumbler
                         <br>
                         CAD $48.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1854,7 +1857,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/6th product.png" alt="Faceted matte black tumbler with purple accents and DRIP droplet icon; jewel-like design.">
                                 <figcaption>
@@ -1898,7 +1901,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1910,13 +1913,13 @@
                 </figure>
 
                 <figure class="amethystEdge">
-                    <img src="Images/6th product 2nd.png" alt="Matte graphite gray 20 oz diamond‑cut tumbler, faceted edges plated in rose‑pink, snap‑in lid with pink trim, DRIP drop icon embossed in rose‑pink on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/6th product 2nd.png" alt="Matte graphite gray 20 oz diamond‑cut tumbler, faceted edges plated in rose‑pink, snap‑in lid with pink trim, DRIP drop icon embossed in rose‑pink on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP AmethystEdge Series - RoseQuartzGraphite Tumbler
                         <br>
                         CAD $62.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1924,7 +1927,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/6th product 2nd.png" alt="Matte graphite gray 20 oz diamond‑cut tumbler, faceted edges plated in rose‑pink, snap‑in lid with pink trim, DRIP drop icon embossed in rose‑pink on front.">
                                 <figcaption>
@@ -1969,7 +1972,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1981,13 +1984,13 @@
                 </figure>
 
                 <figure class="amethystEdge">
-                    <img src="Images/6th product 3rd.png" alt="Burnt‑orange 20 oz diamond‑cut tumbler with high‑gloss cobalt‑blue edges, snap‑in lid with blue trim, DRIP drop icon embossed in cobalt‑blue on front."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/6th product 3rd.png" alt="Burnt‑orange 20 oz diamond‑cut tumbler with high‑gloss cobalt‑blue edges, snap‑in lid with blue trim, DRIP drop icon embossed in cobalt‑blue on front."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP AmethystEdge Series - CobaltEmber Tumbler
                         <br>
                         CAD $62.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -1995,7 +1998,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/6th product 3rd.png" alt="Burnt‑orange 20 oz diamond‑cut tumbler with high‑gloss cobalt‑blue edges, snap‑in lid with blue trim, DRIP drop icon embossed in cobalt‑blue on front.">
                                 <figcaption>
@@ -2040,7 +2043,7 @@
                                         ✅ 30-day hassle-free returns
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -2052,13 +2055,13 @@
                 </figure>
 
                 <figure class="amethystEdge"> 
-                    <img src="Images/6th product 4th.png" alt="Matte ash‑black 20 oz diamond‑cut tumbler with pearlescent jade‑green edges and gold‑flake accents, snap‑in lid with jade trim, DRIP drop icon embossed in jade‑green on front." onclick="detailsBoxOpen(this)">
+                    <img src="Images/6th product 4th.png" alt="Matte ash‑black 20 oz diamond‑cut tumbler with pearlescent jade‑green edges and gold‑flake accents, snap‑in lid with jade trim, DRIP drop icon embossed in jade‑green on front." onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP AmethystEdge Series - JadeAshGold Tumbler
                         <br>
                         CAD $62.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -2066,7 +2069,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/6th product 4th.png" alt="Matte ash‑black 20 oz diamond‑cut tumbler with pearlescent jade‑green edges and gold‑flake accents, snap‑in lid with jade trim, DRIP drop icon embossed in jade‑green on front.">
                                 <figcaption>
@@ -2111,7 +2114,7 @@
                                         ✅ 30-day satisfaction guarantee
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -2123,13 +2126,13 @@
                 </figure>
 
                 <figure class="amethystEdge"> 
-                    <img src="Images/6th product 5th.png" alt="Matte charcoal black 20 oz diamond‑cut tumbler with glowing topaz‑orange facet veins, snap‑in lid with orange trim, DRIP drop icon embossed in topaz‑orange on front." onclick="detailsBoxOpen(this)">
+                    <img src="Images/6th product 5th.png" alt="Matte charcoal black 20 oz diamond‑cut tumbler with glowing topaz‑orange facet veins, snap‑in lid with orange trim, DRIP drop icon embossed in topaz‑orange on front." onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP AmethystEdge Series - TopazRift Tumbler
                         <br>
                         CAD $62.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -2137,7 +2140,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/6th product 5th.png" alt="Matte charcoal black 20 oz diamond‑cut tumbler with glowing topaz‑orange facet veins, snap‑in lid with orange trim, DRIP drop icon embossed in topaz‑orange on front.">
                                 <figcaption>
@@ -2182,7 +2185,7 @@
                                         ✅ Backed by a 30-day return policy
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -2195,13 +2198,13 @@
 
 
                 <figure class="carbonLuxe">
-                    <img src="Images/7th product.png" alt="Matte black carbon fiber tumbler with iridescent purple accents and DRIP icon; sculptural and high-end design."  onclick="detailsBoxOpen(this)">
+                    <img src="Images/7th product.png" alt="Matte black carbon fiber tumbler with iridescent purple accents and DRIP icon; sculptural and high-end design."  onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP CarbonLuxe Prism Series - CarbonIridescent Tumbler
                         <br>
                         CAD $65.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -2209,7 +2212,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/7th product.png" alt="Matte black carbon fiber tumbler with iridescent purple accents and DRIP icon; sculptural and high-end design.">
                                 <figcaption>
@@ -2254,7 +2257,7 @@
                                         ✅ Covered by DRiP's premium 30-day satisfaction guarantee
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -2265,13 +2268,13 @@
                 </figure>
 
                 <figure class="carbonLuxe">
-                    <img src="Images/7th product 2nd.png" alt="Matte dark steel 24 oz tumbler with prism facets, liquid-gradient chrome inlays shifting copper-violet-teal, snap-in lid with teal chrome trim, DRIP drop icon mirrored gradient on front." onclick="detailsBoxOpen(this)">
+                    <img src="Images/7th product 2nd.png" alt="Matte dark steel 24 oz tumbler with prism facets, liquid-gradient chrome inlays shifting copper-violet-teal, snap-in lid with teal chrome trim, DRIP drop icon mirrored gradient on front." onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP CarbonLuxe Prism Series - NebulaChrome Tumbler
                         <br>
                         CAD $65.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -2279,7 +2282,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/7th product 2nd.png" alt="Matte dark steel 24 oz tumbler with prism facets, liquid-gradient chrome inlays shifting copper-violet-teal, snap-in lid with teal chrome trim, DRIP drop icon mirrored gradient on front.">
                                 <figcaption>
@@ -2324,7 +2327,7 @@
                                         ✅ Covered by DRiP’s LuxeCare 30-day return policy
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -2335,13 +2338,13 @@
                 </figure>
 
                 <figure class="carbonLuxe">
-                    <img src="Images/7th product 3rd.png" alt="Soft matte graphite-black 24 oz tumbler with diamond facets, spectral nano-coating trim reflecting blue / violet / cyan, snap-in lid with violet-blue edge, DRIP drop icon filled with prismatic resin on front." onclick="detailsBoxOpen(this)">
+                    <img src="Images/7th product 3rd.png" alt="Soft matte graphite-black 24 oz tumbler with diamond facets, spectral nano-coating trim reflecting blue / violet / cyan, snap-in lid with violet-blue edge, DRIP drop icon filled with prismatic resin on front." onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP CarbonLuxe Prism Series - GraphiteSpectral Tumbler
                         <br>
                         CAD $65.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -2349,7 +2352,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/7th product 3rd.png" alt="Soft matte graphite-black 24 oz tumbler with diamond facets, spectral nano-coating trim reflecting blue / violet / cyan, snap-in lid with violet-blue edge, DRIP drop icon filled with prismatic resin on front.">
                                 <figcaption>
@@ -2394,7 +2397,7 @@
                                         ✅ Protected by DRiP’s LuxeCare 30-day guarantee
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -2405,13 +2408,13 @@
                 </figure>
 
                 <figure class="carbonLuxe">
-                    <img src="Images/7th product 4th.png" alt="High-gloss onyx black 24 oz tumbler with prism facets, ember-orange and titanium-blue edge accents, snap-in lid with orange trim, DRIP drop icon embossed in titanium blue on front." onclick="detailsBoxOpen(this)">
+                    <img src="Images/7th product 4th.png" alt="High-gloss onyx black 24 oz tumbler with prism facets, ember-orange and titanium-blue edge accents, snap-in lid with orange trim, DRIP drop icon embossed in titanium blue on front." onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP CarbonLuxe Prism Series - OnyxFlare Tumbler
                         <br>
                         CAD $65.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -2419,7 +2422,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/7th product 4th.png" alt="High-gloss onyx black 24 oz tumbler with prism facets, ember-orange and titanium-blue edge accents, snap-in lid with orange trim, DRIP drop icon embossed in titanium blue on front.">
                                 <figcaption>
@@ -2464,7 +2467,7 @@
                                         ✅ 30-day LuxeCare return policy included
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -2475,13 +2478,13 @@
                 </figure>
 
                 <figure class="carbonLuxe">
-                    <img src="Images/7th product 5th.png" alt="Matte black carbon fiber 24 oz tumbler with diamond facets, three asymmetrical spectral prism bands (violet-indigo, emerald-cyan, gold-crimson), snap-in lid with multichrome-edged spout, DRIP drop icon back-filled with prism lacquer on front." onclick="detailsBoxOpen(this)">
+                    <img src="Images/7th product 5th.png" alt="Matte black carbon fiber 24 oz tumbler with diamond facets, three asymmetrical spectral prism bands (violet-indigo, emerald-cyan, gold-crimson), snap-in lid with multichrome-edged spout, DRIP drop icon back-filled with prism lacquer on front." onclick="detailsBoxOpen(this)"  tabindex="0"  onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxOpen(this); }">
                     <figcaption>
                         DRiP CarbonLuxe Prism Series - NovaSpectrum Tumbler
                         <br>
                         CAD $65.00
                         <span class="heart-icon">
-                            <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                            <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                         </span>
                         <br>
                         <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
@@ -2489,7 +2492,7 @@
 
                     <div class="details-box">
                         <div class="details-content-for-modal">
-                            <span class="close" onclick="detailsBoxClose(this, event)">&times;</span>
+                            <span class="close" onclick="detailsBoxClose(this, event)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); detailsBoxClose(this, event); }">&times;</span>
                             <figure>
                                 <img src="Images/7th product 5th.png" alt="Matte black carbon fiber 24 oz tumbler with diamond facets, three asymmetrical spectral prism bands (violet-indigo, emerald-cyan, gold-crimson), snap-in lid with multichrome-edged spout, DRIP drop icon back-filled with prism lacquer on front.">
                                 <figcaption>
@@ -2534,7 +2537,7 @@
                                         ✅ Covered by DRiP’s LuxeCare 30-day satisfaction guarantee
                                     </p>
                                     <span class="heart-icon">
-                                        <i onclick="toggleHeartIcon(this)" class="far fa-heart" title="Add to Cart"></i>
+                                        <i onclick="toggleHeartIcon(this)" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleHeartIcon(this); }" class="far fa-heart" title="Add to Cart"></i>
                                     </span>
                                     <br>
                                     <a href="https://magichour.ai/products/ai-image-generator">#-Image Source</a>
